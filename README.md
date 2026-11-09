@@ -1,3 +1,5 @@
+<p align="center"><img src="branding/logo/aleflix-logo-16x9-1080p.png" alt="Aleflix" width="720"></p>
+
 <h1 align="center">Aleflix</h1>
 <h3 align="center">A quiet, cinematic Jellyfin client for Android phones, tablets and TVs</h3>
 
@@ -22,6 +24,12 @@ Aleflix installs alongside Moonfin; the two don't share data.
 - `aleflix://` deep links.
 - In-app update checks read this repository's [releases](https://github.com/alejandrok5/aleflix/releases).
 - Moonfin's Firebase project isn't included, so push notifications from the Moonbase plugin are off. Everything else the plugin offers (settings sync, themes, ratings, Seerr) works as in Moonfin.
+
+## Jellyfin web theme
+
+[**Aleflix Noir for Jellyfin web**](branding/jellyfin-web/README.md) is custom CSS for **Dashboard → Branding → Custom CSS code** that gives your server's web interface the same look as the app. The README there has the full CSS and the install steps.
+
+The 16:9 logo for the Branding page's splash screen is in [`branding/logo/`](branding/logo): [`aleflix-logo-16x9-1080p.png`](branding/logo/aleflix-logo-16x9-1080p.png) (1920×1080) and [`aleflix-logo-16x9.png`](branding/logo/aleflix-logo-16x9.png) (3840×2160), plus a transparent version.
 
 ## Servers
 

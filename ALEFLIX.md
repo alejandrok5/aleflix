@@ -88,6 +88,8 @@ uv venv /tmp/aleflix-brand && uv pip install --python /tmp/aleflix-brand resvg-p
 /tmp/aleflix-brand/bin/python scripts/aleflix/build_assets.py --preview /tmp/aleflix-preview
 ```
 
+`scripts/aleflix/build_wide_logo.py` (same Python setup) draws the 16:9 logo and the web wordmark into `branding/logo/`. The Jellyfin web theme lives in `branding/jellyfin-web/`: `aleflix-noir.css` is the theme, and its README repeats the same code, so change both together.
+
 ## Not rebranded yet
 
 These platforms still carry Moonfin's identity, because the fork targets Android first: iOS, tvOS, macOS, Windows (`msix_config` in `pubspec.yaml`), Linux and web.
