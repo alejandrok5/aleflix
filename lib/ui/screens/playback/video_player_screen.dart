@@ -23,6 +23,7 @@ import 'package:volume_controller/volume_controller.dart';
 import 'package:window_manager/window_manager.dart';
 
 import '../../../data/utils/chapter_markers.dart';
+import '../../../data/utils/episode_cast_utils.dart';
 import '../../../data/utils/server_trickplay.dart';
 import '../../../data/utils/trickplay_headers.dart';
 import '../../../playback/subtitle_style.dart';
@@ -31,6 +32,7 @@ import '../../../playback/system_volume.dart';
 import '../../../util/fullscreen_helper.dart';
 import '../../../util/scroll_sensitivity_binding.dart';
 import '../../widgets/image_source.dart';
+import '../../widgets/marquee_text.dart';
 import '../../widgets/player_volume_control.dart';
 import '../../widgets/playback/playback_time_row.dart';
 import '../../widgets/playback/player_logo.dart';
@@ -7699,26 +7701,54 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
     if (item is! AggregatedItem) return;
     final chapters = _playingChapters(item);
     if (chapters.isEmpty) return;
-    final options = List.generate(chapters.length, (i) {
-      final ch = chapters[i];
-      final name = (ch['Name'] as String?) ?? l10n.chapterNumber(i + 1);
-      final ticks = ch['StartPositionTicks'] as int? ?? 0;
-      return TrackOption(
-        label: name,
-        subtitle: formatPlaybackDuration(Duration(microseconds: ticks ~/ 10)),
+    int startTicks(Map<String, dynamic> ch) =>
+        ch['StartPositionTicks'] as int? ?? 0;
+    final positionTicks = _state.position.inMicroseconds * 10;
+    final current = math.max(
+      0,
+      chapters.lastIndexWhere((ch) => startTicks(ch) <= positionTicks),
+    );
+
+    final imageApi = _clientForItem(item).imageApi;
+    String? imageUrl(int i) {
+      final tag = chapters[i]['ImageTag'] as String?;
+      if (tag == null || tag.isEmpty) return null;
+      final url = imageApi.getChapterImageUrl(
+        item.id,
+        index: i,
+        maxWidth: 400,
+        tag: tag,
       );
-    });
+      return url.isEmpty ? null : url;
+    }
+
     unawaited(() async {
-      final result = await TrackSelectorDialog.show(
+      final result = await showStyledPlayerDialog<int>(
         context,
         title: l10n.chapters,
-        options: options,
+        maxWidth: 900,
+        builder: (dialogCtx) => _ChapterRow(
+          count: chapters.length,
+          initialIndex: current,
+          itemBuilder: (i) {
+            final ch = chapters[i];
+            return _PlayerRowTile(
+              name: (ch['Name'] as String?) ?? l10n.chapterNumber(i + 1),
+              subtitle: formatPlaybackDuration(
+                Duration(microseconds: startTicks(ch) ~/ 10),
+              ),
+              imageUrl: imageUrl(i),
+              landscape: true,
+              current: i == current,
+              autofocus: i == current,
+              onPressed: () => Navigator.of(dialogCtx).pop(i),
+            );
+          },
+        ),
       );
       if (result == null || !mounted) return;
-      final ch = chapters[result];
-      final ticks = ch['StartPositionTicks'] as int? ?? 0;
       _suppressSeekPrompts();
-      _seekDirect(Duration(microseconds: ticks ~/ 10));
+      _seekDirect(Duration(microseconds: startTicks(chapters[result]) ~/ 10));
     }());
     _showControls();
   }
@@ -7792,6 +7822,11 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
   bool _hasCastCrew(dynamic item) {
     if (item is! AggregatedItem) return false;
     if (item.people.isNotEmpty) return true;
+    if (item.type == 'Episode' &&
+        ((item.seriesId != null && item.seriesId!.isNotEmpty) ||
+            (item.seasonId != null && item.seasonId!.isNotEmpty))) {
+      return true;
+    }
     return item.id == _castPeopleItemId && _castPeople.isNotEmpty;
   }
 
@@ -7816,29 +7851,51 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
   Future<List<Map<String, dynamic>>> _resolveCastPeople(
     AggregatedItem item,
   ) async {
-    if (item.people.isNotEmpty) {
-      return item.people;
-    }
     if (item.id == _castPeopleItemId && _castPeople.isNotEmpty) {
       return _castPeople;
     }
 
-    // An episode keeps its cast on the series, everything else on itself.
-    final id = item.type == 'Episode' ? (item.seriesId ?? '') : item.id;
-    if (id.isEmpty) {
+    if (item.type != 'Episode') {
+      if (item.people.isNotEmpty) {
+        return item.people;
+      }
+      if (item.type == 'Season' &&
+          item.seriesId != null &&
+          item.seriesId!.isNotEmpty) {
+        final client = _clientForItem(item);
+        final parentCast = await resolveParentCast(
+          client: client,
+          seriesId: item.seriesId,
+        );
+        if (parentCast.isNotEmpty) return parentCast;
+      }
+      if (item.type == 'Movie' && item.id.isNotEmpty) {
+        try {
+          final client = _clientForItem(item);
+          final data = await client.itemsApi.getItem(item.id);
+          final people = (data['People'] as List?)
+              ?.whereType<Map>()
+              .map((p) => p.cast<String, dynamic>())
+              .toList(growable: false);
+          if (people != null && people.isNotEmpty) {
+            return people;
+          }
+        } catch (_) {}
+      }
       return const <Map<String, dynamic>>[];
     }
 
-    try {
-      final client = _clientForItem(item);
-      final data = await client.itemsApi.getItem(id);
-      final people = (data['People'] as List?)
-          ?.cast<Map<String, dynamic>>()
-          .toList(growable: false);
-      return people ?? const <Map<String, dynamic>>[];
-    } catch (_) {
-      return const <Map<String, dynamic>>[];
-    }
+    final client = _clientForItem(item);
+    final parentActors = await resolveParentCast(
+      client: client,
+      seasonId: item.seasonId,
+      seriesId: item.seriesId,
+    );
+
+    return mergeEpisodePeople(
+      episodePeople: item.people,
+      parentActors: parentActors,
+    );
   }
 
   Future<void> _showCast() async {
@@ -7882,7 +7939,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
         );
       }
 
-      return _CastPersonTile(
+      return _PlayerRowTile(
         name: name,
         subtitle: subtitle,
         imageUrl: imageUrl,
@@ -7897,15 +7954,15 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
       await showStyledPlayerDialog<void>(
         context,
         title: AppLocalizations.of(context).castAndCrew,
-        maxWidth: 640,
+        maxWidth: 680,
         builder: (dialogCtx) => SizedBox(
           height: 210,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.fromLTRB(
-              AppSpacing.spaceLg,
+              AppSpacing.spaceXl,
               AppSpacing.spaceSm,
-              AppSpacing.spaceLg,
+              AppSpacing.space2xl,
               AppSpacing.spaceSm,
             ),
             itemCount: people.length,
@@ -8470,31 +8527,166 @@ class _TvFocusButtonState extends State<_TvFocusButton> {
   }
 }
 
-class _CastPersonTile extends StatefulWidget {
+/// A horizontal chapter row that opens scrolled to [initialIndex], so the
+/// lazy list builds that card and its autofocus can land.
+class _ChapterRow extends StatefulWidget {
+  final int count;
+  final int initialIndex;
+  final Widget Function(int index) itemBuilder;
+
+  const _ChapterRow({
+    required this.count,
+    required this.initialIndex,
+    required this.itemBuilder,
+  });
+
+  @override
+  State<_ChapterRow> createState() => _ChapterRowState();
+}
+
+class _ChapterRowState extends State<_ChapterRow> {
+  static const _gap = 16.0;
+  static const _padding = AppSpacing.spaceLg;
+  ScrollController? _controller;
+
+  @override
+  void dispose() {
+    _controller?.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 200,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          const stride = _PlayerRowTile.landscapeWidth + _gap;
+          final viewport = constraints.maxWidth;
+          final content = 2 * _padding + widget.count * stride - _gap;
+          final centered = _padding +
+              widget.initialIndex * stride -
+              (viewport - _PlayerRowTile.landscapeWidth) / 2;
+          _controller ??= ScrollController(
+            initialScrollOffset: centered.clamp(
+              0.0,
+              math.max(0.0, content - viewport),
+            ),
+          );
+          return ListView.separated(
+            controller: _controller,
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.fromLTRB(
+              _padding,
+              AppSpacing.spaceSm,
+              _padding,
+              AppSpacing.spaceSm,
+            ),
+            itemCount: widget.count,
+            separatorBuilder: (_, _) => const SizedBox(width: _gap),
+            itemBuilder: (_, i) => widget.itemBuilder(i),
+          );
+        },
+      ),
+    );
+  }
+}
+
+/// A card in the player's cast and chapter rows. [landscape] draws a 16:9
+/// chapter frame in place of a round portrait.
+class _PlayerRowTile extends StatefulWidget {
+  static const landscapeWidth = 200.0;
+
   final String name;
   final String subtitle;
   final String? imageUrl;
   final bool autofocus;
+  final bool landscape;
+  final bool current;
   final VoidCallback? onPressed;
 
-  const _CastPersonTile({
+  const _PlayerRowTile({
     required this.name,
     required this.subtitle,
     required this.imageUrl,
     required this.autofocus,
+    this.landscape = false,
+    this.current = false,
     this.onPressed,
   });
 
   @override
-  State<_CastPersonTile> createState() => _CastPersonTileState();
+  State<_PlayerRowTile> createState() => _PlayerRowTileState();
 }
 
-class _CastPersonTileState extends State<_CastPersonTile> {
+class _PlayerRowTileState extends State<_PlayerRowTile> {
+  static const _nameStyle = TextStyle(
+    color: Colors.white,
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+  );
+
+  final _focusNode = FocusNode();
   bool _focused = false;
 
   @override
+  void initState() {
+    super.initState();
+    if (widget.autofocus) {
+      // On TV a navigator observer focuses a new route's first focusable
+      // after autofocus resolves, so the card meant to open focused takes
+      // it back here.
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _focusNode.requestFocus();
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  Widget _landscapeImage(Widget placeholder) {
+    final url = widget.imageUrl;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8),
+      child: AspectRatio(
+        aspectRatio: 16 / 9,
+        child: ColoredBox(
+          color: Colors.white.withValues(alpha: 0.1),
+          child: url == null
+              ? Center(child: placeholder)
+              : Image(
+                  image: NetworkImage(url, headers: serverImageHeaders),
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, _, _) => Center(child: placeholder),
+                ),
+        ),
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final focusSide = ThemeRegistry.active.borders.focusBorder;
+    final border = _focused
+        ? Border.fromBorderSide(
+            focusSide.copyWith(color: Colors.white, width: 2),
+          )
+        : widget.current
+        ? Border.fromBorderSide(
+            focusSide.copyWith(color: AppColorScheme.accent, width: 2),
+          )
+        : null;
+    final placeholder = AdaptiveIcon(
+      widget.landscape ? Icons.movie : Icons.person,
+      color: Colors.white54,
+      size: 32,
+    );
     return Focus(
+      focusNode: _focusNode,
       canRequestFocus: widget.onPressed != null,
       autofocus: widget.autofocus,
       onFocusChange: (f) => setState(() => _focused = f),
@@ -8512,7 +8704,7 @@ class _CastPersonTileState extends State<_CastPersonTile> {
           duration: const Duration(milliseconds: 120),
           alignment: Alignment.topCenter,
           child: SizedBox(
-            width: 110,
+            width: widget.landscape ? _PlayerRowTile.landscapeWidth : 110,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -8520,46 +8712,43 @@ class _CastPersonTileState extends State<_CastPersonTile> {
                   duration: const Duration(milliseconds: 120),
                   padding: const EdgeInsets.all(2),
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: _focused
-                        ? Border.fromBorderSide(
-                            ThemeRegistry.active.borders.focusBorder.copyWith(
-                              color: Colors.white,
-                              width: 2,
-                            ),
-                          )
+                    shape: widget.landscape
+                        ? BoxShape.rectangle
+                        : BoxShape.circle,
+                    borderRadius: widget.landscape
+                        ? BorderRadius.circular(10)
                         : null,
+                    border: border,
                   ),
-                  child: CircleAvatar(
-                    radius: 48,
-                    backgroundColor: Colors.white.withValues(alpha: 0.1),
-                    backgroundImage: widget.imageUrl != null
-                        ? NetworkImage(
-                            widget.imageUrl!,
-                            headers: serverImageHeaders,
-                          )
-                        : null,
-                    child: widget.imageUrl == null
-                        ? const AdaptiveIcon(
-                            Icons.person,
-                            color: Colors.white54,
-                            size: 32,
-                          )
-                        : null,
-                  ),
+                  child: widget.landscape
+                      ? _landscapeImage(placeholder)
+                      : CircleAvatar(
+                          radius: 48,
+                          backgroundColor: Colors.white.withValues(alpha: 0.1),
+                          backgroundImage: widget.imageUrl != null
+                              ? NetworkImage(
+                                  widget.imageUrl!,
+                                  headers: serverImageHeaders,
+                                )
+                              : null,
+                          child: widget.imageUrl == null ? placeholder : null,
+                        ),
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  widget.name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
+                if (widget.landscape && _focused)
+                  MarqueeText(
+                    text: widget.name,
+                    style: _nameStyle,
+                    textAlign: TextAlign.center,
+                  )
+                else
+                  Text(
+                    widget.name,
+                    style: _nameStyle,
+                    textAlign: TextAlign.center,
+                    maxLines: widget.landscape ? 1 : 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  textAlign: TextAlign.center,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
                 if (widget.subtitle.isNotEmpty)
                   Text(
                     widget.subtitle,

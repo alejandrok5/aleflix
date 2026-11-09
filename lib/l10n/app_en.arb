@@ -2423,6 +2423,45 @@
   "@writers": {
     "description": "Metadata label for writers"
   },
+  "episodeDirector": "Episode Director",
+  "@episodeDirector": {
+    "description": "Role label for an episode director"
+  },
+  "episodeDirectorWithRole": "{role} (Episode Director)",
+  "@episodeDirectorWithRole": {
+    "description": "Role label formatting an episode director with an existing role description",
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
+  "episodeWriter": "Episode Writer",
+  "@episodeWriter": {
+    "description": "Role label for an episode writer"
+  },
+  "episodeWriterWithRole": "{role} (Episode Writer)",
+  "@episodeWriterWithRole": {
+    "description": "Role label formatting an episode writer with an existing role description",
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
+  "guestStar": "Guest Star",
+  "@guestStar": {
+    "description": "Role label for a guest star"
+  },
+  "guestStarWithRole": "{role} (Guest Star)",
+  "@guestStarWithRole": {
+    "description": "Role label formatting a character role as a guest star",
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
   "studio": "STUDIO",
   "@studio": {
     "description": "Metadata label for studio"
@@ -15834,6 +15873,10 @@
   "@siloPinUnlock": {
     "description": "Button in the Silo profile PIN dialog that checks the PIN"
   },
+  "siloPinRemember": "Remember PIN on this device",
+  "@siloPinRemember": {
+    "description": "Checkbox in the Silo profile PIN dialog. Ticked, the PIN isn't asked for again on this device; unticked, it is asked for each time the app starts or this profile is switched to"
+  },
   "siloPinWrong": "That PIN isn't right.",
   "@siloPinWrong": {
     "description": "Shown in the Silo profile PIN dialog when the PIN doesn't match"
@@ -15854,10 +15897,6 @@
   "siloPinFailed": "The PIN couldn't be checked. Try again.",
   "@siloPinFailed": {
     "description": "Shown in the Silo profile PIN dialog when the check failed (no network, server error)"
-  },
-  "siloSignOutAccount": "Sign out of the Silo account",
-  "@siloSignOutAccount": {
-    "description": "Account menu button shown for a Silo household profile when other profiles of the same Silo account are stored on this device: signs all of them out and ends the login (Sign out alone removes only the current profile)"
   },
   "trailerCount": "{count, plural, =1{1 trailer} other{{count} trailers}}",
   "@trailerCount": {
