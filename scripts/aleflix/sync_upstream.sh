@@ -3,6 +3,7 @@
 # rebrand, then sets the Aleflix version for it.
 #
 #   scripts/aleflix/sync_upstream.sh [tag]     tag defaults to Moonfin's latest release
+#   scripts/aleflix/sync_upstream.sh main      Moonfin's latest commits, released or not
 #
 # Exit codes:
 #    0  merged; two commits were made (the merge, then the rebrand + version)
@@ -12,7 +13,8 @@
 # Localization files (lib/l10n) are taken from Moonfin on conflict, because the
 # rebrand script re-derives every Aleflix change to them. Moonfin's GitHub
 # workflow files are kept out of the fork: Aleflix runs its own (aleflix-*.yml),
-# and Moonfin's are disabled here.
+# and Moonfin's are disabled here. README.md is Aleflix's own, so Moonfin's
+# edits to it are dropped.
 #
 # Needs: git, gh (for the latest release), python3, flutter (for gen-l10n).
 set -euo pipefail
@@ -32,13 +34,24 @@ TAG="${1:-}"
 if [ -z "$TAG" ]; then
   TAG="$(gh release view --repo "$UPSTREAM_REPO" --json tagName --jq .tagName)"
 fi
-if ! git rev-parse -q --verify "refs/tags/${TAG}^{commit}" >/dev/null; then
-  echo "sync: Moonfin tag '$TAG' not found" >&2
+# A release tag, or a Moonfin branch (main) at its current commit. A branch is
+# named by its commit, so the CI branch and the test checkout stay put while
+# Moonfin moves on.
+if git rev-parse -q --verify "refs/tags/${TAG}^{commit}" >/dev/null; then
+  COMMIT="$(git rev-parse "refs/tags/${TAG}^{commit}")"
+  UPSTREAM_URL="https://github.com/${UPSTREAM_REPO}/releases/tag/${TAG}"
+elif git rev-parse -q --verify "refs/remotes/upstream/${TAG}^{commit}" >/dev/null; then
+  COMMIT="$(git rev-parse "refs/remotes/upstream/${TAG}^{commit}")"
+  UPSTREAM_URL="https://github.com/${UPSTREAM_REPO}/commit/${COMMIT}"
+  TAG="${TAG}-${COMMIT:0:10}"
+else
+  echo "sync: Moonfin tag or branch '$TAG' not found" >&2
   exit 1
 fi
 echo "sync: Moonfin release $TAG"
+echo "sync: Moonfin commit $COMMIT"
 
-if git merge-base --is-ancestor "$TAG" HEAD; then
+if git merge-base --is-ancestor "$COMMIT" HEAD; then
   echo "sync: Moonfin $TAG is already merged"
   exit 10
 fi
@@ -46,14 +59,14 @@ fi
 prev_base="$(scripts/aleflix/version.sh --base)"
 prev_revision="$(grep -E '^revision=' aleflix.properties | cut -d= -f2 | tr -d '[:space:]')"
 
-if ! git merge --no-ff --no-commit "$TAG"; then
+if ! git merge --no-ff --no-commit "$COMMIT"; then
   while IFS= read -r file; do
     case "$file" in
       lib/l10n/*)
         git checkout --theirs -- "$file"
         git add -- "$file"
         ;;
-      .github/workflows/*)
+      .github/workflows/*|README.md)
         # Aleflix's side always wins here (see the restore below).
         if git cat-file -e "HEAD:$file" 2>/dev/null; then
           git checkout --ours -- "$file"
@@ -75,12 +88,11 @@ if ! git merge --no-ff --no-commit "$TAG"; then
   fi
 fi
 
-# Keep the fork's own workflow set. This also keeps the push possible with the
-# Actions token, which may not change workflow files.
-git restore --source=HEAD --staged --worktree -- .github/workflows 2>/dev/null || true
+# Keep the fork's own workflow set and README. Leaving the workflows alone also
+# keeps the push possible with the Actions token, which may not change them.
+git restore --source=HEAD --staged --worktree -- .github/workflows README.md 2>/dev/null || true
 
-git commit --quiet --no-edit -m "Merge Moonfin ${TAG}" \
-  -m "Upstream release: https://github.com/${UPSTREAM_REPO}/releases/tag/${TAG}"
+git commit --quiet --no-edit -m "Merge Moonfin ${TAG}" -m "Upstream: ${UPSTREAM_URL}"
 
 # Re-apply the rebrand to whatever strings came in.
 python3 scripts/aleflix/rebrand_strings.py
@@ -88,7 +100,7 @@ python3 scripts/aleflix/rebrand_strings.py
 "$FLUTTER" gen-l10n
 
 # Follow Moonfin's Flutter pin for builds and tests.
-moonfin_flutter="$(git show "${TAG}:.github/workflows/build.yml" 2>/dev/null \
+moonfin_flutter="$(git show "${COMMIT}:.github/workflows/build.yml" 2>/dev/null \
   | sed -nE "s/^[[:space:]]*FLUTTER_VERSION:[[:space:]]*'?([0-9.]+)'?.*/\1/p" | head -1)"
 if [ -n "$moonfin_flutter" ]; then
   printf '%s\n' "$moonfin_flutter" > scripts/aleflix/flutter-version

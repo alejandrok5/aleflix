@@ -22,7 +22,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Moonfin release tag to merge (default is the latest release)
+        description: Moonfin release tag to merge, or main for Moonfin's latest commits (default is the latest release)
         required: false
 
 permissions:
@@ -39,6 +39,7 @@ jobs:
     outputs:
       merged: ${{ steps.sync.outputs.merged }}
       tag: ${{ steps.sync.outputs.tag }}
+      upstream: ${{ steps.sync.outputs.upstream }}
       sha: ${{ steps.sync.outputs.sha }}
       version: ${{ steps.sync.outputs.version }}
     steps:
@@ -71,6 +72,7 @@ jobs:
           set -e
           tag="$(sed -nE 's/^sync: Moonfin release (.*)$/\1/p' sync.log | head -1)"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "upstream=$(sed -nE 's/^sync: Moonfin commit (.*)$/\1/p' sync.log | head -1)" >> "$GITHUB_OUTPUT"
           case "$code" in
             0)
               echo "merged=true" >> "$GITHUB_OUTPUT"
@@ -146,7 +148,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           repository: Moonfin-Client/Moonfin-Core
-          ref: ${{ needs.merge.outputs.tag }}
+          ref: ${{ needs.merge.outputs.upstream }}
       - id: flutter
         run: |
           v="$(sed -nE "s/^[[:space:]]*FLUTTER_VERSION:[[:space:]]*'?([0-9.]+)'?.*/\1/p" .github/workflows/build.yml | head -1)"
