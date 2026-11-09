@@ -213,3 +213,23 @@ tasks.register<Copy>("copyAndroidTvDebugApkForFlutter") {
 tasks.matching { it.name == "assembleDebug" }.configureEach {
     finalizedBy("copyAndroidTvDebugApkForFlutter")
 }
+
+// Aleflix: the version name is Moonfin's plus the Aleflix revision from
+// aleflix.properties at the repo root (3.0.0 -> 3.0.0.1), so the in-app update
+// check can tell Aleflix releases apart while following Moonfin's numbering.
+// Version codes stay Moonfin's; Android installs an equal code as an update.
+val aleflixRevision: String = Properties().run {
+    val file = rootDir.resolve("../aleflix.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+    getProperty("revision")?.trim().orEmpty()
+}
+
+androidComponents {
+    onVariants { variant ->
+        if (aleflixRevision.isEmpty()) return@onVariants
+        variant.outputs.forEach { output ->
+            val base = output.versionName.orNull ?: return@forEach
+            output.versionName.set("$base.$aleflixRevision")
+        }
+    }
+}

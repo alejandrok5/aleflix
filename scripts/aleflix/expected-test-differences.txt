@@ -1,0 +1,21 @@
+# Moonfin tests that fail on Aleflix by design. compare_tests.py ignores these
+# when it checks that a Moonfin merge broke nothing. One test name per line.
+
+# They expect the text "Moonfin" where Aleflix says "Aleflix".
+SiloFailure.of 410 client_upgrade_required and 426 ask to update Moonfin
+an older Silo asks to update Silo
+the player's Silo refusals match their English strings
+exportText produces a formatted report with headers
+the tab shows the app name while nothing plays
+the tab is named after the film that is playing
+an episode carries its series name
+the app name comes back once playback stops
+
+# They exercise the Neon Pulse and 8-bit Hero themes, which Aleflix removed.
+Neon Pulse typography applies themed display styling
+theme Neon Pulse colours each tab from its cycle
+theme the pixel theme draws its own border
+SkipSegmentOverlay collapses border radius to 0 in 8-bit hero theme
+NextUpOverlay adapts card border and button focus across themes
+MediaWatchedBadge dynamically updates color when theme changes via AppThemeScope
+every theme falls back to a bundled font

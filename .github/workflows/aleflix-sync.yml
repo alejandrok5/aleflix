@@ -1,0 +1,232 @@
+# Keeps Aleflix on Moonfin's releases, without a person in the loop:
+#
+#   1. Daily, look for a new Moonfin release and merge it (scripts/aleflix/sync_upstream.sh),
+#      re-applying the Aleflix rebrand and setting the version (Moonfin 3.0.1 -> Aleflix 3.0.1.1).
+#   2. Check it: flutter analyze, then the test gate (no test may fail on Aleflix that passes on
+#      that Moonfin release, apart from scripts/aleflix/expected-test-differences.txt), then a
+#      release build of both APKs.
+#   3. If all of that passes, move main to the merge and run aleflix-release.yml, which publishes
+#      the release that installed copies find under Settings -> About -> Check for updates.
+#
+# Anything that fails (a conflict outside the translations, analyzer errors, a broken test, a
+# failed build) stops before main changes, and GitHub emails the failed run.
+#
+# Pushing Moonfin's history needs the SYNC_TOKEN secret: a fine-grained token for this repository
+# with Contents and Workflows read/write, because Moonfin's commits touch workflow files, which
+# the built-in Actions token may not push.
+name: Aleflix sync with Moonfin
+
+on:
+  schedule:
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Moonfin release tag to merge (default is the latest release)
+        required: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: aleflix-sync
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-26.04
+    outputs:
+      merged: ${{ steps.sync.outputs.merged }}
+      tag: ${{ steps.sync.outputs.tag }}
+      sha: ${{ steps.sync.outputs.sha }}
+      version: ${{ steps.sync.outputs.version }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.SYNC_TOKEN || github.token }}
+
+      - name: Read Flutter version
+        id: flutter
+        run: echo "version=$(cat scripts/aleflix/flutter-version)" >> "$GITHUB_OUTPUT"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.flutter.outputs.version }}
+          cache: true
+
+      - name: Merge the Moonfin release
+        id: sync
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          git config user.name "Alejandro Gonzalez"
+          git config user.email "alejandrok5@gmail.com"
+          set +e
+          scripts/aleflix/sync_upstream.sh "$TAG" 2>&1 | tee sync.log
+          code=${PIPESTATUS[0]}
+          set -e
+          tag="$(sed -nE 's/^sync: Moonfin release (.*)$/\1/p' sync.log | head -1)"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          case "$code" in
+            0)
+              echo "merged=true" >> "$GITHUB_OUTPUT"
+              echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              echo "version=$(scripts/aleflix/version.sh)" >> "$GITHUB_OUTPUT"
+              ;;
+            10)
+              echo "merged=false" >> "$GITHUB_OUTPUT"
+              echo "Moonfin $tag is already in Aleflix." >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            20)
+              echo "::error::Moonfin $tag conflicts with Aleflix changes; it needs a manual merge (see the log)."
+              exit 1
+              ;;
+            *)
+              echo "::error::The sync script failed (exit $code)."
+              exit 1
+              ;;
+          esac
+
+      # Errors fail, infos and warnings don't (the tree carries longstanding
+      # ones). The local packages need their own pub get, as in Moonfin's CI.
+      - name: Analyze
+        if: steps.sync.outputs.merged == 'true'
+        run: |
+          for pkg in packages/*/; do
+            if [ -f "$pkg/pubspec.yaml" ]; then (cd "$pkg" && flutter pub get >/dev/null); fi
+          done
+          flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Push the candidate branch
+        if: steps.sync.outputs.merged == 'true'
+        run: |
+          branch="aleflix-sync/${{ steps.sync.outputs.tag }}"
+          if ! git push --force origin "HEAD:refs/heads/$branch" 2> push.err; then
+            cat push.err
+            if grep -q "workflow" push.err; then
+              echo "::error::Pushing Moonfin's history needs the SYNC_TOKEN secret (fine-grained token with Contents and Workflows read/write on this repository)."
+            fi
+            exit 1
+          fi
+
+  test-aleflix:
+    needs: merge
+    if: needs.merge.outputs.merged == 'true'
+    runs-on: ubuntu-26.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ needs.merge.outputs.sha }}
+      - id: flutter
+        run: echo "version=$(cat scripts/aleflix/flutter-version)" >> "$GITHUB_OUTPUT"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.flutter.outputs.version }}
+          cache: true
+      - run: flutter pub get
+      - name: Run the test suite
+        run: flutter test --reporter json > aleflix.jsonl || true
+      - uses: actions/upload-artifact@v6
+        with:
+          name: tests-aleflix
+          path: aleflix.jsonl
+          retention-days: 14
+
+  test-moonfin:
+    needs: merge
+    if: needs.merge.outputs.merged == 'true'
+    runs-on: ubuntu-26.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          repository: Moonfin-Client/Moonfin-Core
+          ref: ${{ needs.merge.outputs.tag }}
+      - id: flutter
+        run: |
+          v="$(sed -nE "s/^[[:space:]]*FLUTTER_VERSION:[[:space:]]*'?([0-9.]+)'?.*/\1/p" .github/workflows/build.yml | head -1)"
+          echo "version=${v:-stable}" >> "$GITHUB_OUTPUT"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.flutter.outputs.version }}
+          cache: true
+      - run: flutter pub get
+      - name: Run the test suite
+        run: flutter test --reporter json > moonfin.jsonl || true
+      - uses: actions/upload-artifact@v6
+        with:
+          name: tests-moonfin
+          path: moonfin.jsonl
+          retention-days: 14
+
+  test-gate:
+    needs: [merge, test-aleflix, test-moonfin]
+    runs-on: ubuntu-26.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ needs.merge.outputs.sha }}
+      - uses: actions/download-artifact@v7
+        with:
+          pattern: tests-*
+          merge-multiple: true
+      - name: Compare with Moonfin
+        id: compare
+        run: |
+          if python3 scripts/aleflix/compare_tests.py aleflix.jsonl moonfin.jsonl scripts/aleflix/expected-test-differences.txt | tee compare.txt; then
+            echo "rerun=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "rerun=true" >> "$GITHUB_OUTPUT"
+            sed -n '/^FILES:$/,$p' compare.txt | tail -n +2 | sed -E 's#.*/(test/.*)#\1#' > rerun-files.txt
+          fi
+      # A test can be flaky, so the files with new failures get one more run
+      # before the gate fails.
+      - id: flutter
+        if: steps.compare.outputs.rerun == 'true'
+        run: echo "version=$(cat scripts/aleflix/flutter-version)" >> "$GITHUB_OUTPUT"
+      - uses: subosito/flutter-action@v2
+        if: steps.compare.outputs.rerun == 'true'
+        with:
+          flutter-version: ${{ steps.flutter.outputs.version }}
+          cache: true
+      - name: Re-run the new failures
+        if: steps.compare.outputs.rerun == 'true'
+        run: |
+          flutter pub get
+          flutter test --reporter json $(cat rerun-files.txt) > rerun.jsonl || true
+          python3 scripts/aleflix/compare_tests.py rerun.jsonl moonfin.jsonl scripts/aleflix/expected-test-differences.txt
+
+  build:
+    needs: [merge, test-gate]
+    uses: ./.github/workflows/aleflix-build.yml
+    with:
+      ref: ${{ needs.merge.outputs.sha }}
+    secrets: inherit
+
+  promote:
+    needs: [merge, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.SYNC_TOKEN || github.token }}
+      - name: Move main to the merge
+        run: |
+          git fetch origin "${{ needs.merge.outputs.sha }}"
+          # Fast-forward only: if main moved while this ran, stop rather than overwrite.
+          git push origin "${{ needs.merge.outputs.sha }}:refs/heads/main"
+          git push origin --delete "aleflix-sync/${{ needs.merge.outputs.tag }}" || true
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run aleflix-release.yml --ref main
+          echo "Merged Moonfin ${{ needs.merge.outputs.tag }} as Aleflix ${{ needs.merge.outputs.version }}; the release workflow publishes it." >> "$GITHUB_STEP_SUMMARY"

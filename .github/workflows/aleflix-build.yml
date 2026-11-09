@@ -1,0 +1,89 @@
+# Builds the signed Aleflix phone and TV APKs for one commit. Called by
+# aleflix-release.yml and aleflix-sync.yml; uploads apk-mobile and apk-tv.
+name: Aleflix build
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit, branch or tag to build
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    name: android (${{ matrix.target }})
+    runs-on: ubuntu-26.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: true
+      matrix:
+        target: [mobile, tv]
+    env:
+      # Fingerprint of the Aleflix release key; the build fails if an APK is
+      # signed with anything else.
+      ALEFLIX_CERT_SHA256: d972c4692d961d54c078a7d118ac4bbd76e203e66f71b397403073b593271340
+      REQUIRE_RELEASE_KEY: '1'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Read Flutter version
+        id: flutter
+        run: echo "version=$(cat scripts/aleflix/flutter-version)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.flutter.outputs.version }}
+          cache: true
+
+      - name: Set up signing
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_TYPE: ${{ secrets.ANDROID_KEYSTORE_TYPE }}
+          STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -z "$ANDROID_KEYSTORE_BASE64" ]; then
+            echo "::error::The ANDROID_KEYSTORE_BASE64 secret is missing; releases must be signed with the Aleflix key."
+            exit 1
+          fi
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/release.keystore
+          cat > android/keystore.properties <<EOF
+          storeFile=../release.keystore
+          storeType=$STORE_TYPE
+          storePassword=$STORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          EOF
+          keytool -list -keystore android/app/release.keystore -storetype "$STORE_TYPE" -storepass "$STORE_PASSWORD" >/dev/null
+
+      # Same limits Moonfin's CI uses: the dev-machine heap in
+      # android/gradle.properties leaves the 16 GB runner no room for Dart AOT.
+      - name: Limit Gradle memory
+        run: |
+          mkdir -p ~/.gradle
+          cat >> ~/.gradle/gradle.properties <<'EOF'
+          org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=1G -XX:ReservedCodeCacheSize=256m -XX:+HeapDumpOnOutOfMemoryError
+          kotlin.daemon.jvmargs=-Xmx2G
+          EOF
+
+      - name: Build
+        run: scripts/aleflix/build_release.sh ${{ matrix.target }}
+
+      - uses: actions/upload-artifact@v6
+        with:
+          name: apk-${{ matrix.target }}
+          path: dist/*.apk
+          if-no-files-found: error
+          retention-days: 14

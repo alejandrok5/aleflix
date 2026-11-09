@@ -1,0 +1,67 @@
+# Publishes an Aleflix release when a push to main changes the version
+# (aleflix.properties or pubspec.yaml), or when run by hand. Skips versions that
+# are already released. Installed copies pick releases up under
+# Settings -> About -> Check for updates.
+name: Aleflix release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - aleflix.properties
+      - pubspec.yaml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aleflix-release
+  cancel-in-progress: false
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      released: ${{ steps.v.outputs.released }}
+      sha: ${{ steps.v.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v5
+      - id: v
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(scripts/aleflix/version.sh)"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          if gh release view "$version" >/dev/null 2>&1; then
+            echo "released=true" >> "$GITHUB_OUTPUT"
+            echo "Aleflix $version is already released; nothing to do."
+          else
+            echo "released=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  build:
+    needs: version
+    if: needs.version.outputs.released == 'false'
+    uses: ./.github/workflows/aleflix-build.yml
+    with:
+      ref: ${{ needs.version.outputs.sha }}
+    secrets: inherit
+
+  publish:
+    needs: [version, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ needs.version.outputs.sha }}
+      - uses: actions/download-artifact@v7
+        with:
+          pattern: apk-*
+          path: dist
+          merge-multiple: true
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/aleflix/publish_release.sh "${{ needs.version.outputs.sha }}"
