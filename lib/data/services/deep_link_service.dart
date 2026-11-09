@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:app_links/app_links.dart';
 
+import '../../aleflix/aleflix_brand.dart';
 import '../../ui/navigation/destinations.dart';
 import '../../util/platform_detection.dart';
 
@@ -50,7 +51,9 @@ class DeepLinkService {
   /// is only honored for users already signed in on this device, and never
   /// bypasses a PIN, an always-authenticate setting or Kids Mode.
   static String? routeForDeepLink(Uri uri) {
-    if (uri.scheme != 'moonfin') return null;
+    if (uri.scheme != AleflixBrand.deepLinkScheme && uri.scheme != 'moonfin') {
+      return null;
+    }
     if (uri.host == 'search') {
       final searchQuery = uri.queryParameters['query'];
       if (searchQuery == null || searchQuery.isEmpty) return null;

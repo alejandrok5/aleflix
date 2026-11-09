@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../aleflix/aleflix_loading_mark.dart';
 import '../../../preference/preference_constants.dart';
 
 /// Extension helpers to map loading animation enums to layout properties.
@@ -211,9 +212,10 @@ class LoadingAnimationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return switch (image) {
       LoadingAnimationImage.none => const SizedBox.shrink(),
-      LoadingAnimationImage.moonfinLogo => MoonfinLogoAnimation(
+      // Aleflix: the wolf-and-moon mark instead of the spinning Moonfin logo.
+      LoadingAnimationImage.moonfinLogo => AleflixLoadingMark(
           size: size,
-          speed: speed,
+          speed: speed.multiplier,
         ),
       LoadingAnimationImage.spinner => StockSpinnerAnimation(
           size: size,
@@ -409,7 +411,7 @@ class _SpinnerPainter extends CustomPainter {
     final gradient = SweepGradient(
       startAngle: 0.0,
       endAngle: sweepAngle,
-      colors: const [Color(0x00AA5CC3), Color(0xFFAA5CC3), Color(0xFF00A4DC)],
+      colors: const [Color(0x00C8A96A), Color(0xFFC8A96A), Color(0xFFF4EFE6)],
       stops: const [0.0, 0.45, 1.0],
       transform: GradientRotation(startAngle),
     );
@@ -532,8 +534,8 @@ class RunnerPainter extends CustomPainter {
     final strokeW = (6.5 * scale).clamp(3.0, 9.5);
 
     // Moonfin signature brand colors: Cyan lead limbs & torso, Purple trail limbs, White head
-    const moonfinCyan = Color(0xFF00A4DC);
-    const moonfinPurple = Color(0xFFAA5CC3);
+    const moonfinCyan = Color(0xFFC8A96A); // Aleflix champagne
+    const moonfinPurple = Color(0xFF8A7A5E); // Aleflix bronze
     const headColor = Colors.white;
 
     final leadLimbPaint = Paint()
@@ -821,7 +823,7 @@ class _MoonBackdropPainter extends CustomPainter {
     // Celestial ambient glow behind the moon
     final glowColor = switch (palette) {
       MoonPhasesPalette.natural => const Color(0xFF38BDF8),
-      MoonPhasesPalette.moonfin => const Color(0xFF00A4DC),
+      MoonPhasesPalette.moonfin => const Color(0xFFC8A96A),
       MoonPhasesPalette.neonfin => const Color(0xFFFF2E92),
     };
     final glowPaint = Paint()
@@ -844,7 +846,7 @@ class _MoonBackdropPainter extends CustomPainter {
             center: const Alignment(-0.25, -0.25),
             radius: 0.90,
             colors: const [
-              Color(0xFF0E1118),
+              Color(0xFF1A1816),
               Color(0xFF000000),
             ],
           ).createShader(Rect.fromCircle(center: center, radius: radius)),
@@ -1057,11 +1059,11 @@ class _MoonPhasesPainter extends CustomPainter {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: const [
-              Color(0xFFAA5CC3),
-              Color(0xFF9C62C5),
-              Color(0xFF7672CB),
-              Color(0xFF3A8CD4),
-              Color(0xFF00A4DC),
+              Color(0xFFF4EFE6),
+              Color(0xFFEDE0C4),
+              Color(0xFFE6D3A8),
+              Color(0xFFC8A96A),
+              Color(0xFFA88A4E),
             ],
             stops: const [0.10, 0.20, 0.40, 0.66, 0.90],
           ).createShader(Rect.fromCircle(center: center, radius: radius)),
@@ -1091,7 +1093,7 @@ class _MoonPhasesPainter extends CustomPainter {
     // Crisp outer rim highlight
     final rimColor = switch (palette) {
       MoonPhasesPalette.natural => Colors.white.withAlpha(45),
-      MoonPhasesPalette.moonfin => const Color(0xFF00A4DC).withAlpha(40),
+      MoonPhasesPalette.moonfin => const Color(0xFFC8A96A).withAlpha(40),
       MoonPhasesPalette.neonfin => const Color(0xFF00E5FF).withAlpha(50),
     };
     final rimPaint = Paint()

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moonfin_design/moonfin_design.dart';
 
+import '../../aleflix/aleflix_brand.dart';
 import 'overlay_sheet.dart';
 
 const _kCardRadius = 20.0;
@@ -24,7 +25,7 @@ class LoginScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMoonfin = ThemeRegistry.active.id == ThemeRegistry.moonfinId;
+    final isMoonfin = AleflixBrand.usesUpstreamMoonfinStyling;
     final cardColor = isMoonfin
         ? _kMoonfinCardColor
         : AppColorScheme.surface.withAlpha(0xCC);
@@ -70,7 +71,7 @@ class LoginBackdrop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMoonfin = ThemeRegistry.active.id == ThemeRegistry.moonfinId;
+    final isMoonfin = AleflixBrand.usesUpstreamMoonfinStyling;
     final gradientColors = isMoonfin
         ? const [Color(0xFF0a0a0a), Color(0xFF1a1a2e), Color(0xFF16213e)]
         : [

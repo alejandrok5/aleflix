@@ -463,6 +463,11 @@ class ThemeSpec {
   /// platform default.
   final String? fontFamily;
 
+  /// Optional family for display, headline and large title text, so a theme
+  /// can pair an editorial face for titles with [fontFamily] for UI copy.
+  /// `null` keeps every style on [fontFamily].
+  final String? displayFontFamily;
+
   /// Text glow shadows applied to styled text elements (clock, labels, etc.).
   /// Empty list means no glow (default for Moonfin).
   final List<Shadow> textGlow;
@@ -496,6 +501,7 @@ class ThemeSpec {
     this.semantic = ThemeSemanticTokens.defaults,
     this.book = ThemeBookTokens.defaults,
     this.fontFamily,
+    this.displayFontFamily,
     this.textGlow = const [],
     this.navColorCycle = const [],
     this.transparentNavbarSurface = false,
@@ -514,6 +520,7 @@ class ThemeSpec {
         semantic: semantic,
         book: book,
         fontFamily: fontFamily,
+        displayFontFamily: displayFontFamily,
         textGlow: textGlow,
         navColorCycle: navColorCycle,
         transparentNavbarSurface: transparentNavbarSurface,

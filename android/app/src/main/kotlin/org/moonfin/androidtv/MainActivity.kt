@@ -332,7 +332,7 @@ class MainActivity : AudioServiceActivity(), GamepadsCompatibleActivity {
         } else {
             "id=${Uri.encode(itemId)}&serverId=${Uri.encode(serverId)}"
         }
-        return "moonfin://item?$query"
+        return "aleflix://item?$query"
     }
 
     // audio_service boots the app on an engine of its own whenever something
@@ -1292,7 +1292,7 @@ class MainActivity : AudioServiceActivity(), GamepadsCompatibleActivity {
         val targetId = args["targetId"] as? String
         val streamUrl = args["streamUrl"] as? String
         val contentType = args["contentType"] as? String
-        val title = args["title"] as? String ?: "Moonfin"
+        val title = args["title"] as? String ?: "Aleflix"
         val subtitle = args["subtitle"] as? String
         val posterUrl = args["posterUrl"] as? String
         val queueItems = parseQueueItems(args["queueItems"])
@@ -1496,7 +1496,7 @@ class MainActivity : AudioServiceActivity(), GamepadsCompatibleActivity {
         return entries.mapNotNull { entry ->
             val map = entry as? Map<*, *> ?: return@mapNotNull null
             val streamUrl = map["streamUrl"] as? String ?: return@mapNotNull null
-            val title = map["title"] as? String ?: "Moonfin"
+            val title = map["title"] as? String ?: "Aleflix"
             buildMap<String, Any> {
                 put("streamUrl", streamUrl)
                 put("title", title)
@@ -1544,7 +1544,7 @@ class MainActivity : AudioServiceActivity(), GamepadsCompatibleActivity {
         val mediaInfo = buildMediaInfo(
             streamUrl = url,
             contentType = contentType,
-            title = title ?: "Moonfin",
+            title = title ?: "Aleflix",
             subtitle = subtitle,
             posterUrl = posterUrl,
         )

@@ -49,14 +49,14 @@ bool _legacyStereoAacFallbackDefaultForPlatform() {
 String _clientName() {
   if (PlatformDetection.isAppleTV) return 'Moonfin for tvOS';
   if (PlatformDetection.isAndroid && PlatformDetection.isTV) {
-    return 'Moonfin for Android TV';
+    return 'Aleflix for Android TV';
   }
   if (PlatformDetection.isWeb) {
     return webRuntimeConfig.pluginMode
         ? 'Moonfin for Web'
         : 'Moonfin on Github';
   }
-  if (PlatformDetection.isAndroid) return 'Moonfin for Android';
+  if (PlatformDetection.isAndroid) return 'Aleflix for Android';
   if (PlatformDetection.isIOS) return 'Moonfin for iOS';
   if (PlatformDetection.isMacOS) return 'Moonfin for macOS';
   if (PlatformDetection.isWindows) return 'Moonfin for Windows';

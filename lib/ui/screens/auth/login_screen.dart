@@ -37,6 +37,7 @@ import '../../widgets/client_certificate_dialog.dart';
 import '../../widgets/login_scaffold.dart';
 import '../../widgets/pin_entry_dialog.dart';
 import '../../widgets/sign_in_qr_code.dart';
+import '../../../aleflix/aleflix_brand.dart';
 import 'silo_password_change_dialog.dart';
 
 final _kAccent = AppColorScheme.accent;
@@ -177,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   bool get _hasUsername => widget.prefillUsername != null;
   bool get _hasPassword => widget.hasPassword;
-  bool get _isMoonfin => ThemeRegistry.active.id == ThemeRegistry.moonfinId;
+  bool get _isMoonfin => AleflixBrand.usesUpstreamMoonfinStyling;
 
   Color _loginForeground(double alpha) {
     return (_isMoonfin ? Colors.white : AppColorScheme.onSurface).withValues(

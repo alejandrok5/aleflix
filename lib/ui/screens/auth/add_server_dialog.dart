@@ -18,6 +18,7 @@ import '../../widgets/client_certificate_dialog.dart';
 import '../../widgets/overlay_sheet.dart';
 import '../../widgets/server_type_icon.dart';
 import '../../widgets/silo_native_offer_dialog.dart';
+import '../../../aleflix/aleflix_brand.dart';
 
 /// Where the server screen goes once [AddServerDialog] closes.
 sealed class AddServerOutcome {
@@ -59,7 +60,7 @@ Future<AddServerOutcome?> showAddServerDialog({
   );
 }
 
-bool get _isMoonfin => ThemeRegistry.active.id == ThemeRegistry.moonfinId;
+bool get _isMoonfin => AleflixBrand.usesUpstreamMoonfinStyling;
 
 Color _fg(double alpha) =>
     (_isMoonfin ? Colors.white : AppColorScheme.onSurface).withValues(

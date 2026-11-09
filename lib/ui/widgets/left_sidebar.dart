@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'package:moonfin_design/moonfin_design.dart';
 import 'package:server_core/server_core.dart';
 
+import '../../aleflix/aleflix_palette.dart';
 import '../../auth/repositories/user_repository.dart';
 import '../../data/models/aggregated_library.dart';
 import '../../data/repositories/multi_server_repository.dart';
@@ -1361,7 +1362,7 @@ class _LeftSidebarState extends State<LeftSidebar> with RouteAware {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Color(0xFF00A4DC), Color(0xFF0077B6)],
+          colors: [AleflixPalette.bronze, AleflixPalette.surface], // Aleflix
         ),
       ),
       child: ClipOval(

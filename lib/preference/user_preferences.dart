@@ -1732,7 +1732,7 @@ class UserPreferences extends ChangeNotifier {
 
   static final focusColor = EnumPreference(
     key: 'focus_color',
-    defaultValue: AppTheme.white,
+    defaultValue: AppTheme.champagne,
     values: AppTheme.values,
   );
 
@@ -2075,9 +2075,11 @@ class UserPreferences extends ChangeNotifier {
     defaultValue: false,
   );
 
+  // Aleflix: the Watch Together nav button too, so joining a group is one
+  // press away.
   static final showSyncPlayButton = Preference(
     key: 'pref_show_syncplay_button',
-    defaultValue: false,
+    defaultValue: true,
   );
 
   static final showLibrariesInToolbar = Preference(
@@ -2325,21 +2327,23 @@ class UserPreferences extends ChangeNotifier {
     values: ScreensaverBackdrop.values,
   );
 
+  // Aleflix: a medium clock held in the bottom-right corner by default
+  // (was a bouncing logo in the middle).
   static final screensaverComponent = EnumPreference(
     key: 'pref_screensaver_component',
-    defaultValue: ScreensaverComponent.moonfinLogo,
+    defaultValue: ScreensaverComponent.clock,
     values: ScreensaverComponent.values,
   );
 
   static final screensaverMovement = EnumPreference(
     key: 'pref_screensaver_movement',
-    defaultValue: ScreensaverMovement.moderate,
+    defaultValue: ScreensaverMovement.staticCorner,
     values: ScreensaverMovement.values,
   );
 
   static final screensaverPosition = EnumPreference(
     key: 'pref_screensaver_position',
-    defaultValue: ScreensaverPosition.middle,
+    defaultValue: ScreensaverPosition.bottomRight,
     values: ScreensaverPosition.values,
   );
 
@@ -3905,9 +3909,12 @@ class UserPreferences extends ChangeNotifier {
     key: 'pref_live_direct',
     defaultValue: false,
   );
+  // Aleflix: Watch Together (Jellyfin SyncPlay) on by default, so two people
+  // on different devices can watch the same title in step. It stays hidden on
+  // servers without SyncPlay.
   static final syncPlayEnabled = Preference(
     key: 'pref_syncplay_enabled',
-    defaultValue: false,
+    defaultValue: true,
   );
 
   static final syncPlayEnableSyncCorrection = Preference(
@@ -3956,9 +3963,12 @@ class UserPreferences extends ChangeNotifier {
     defaultValue: false,
   );
 
+  // Aleflix: on by default. Upstream only switches it on when Moonbase
+  // answers at a user's first sign-in, so a plugin installed later stayed off.
+  // It does nothing on a server without the plugin.
   static final pluginSyncEnabled = Preference(
     key: 'pref_plugin_sync_enabled',
-    defaultValue: false,
+    defaultValue: true,
   );
 
   /// The settings profile this device pulls from and pushes to. Empty follows
@@ -4257,9 +4267,11 @@ class UserPreferences extends ChangeNotifier {
     defaultValue: '',
   );
 
+  // Aleflix: on by default; Seerr still only appears once Moonbase reports
+  // it enabled and the user has a Seerr session.
   static final seerrEnabled = Preference(
     key: 'seerr_enabled',
-    defaultValue: false,
+    defaultValue: true,
   );
 
   static final seerrBlockNsfw = Preference(

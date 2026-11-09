@@ -1,6 +1,6 @@
 {
     "@@locale": "lv",
-    "appTitle": "Moonfin",
+    "appTitle": "Aleflix",
     "@appTitle": {
         "description": "The application title"
     },
@@ -82,7 +82,7 @@
     "@selectServer": {
         "description": "Button to navigate back to server selection"
     },
-    "appVersionFooter": "Moonfin versija {version}",
+    "appVersionFooter": "Aleflix versija {version}",
     "@appVersionFooter": {
         "description": "App version shown in footer",
         "placeholders": {
@@ -156,7 +156,7 @@
     "@secureStorageUnavailable": {
         "description": "Dialog title when system keyring is inaccessible"
     },
-    "secureStorageUnavailableMessage": "Moonfin nevarēja piekļūt jūsu sistēmas atslēgu piekariņam. Pieteikšanos var turpināt, taču droša marķiera krātuve var nebūt pieejama, kamēr atslēgu piekariņš nav atbloķēts.",
+    "secureStorageUnavailableMessage": "Aleflix nevarēja piekļūt jūsu sistēmas atslēgu piekariņam. Pieteikšanos var turpināt, taču droša marķiera krātuve var nebūt pieejama, kamēr atslēgu piekariņš nav atbloķēts.",
     "@secureStorageUnavailableMessage": {
         "description": "Explanation when secure storage is not available"
     },
@@ -168,15 +168,15 @@
     "@settingsAppearanceTheme": {
         "description": "Title for the theme selection screen and theme settings entry"
     },
-    "settingsAppearanceThemeSubtitle": "Pārslēdzieties starp Moonfin un Neon Pulse, nerestartējot lietotni",
+    "settingsAppearanceThemeSubtitle": "Pārslēdzieties starp Aleflix un Neon Pulse, nerestartējot lietotni",
     "@settingsAppearanceThemeSubtitle": {
         "description": "Subtitle for the theme selection screen and theme settings entry"
     },
-    "themeMoonfin": "Moonfin",
+    "themeMoonfin": "Aleflix Noir",
     "@themeMoonfin": {
         "description": "Display name for the Moonfin theme"
     },
-    "themeMoonfinSubtitle": "Pašreizējais Moonfin izskats, ko jūs visi esat iemīlējuši",
+    "themeMoonfinSubtitle": "Pašreizējais Aleflix izskats, ko jūs visi esat iemīlējuši",
     "@themeMoonfinSubtitle": {
         "description": "Preview description for the Moonfin theme"
     },
@@ -249,7 +249,7 @@
             }
         }
     },
-    "exitApp": "Vai iziet no Moonfin?",
+    "exitApp": "Vai iziet no Aleflix?",
     "@exitApp": {
         "description": "Title of exit confirmation dialog"
     },
@@ -3080,7 +3080,7 @@
     "@customMpvConfPath": {
         "description": "Setting for custom mpv.conf path"
     },
-    "notSetMpvConf": "Nav iestatīts. Moonfin izmēģinās noklusējuma mpv.conf lietotņu/datu mapēs.",
+    "notSetMpvConf": "Nav iestatīts. Aleflix izmēģinās noklusējuma mpv.conf lietotņu/datu mapēs.",
     "@notSetMpvConf": {
         "description": "Description when no custom mpv.conf is set"
     },
@@ -3307,7 +3307,7 @@
     "@saveToDownloadsFolder": {
         "description": "Setting for saving to downloads folder"
     },
-    "downloadsVisibleToOtherApps": "Lejupielādes/Moonfin — redzams citām lietotnēm",
+    "downloadsVisibleToOtherApps": "Lejupielādes/Aleflix — redzams citām lietotnēm",
     "@downloadsVisibleToOtherApps": {
         "description": "Description for downloads folder visibility"
     },
@@ -3343,7 +3343,7 @@
     "@saveToDownloadsFolderQuestion": {
         "description": "Dialog title for saving to downloads folder"
     },
-    "saveToDownloadsFolderDescription": "Lejupielādētie multivide tiks saglabāti jūsu ierīces mapē Lejupielādes/Moonfin. Šie faili būs redzami citām lietotnēm, piemēram, jūsu galerijai vai mūzikas atskaņotājam.\n\nEsošās lejupielādes paliks to pašreizējā atrašanās vietā.",
+    "saveToDownloadsFolderDescription": "Lejupielādētie multivide tiks saglabāti jūsu ierīces mapē Lejupielādes/Aleflix. Šie faili būs redzami citām lietotnēm, piemēram, jūsu galerijai vai mūzikas atskaņotājam.\n\nEsošās lejupielādes paliks to pašreizējā atrašanās vietā.",
     "@saveToDownloadsFolderDescription": {
         "description": "Description for saving to downloads folder"
     },
@@ -3475,7 +3475,7 @@
     "@libraryVisibility": {
         "description": "Section title for library visibility"
     },
-    "libraryVisibilityDescription": "Pārslēgt mājas lapas redzamību katrai bibliotēkai. Restartējiet Moonfin, lai izmaiņas stātos spēkā.",
+    "libraryVisibilityDescription": "Pārslēgt mājas lapas redzamību katrai bibliotēkai. Restartējiet Aleflix, lai izmaiņas stātos spēkā.",
     "@libraryVisibilityDescription": {
         "description": "Explanation shown on the library visibility settings screen"
     },
@@ -3524,7 +3524,7 @@
     "@mediaBarModeDescription": {
         "description": "Description for media bar style setting"
     },
-    "mediaBarModeMoonfin": "Moonfin",
+    "mediaBarModeMoonfin": "Aleflix",
     "@mediaBarModeMoonfin": {
         "description": "Media bar style option: Moonfin"
     },
@@ -4084,7 +4084,7 @@
     "@sourceCode": {
         "description": "Link to source code"
     },
-    "sourceCodeUrl": "https://github.com/Moonfin-Client/Moonfin-Core",
+    "sourceCodeUrl": "https://github.com/alejandrok5/aleflix",
     "@sourceCodeUrl": {
         "description": "Displayed source code repository URL"
     },
@@ -4252,7 +4252,7 @@
     "@cancelRequest": {
         "description": "Button/dialog title to cancel a media request"
     },
-    "playInMoonfin": "Spēlē Moonfin",
+    "playInMoonfin": "Spēlē Aleflix",
     "@playInMoonfin": {
         "description": "Button to play available media in Moonfin"
     },
@@ -4306,7 +4306,7 @@
     "@keep": {
         "description": "Button to keep/dismiss a cancel dialog"
     },
-    "itemNotFoundInLibrary": "Vienums nav atrasts jūsu Moonfin bibliotēkā",
+    "itemNotFoundInLibrary": "Vienums nav atrasts jūsu Aleflix bibliotēkā",
     "@itemNotFoundInLibrary": {
         "description": "Snackbar when Seerr item cannot be found in Jellyfin"
     },
@@ -4610,7 +4610,7 @@
         }
     },
     "adminServerRebootInProgress": "Notiek servera atsāknēšana",
-    "adminServerRebootMessage": "Notiek servera atsāknēšana, lūdzu, restartējiet Moonfin",
+    "adminServerRebootMessage": "Notiek servera atsāknēšana, lūdzu, restartējiet Aleflix",
     "adminActiveSessions": "Aktīvās sesijas",
     "adminSessionsLoadFailed": "Neizdevās ielādēt sesijas",
     "adminNoActiveSessions": "Nav aktīvu sesiju",
@@ -6498,7 +6498,7 @@
     "settingsShowGenresButtonInNavigation": "Rādīt žanru pogu navigācijas joslā",
     "settingsShowFavoritesButtonInNavigation": "Parādiet izlases pogu navigācijas joslā",
     "settingsShowLibrariesButtonInNavigation": "Parādiet bibliotēkas pogu navigācijas joslā",
-    "settingsLibraryVisibilitySubtitle": "Pārslēgt mājas lapas redzamību katrai bibliotēkai. Restartējiet Moonfin, lai izmaiņas stātos spēkā.",
+    "settingsLibraryVisibilitySubtitle": "Pārslēgt mājas lapas redzamību katrai bibliotēkai. Restartējiet Aleflix, lai izmaiņas stātos spēkā.",
     "settingsMediaBarAndLocalPreviews": "Multivides josla un vietējie priekšskatījumi",
     "settingsVisualOverlays": "Vizuālie pārklājumi",
     "settingsSeasonalSurprise": "Sezonas pārsteigums",
@@ -6517,14 +6517,14 @@
     "settingsJoinDiscord": "Pievienojieties Discord",
     "settingsJoinDiscordSubtitle": "Tērzējiet ar kopienu",
     "settingsJoinTheDiscord": "Pievienojieties Discord",
-    "settingsSupportMoonfin": "Atbalstiet Moonfin",
+    "settingsSupportMoonfin": "Atbalstiet Aleflix",
     "settingsLegal": "JURIDISKĀS",
     "settingsLicenses": "Licences",
     "settingsOpenSourceLicenseNotices": "Atvērtā koda licences paziņojumi",
     "settingsPrivacyPolicy": "Privātuma politika",
-    "settingsPrivacyPolicySubtitle": "Kā Moonfin apstrādā jūsu datus",
+    "settingsPrivacyPolicySubtitle": "Kā Aleflix apstrādā jūsu datus",
     "settingsCheckForUpdates": "Pārbaudiet atjauninājumus",
-    "settingsCheckForUpdatesSubtitle": "Pārbaudiet jaunāko Moonfin versiju",
+    "settingsCheckForUpdatesSubtitle": "Pārbaudiet jaunāko Aleflix versiju",
     "settingsPoweredByFlutter": "Darbojas ar Flutter",
     "settingsLicenseNoticesCount": "{count, plural, zero {# licenču paziņojumu} one {# licences paziņojums} other {# licences paziņojumi}}",
     "@settingsLicenseNoticesCount": {
@@ -6994,7 +6994,7 @@
         }
     },
     "savedThemesTitle": "Saglabātie motīvi",
-    "savedThemesDescription": "Tie ir motīvi, kas lejupielādēti no pašreizējā servera spraudņa Moonfin. Dzēšot, tiek noņemta tikai šī vietējā kopija.",
+    "savedThemesDescription": "Tie ir motīvi, kas lejupielādēti no pašreizējā servera spraudņa Moonbase. Dzēšot, tiek noņemta tikai šī vietējā kopija.",
     "savedThemesEmpty": "Šim serverim netika atrasts neviens saglabāts motīvs.",
     "savedThemesCurrentThemeId": "{themeId} • Pašlaik aktīvs",
     "@savedThemesCurrentThemeId": {
@@ -7008,7 +7008,7 @@
     "savedThemesDeleteTooltip": "Dzēst saglabāto motīvu",
     "savedThemesManageSubtitle": "Pārvaldiet šajā ierīcē lejupielādētos spraudņu motīvus",
     "themeEditor": "Tēmas redaktors",
-    "themeEditorSubtitle": "Pārlūkprogrammā atveriet Moonfin motīvu redaktoru",
+    "themeEditorSubtitle": "Pārlūkprogrammā atveriet Aleflix motīvu redaktoru",
     "homeScreen": "Sākuma ekrāns",
     "bottomBar": "Apakšējā josla",
     "homeRowsStyleClassic": "Klasika",
@@ -7057,12 +7057,12 @@
     "preferSdhSubtitles": "Dodiet priekšroku SDH subtitriem",
     "preferSdhSubtitlesSubtitle": "Veicot automātisko atlasi, piešķiriet prioritāti SDH/CC subtitru celiņiem.",
     "webDiagnostics": "Web diagnostika",
-    "webDiagnosticsTitle": "Moonfin Tīmekļa diagnostika",
+    "webDiagnosticsTitle": "Aleflix Tīmekļa diagnostika",
     "webDiagnosticsIntro": "Izmantojiet šo lapu, lai diagnosticētu pārlūkprogrammas savienojamības problēmas (CORS, jaukts saturs un atklāšanas iestatījumi).",
     "webDiagnosticsDetectedMixedContentFailure": "Konstatēta jaukta satura kļūme",
     "webDiagnosticsDetectedCorsPreflightFailure": "Konstatēta CORS/pirmslidojuma kļūme",
-    "webDiagnosticsMixedContentFailureBody": "Moonfin atklāja HTTPS lapu, kas mēģina izsaukt HTTP servera URL. Pārlūkprogrammas bloķē šo pieprasījumu, pirms tas sasniedz jūsu serveri.",
-    "webDiagnosticsCorsFailureBody": "Moonfin atklāja pārlūkprogrammas līmeņa pieprasījuma kļūmi, ko parasti izraisa trūkstošas ​​CORS vai pirmspārbaudes galvenes multivides serverī.",
+    "webDiagnosticsMixedContentFailureBody": "Aleflix atklāja HTTPS lapu, kas mēģina izsaukt HTTP servera URL. Pārlūkprogrammas bloķē šo pieprasījumu, pirms tas sasniedz jūsu serveri.",
+    "webDiagnosticsCorsFailureBody": "Aleflix atklāja pārlūkprogrammas līmeņa pieprasījuma kļūmi, ko parasti izraisa trūkstošas ​​CORS vai pirmspārbaudes galvenes multivides serverī.",
     "webDiagnosticsTargetUrl": "Mērķa URL: {url}",
     "@webDiagnosticsTargetUrl": {
         "description": "Target URL shown in diagnostics summary",
@@ -7092,7 +7092,7 @@
     "notConfigured": "nav konfigurēts",
     "webDiagnosticsMixedContent": "Jaukts saturs",
     "webDiagnosticsMixedContentDetected": "Šī lapa tiek ielādēta, izmantojot HTTPS, bet viens vai vairāki konfigurētie URL ir HTTP. Pārlūkprogrammas neļauj HTTPS lapām izsaukt HTTP API.",
-    "webDiagnosticsMixedContentFix": "Labojums: apkalpojiet multivides serveri vai starpniekservera galapunktu, izmantojot HTTPS, vai ielādējiet Moonfin, izmantojot HTTP, tikai uzticamos lokālos tīklos.",
+    "webDiagnosticsMixedContentFix": "Labojums: apkalpojiet multivides serveri vai starpniekservera galapunktu, izmantojot HTTPS, vai ielādējiet Aleflix, izmantojot HTTP, tikai uzticamos lokālos tīklos.",
     "webDiagnosticsNoMixedContentDetected": "Pašreizējos izpildlaika iestatījumos nav konstatēta acīmredzama jaukta satura konfigurācija.",
     "webDiagnosticsCorsChecklist": "CORS kontrolsaraksts",
     "webDiagnosticsCorsChecklistItem1": "• Atļaut pārlūkprogrammas izcelsmi sadaļā Access-Control-Allow-Origin.",
@@ -7288,7 +7288,7 @@
     "@detailScreenStyle": {
         "description": "Label for the media detail screen layout style setting"
     },
-    "detailScreenStyleSubtitle": "Klasiskais ir oriģinālais centrētais Moonfin izkārtojums. Modernais ir adaptīvs kinematogrāfisks izkārtojums.",
+    "detailScreenStyleSubtitle": "Klasiskais ir oriģinālais centrētais Aleflix izkārtojums. Modernais ir adaptīvs kinematogrāfisks izkārtojums.",
     "@detailScreenStyleSubtitle": {
         "description": "Explanation under the detail screen style setting"
     },
@@ -7320,11 +7320,11 @@
     "@recommendationSystem": {
         "description": "Label for the Recommendation System setting"
     },
-    "recommendationSystemSubtitle": "Izmantojiet Moonfin Recommends vietējās bibliotēkas algoritmu vai tiešsaistes TMDB līdzības rādītājus. Piezīme: tiešsaistes ieteikumiem nepieciešama Seerr integrācija.",
+    "recommendationSystemSubtitle": "Izmantojiet Aleflix Recommends vietējās bibliotēkas algoritmu vai tiešsaistes TMDB līdzības rādītājus. Piezīme: tiešsaistes ieteikumiem nepieciešama Seerr integrācija.",
     "@recommendationSystemSubtitle": {
         "description": "Explanation under the recommendation system setting"
     },
-    "recommendationSystemMoonfin": "Moonfin Recommends",
+    "recommendationSystemMoonfin": "Aleflix Recommends",
     "@recommendationSystemMoonfin": {
         "description": "Recommendation system option: Moonfin Recommends"
     },
@@ -7336,7 +7336,7 @@
     "@recommendationsApplyParentalRatingCap": {
         "description": "Label for the toggle that controls whether similar suggestions are capped by target media parental rating"
     },
-    "recommendationsApplyParentalRatingCapSubtitle": "Ierobežot Moonfin Recommends ieteikumus atbilstoši izvēlētā satura vecuma ierobežojumam",
+    "recommendationsApplyParentalRatingCapSubtitle": "Ierobežot Aleflix Recommends ieteikumus atbilstoši izvēlētā satura vecuma ierobežojumam",
     "@recommendationsApplyParentalRatingCapSubtitle": {
         "description": "Explanation under the parental rating cap setting toggle"
     },
@@ -7384,7 +7384,7 @@
     "@customThemeTitle": {
         "description": "Title for the custom theme settings section"
     },
-    "customThemeSubtitle": "Pielāgotas tēmas maina vizuālos elementus visā Moonfin lietotnē. Izvēlieties vienu no šīm iespējām atbilstoši savam stilam.",
+    "customThemeSubtitle": "Pielāgotas tēmas maina vizuālos elementus visā Aleflix lietotnē. Izvēlieties vienu no šīm iespējām atbilstoši savam stilam.",
     "@customThemeSubtitle": {
         "description": "Description under custom themes section"
     },
@@ -7557,7 +7557,7 @@
     "@shuffleAllMusic": {
         "description": "Car browse action that shuffles the whole music library"
     },
-    "carSignInPrompt": "Pierakstieties Moonfin savā tālrunī",
+    "carSignInPrompt": "Pierakstieties Aleflix savā tālrunī",
     "@carSignInPrompt": {
         "description": "Shown in the car when no account is signed in"
     },
@@ -8897,7 +8897,7 @@
     "@impellerRendering": {
         "description": "Title of the setting that selects the Flutter rendering engine (Impeller vs. legacy)."
     },
-    "impellerRenderingSubtitle": "Impeller ir Flutter modernais GPU renderētājs, kas nodrošina plūstošākas animācijas un mazāku raustīšanos. Dažās TV pierīcēs un vecākos GPU tas var radīt traucējumus vai melnu attēlu; tādā gadījumā izslēdziet to. “Automātiski” izvēlas jūsu ierīcei piemērotāko noklusējumu. Lai lietotu izmaiņas, restartējiet Moonfin.",
+    "impellerRenderingSubtitle": "Impeller ir Flutter modernais GPU renderētājs, kas nodrošina plūstošākas animācijas un mazāku raustīšanos. Dažās TV pierīcēs un vecākos GPU tas var radīt traucējumus vai melnu attēlu; tādā gadījumā izslēdziet to. “Automātiski” izvēlas jūsu ierīcei piemērotāko noklusējumu. Lai lietotu izmaiņas, restartējiet Aleflix.",
     "@impellerRenderingSubtitle": {
         "description": "Explanatory description under the rendering engine setting."
     },
@@ -8908,7 +8908,7 @@
     "@impellerRestartTitle": {
         "description": "Title of the dialog shown after changing the rendering engine."
     },
-    "impellerRestartMessage": "Lai mainītu renderēšanas dzinēju, Moonfin ir jārestartē. Aizveriet lietotni tagad un atveriet to no jauna.",
+    "impellerRestartMessage": "Lai mainītu renderēšanas dzinēju, Aleflix ir jārestartē. Aizveriet lietotni tagad un atveriet to no jauna.",
     "@impellerRestartMessage": {
         "description": "Body of the dialog shown after changing the rendering engine."
     },

@@ -13,6 +13,7 @@ import 'package:playback_core/playback_core.dart';
 import 'package:screen_retriever/screen_retriever.dart';
 import 'package:window_manager/window_manager.dart';
 
+import 'aleflix/aleflix_loading_mark.dart';
 import 'app.dart';
 import 'data/models/aggregated_item.dart';
 import 'background/watch_next_background.dart' as watch_next_bg;
@@ -1036,6 +1037,9 @@ void main() async {
   try {
     GetIt.instance<AirPlayCommandBridge>().start();
   } catch (_) {}
+
+  // Aleflix: the loading mark's logo is compiled now, not on the first stream.
+  unawaited(AleflixLoadingMark.precache());
 
   runApp(const MoonfinApp());
 }

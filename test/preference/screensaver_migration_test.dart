@@ -79,8 +79,9 @@ void main() {
 
       expect(prefs.get(UserPreferences.screensaverBackdrop),
           ScreensaverBackdrop.library);
+      // Aleflix: the clock is the default component.
       expect(prefs.get(UserPreferences.screensaverComponent),
-          ScreensaverComponent.moonfinLogo);
+          ScreensaverComponent.clock);
     });
 
     test('an existing choice is never overwritten by the migration', () async {

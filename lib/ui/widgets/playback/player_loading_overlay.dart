@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../../aleflix/aleflix_palette.dart';
 import '../../../preference/preference_constants.dart';
 import '../../../preference/user_preferences.dart';
 import 'loading_animation_widget.dart';
@@ -34,7 +35,12 @@ class _PlayerLoadingOverlayState extends State<PlayerLoadingOverlay>
   static const _labelGradient = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    colors: [Color(0xFFAA5CC3), Color(0xFF00A4DC)],
+    // Aleflix: champagne sheen (was Moonfin's purple-to-cyan).
+    colors: [
+      AleflixPalette.champagne,
+      AleflixPalette.ivory,
+      AleflixPalette.champagne,
+    ],
   );
 
   late final AnimationController _labelController;
@@ -132,7 +138,7 @@ class _PlayerLoadingOverlayState extends State<PlayerLoadingOverlay>
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: fontSize,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w600,
                     letterSpacing: letterSpacing,
                   ),
                 ),

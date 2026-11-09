@@ -282,7 +282,8 @@ void main() {
       await toLastStep(tester);
 
       // Down the themes, past the playback languages, onto the Moonbase row.
-      for (var i = 0; i < 5; i++) {
+      // Aleflix offers two themes (Noir, Glass), not upstream's four.
+      for (var i = 0; i < 3; i++) {
         await press(tester, LogicalKeyboardKey.arrowDown);
       }
       await press(tester, LogicalKeyboardKey.enter);

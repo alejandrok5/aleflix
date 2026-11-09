@@ -1,49 +1,76 @@
 import 'package:flutter/material.dart';
 
-import '../app_colors.dart';
 import '../theme_spec.dart';
+
+// Aleflix Noir. This is the default theme and keeps upstream's 'moonfin' id
+// (ThemeRegistry.moonfinId) so stored preferences, settings sync and every
+// moonfinId special case in upstream code carry over without edits.
+//
+// Warm charcoal ground, ivory type and a single champagne-gold accent, kept
+// for state: progress, selection, focus. Focus is shown as a soft gold ring
+// and a lift shadow rather than a glow. Titles set in Fraunces, UI in Inter.
+
+const _ground = Color(0xFF0E0D0C); // warm charcoal
+const _surface = Color(0xFF1A1816);
+const _raised = Color(0xFF24211E);
+const _raisedActive = Color(0xFF302C27);
+const _hairline = Color(0xFF3A352F);
+const _ivory = Color(0xFFF4EFE6);
+const _faint = Color(0xFF6B665E);
+const _gold = Color(0xFFC8A96A); // champagne
+const _goldLight = Color(0xFFE6D3A8);
 
 const moonfinThemeSpec = ThemeSpec(
   id: 'moonfin',
-  displayName: 'Moonfin',
+  displayName: 'Aleflix Noir',
+  fontFamily: 'Inter',
+  displayFontFamily: 'Fraunces',
   colors: ThemeColorTokens(
-    background: AppColors.black700,
-    onBackground: AppColors.white,
-    surface: AppColors.black500,
-    onSurface: AppColors.white,
-    surfaceVariant: Color(0xFF252525),
-    scrim: Color(0xCC000000),
-    accent: AppColors.cyan500,
-    onAccent: AppColors.white,
-    buttonNormal: Color(0xFF2A2A2A),
-    buttonFocused: AppColors.white,
-    buttonDisabled: Color(0xFF1E1E1E),
-    buttonActive: Color(0xFF3A3A3A),
-    onButtonNormal: AppColors.white,
-    onButtonFocused: AppColors.cyan500,
-    onButtonDisabled: Color(0xFF666666),
-    inputBackground: Color(0xFF2A2A2A),
-    inputFocused: Color(0xFF3A3A3A),
-    inputBorder: Color(0xFF404040),
-    inputBorderFocused: AppColors.cyan500,
-    rangeTrack: Color(0xFF404040),
-    rangeProgress: AppColors.cyan500,
-    rangeThumb: AppColors.cyan500,
-    seekbarBuffered: Color(0x80FFFFFF),
-    badgeBackground: AppColors.cyan500,
-    onBadge: AppColors.white,
-    badgeUnplayed: AppColors.cyan500,
-    badgeWatched: AppColors.green500,
-    recordingActive: AppColors.red500,
-    recordingScheduled: AppColors.orange500,
+    background: _ground,
+    onBackground: _ivory,
+    surface: _surface,
+    onSurface: _ivory,
+    surfaceVariant: _raised,
+    scrim: Color(0xCC0E0D0C),
+    accent: _gold,
+    onAccent: _ground,
+    buttonNormal: _raised,
+    buttonFocused: _ivory,
+    buttonDisabled: _surface,
+    buttonActive: _raisedActive,
+    onButtonNormal: _ivory,
+    onButtonFocused: _ground,
+    onButtonDisabled: _faint,
+    inputBackground: Color(0xFF1F1C19),
+    inputFocused: Color(0xFF2A2622),
+    inputBorder: _hairline,
+    inputBorderFocused: _gold,
+    rangeTrack: _hairline,
+    rangeProgress: _gold,
+    rangeThumb: _goldLight,
+    seekbarBuffered: Color(0x66F4EFE6),
+    badgeBackground: _gold,
+    onBadge: _ground,
+    badgeUnplayed: _gold,
+    badgeWatched: Color(0xFF8E9F7A), // muted sage
+    recordingActive: Color(0xFFC4553D), // brick
+    recordingScheduled: Color(0xFFD08A4E), // amber
+    error: Color(0xFFD9604C),
   ),
   borders: ThemeBorderTokens(
     cardBorder: BorderSide(color: Colors.transparent),
-    chipBorder: BorderSide(color: Color(0x558EC8F0)),
-    focusBorder: BorderSide(color: AppColors.cyan500, width: 2),
-    cardRadius: BorderRadius.all(Radius.circular(8)),
+    chipBorder: BorderSide(color: Color(0x40C8A96A)),
+    focusBorder: BorderSide(color: _goldLight, width: 2),
+    cardRadius: BorderRadius.all(Radius.circular(6)),
     chipRadius: BorderRadius.all(Radius.circular(999)),
-    chipBackground: Color(0x1F8EC8F0),
-    focusGlow: [],
+    chipBackground: Color(0x14F4EFE6),
+    // A lift, not a glow: focused cards rise off the charcoal ground.
+    focusGlow: [
+      BoxShadow(
+        color: Color(0xA6000000),
+        blurRadius: 28,
+        offset: Offset(0, 10),
+      ),
+    ],
   ),
 );

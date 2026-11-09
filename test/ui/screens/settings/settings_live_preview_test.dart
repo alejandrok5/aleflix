@@ -1115,7 +1115,8 @@ void main() {
       expect(asset('assets/icons/genres.png'), findsOneWidget);
       expect(asset('assets/icons/clapperboard.png'), findsOneWidget);
       expect(find.byIcon(Icons.live_tv_rounded), findsNothing);
-      expect(find.byIcon(Icons.groups_rounded), findsNothing);
+      // Aleflix: Watch Together and its button are on by default.
+      expect(find.byIcon(Icons.groups_rounded), findsOneWidget);
 
       // Live TV waits for a Live TV library, as the real button does.
       controller.tryValue('pref_show_live_tv_button', true);

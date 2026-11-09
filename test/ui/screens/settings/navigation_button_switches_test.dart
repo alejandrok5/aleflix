@@ -128,6 +128,8 @@ void main() {
     tester,
   ) async {
     signIn(canDownload: true);
+    // Aleflix: Watch Together is on by default, so switch it off first.
+    await prefs.set(UserPreferences.syncPlayEnabled, false);
     await pump(tester);
     expect(find.text(l10n.settingsSyncplayButton), findsNothing);
 

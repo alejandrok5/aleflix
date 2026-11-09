@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../util/idiom/app_ui_idiom.dart';
 
-const String kCleanSettingsFontFamily = 'NotoSans';
+const String kCleanSettingsFontFamily = 'Inter'; // Aleflix: was NotoSans
 
 Widget withCleanSettingsTypography(BuildContext context, Widget child) {
   final theme = Theme.of(context);

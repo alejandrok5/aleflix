@@ -617,6 +617,10 @@ class _SetupWizardScreenState extends State<SetupWizardScreen> {
     ].join(' · ');
     return [
       for (final theme in VisualThemeId.values)
+        // Only looks the registry still offers (Aleflix drops two built-ins).
+        if (ThemeRegistry.availableThemes.containsKey(
+          AppThemeController.builtInThemeIdFor(theme),
+        ))
         _SetupOption(
           label: switch (theme) {
             VisualThemeId.moonfin => l10n.themeMoonfin,

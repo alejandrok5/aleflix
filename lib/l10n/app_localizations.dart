@@ -223,7 +223,7 @@ abstract class AppLocalizations {
   /// The application title
   ///
   /// In en, this message translates to:
-  /// **'Moonfin'**
+  /// **'Aleflix'**
   String get appTitle;
 
   /// Badge on an anime episode that is filler, meaning it is not adapted from the source manga
@@ -511,7 +511,7 @@ abstract class AppLocalizations {
   /// App version shown in footer
   ///
   /// In en, this message translates to:
-  /// **'Moonfin version {version}'**
+  /// **'Aleflix version {version}'**
   String appVersionFooter(String version);
 
   /// Section heading for previously saved servers
@@ -607,7 +607,7 @@ abstract class AppLocalizations {
   /// Explanation when secure storage is not available
   ///
   /// In en, this message translates to:
-  /// **'Moonfin could not access your system keyring. Login can continue, but secure token storage may be unavailable until the keyring is unlocked.'**
+  /// **'Aleflix could not access your system keyring. Login can continue, but secure token storage may be unavailable until the keyring is unlocked.'**
   String get secureStorageUnavailableMessage;
 
   /// Generic OK button label
@@ -907,13 +907,13 @@ abstract class AppLocalizations {
   /// Explanation under the recommendation system setting
   ///
   /// In en, this message translates to:
-  /// **'Use the Moonfin Recommends local-library algorithm, Jellyfin Recommends server engine, or the online TMDb\'s Similarity Metrics. Note: Online recommendations require Seerr integration.'**
+  /// **'Use the Aleflix Recommends local-library algorithm, Jellyfin Recommends server engine, or the online TMDb\'s Similarity Metrics. Note: Online recommendations require Seerr integration.'**
   String get recommendationSystemSubtitle;
 
   /// Recommendation system option: Moonfin Recommends
   ///
   /// In en, this message translates to:
-  /// **'Moonfin Recommends'**
+  /// **'Aleflix Recommends'**
   String get recommendationSystemMoonfin;
 
   /// Recommendation system option: Jellyfin Recommends
@@ -937,7 +937,7 @@ abstract class AppLocalizations {
   /// Explanation under the parental rating cap setting toggle
   ///
   /// In en, this message translates to:
-  /// **'Limit Moonfin Recommends suggestions by parental rating of target media'**
+  /// **'Limit Aleflix Recommends suggestions by parental rating of target media'**
   String get recommendationsApplyParentalRatingCapSubtitle;
 
   /// Label for the Automatic/Apple/Material interface style setting
@@ -979,7 +979,7 @@ abstract class AppLocalizations {
   /// Subtitle for the interface layout setting
   ///
   /// In en, this message translates to:
-  /// **'Override the detected layout when this device is read wrong. Restart Moonfin for changes to take effect.'**
+  /// **'Override the detected layout when this device is read wrong. Restart Aleflix for changes to take effect.'**
   String get interfaceLayoutSubtitle;
 
   /// Interface layout option: detect from the device
@@ -1135,7 +1135,7 @@ abstract class AppLocalizations {
   /// Description under custom themes section
   ///
   /// In en, this message translates to:
-  /// **'Custom themes alter visual elements across Moonfin. Choose one of these options to suit your style.'**
+  /// **'Custom themes alter visual elements across Aleflix. Choose one of these options to suit your style.'**
   String get customThemeSubtitle;
 
   /// Label for the setting that picks how the on-screen keyboard looks, or whether the TV's own keyboard is used
@@ -1147,7 +1147,7 @@ abstract class AppLocalizations {
   /// Explanation under the keyboard style setting
   ///
   /// In en, this message translates to:
-  /// **'Native uses your TV\'s own keyboard. Classic is the original Moonfin keyboard. Glass is a frosted panel with larger keys. Docked fills the bottom of the screen and shows what you type above the keys.'**
+  /// **'Native uses your TV\'s own keyboard. Classic is the original Aleflix keyboard. Glass is a frosted panel with larger keys. Docked fills the bottom of the screen and shows what you type above the keys.'**
   String get keyboardStyleDescription;
 
   /// Keyboard style option: the TV or device's own system keyboard
@@ -1213,13 +1213,13 @@ abstract class AppLocalizations {
   /// Display name for the Moonfin theme
   ///
   /// In en, this message translates to:
-  /// **'Moonfin'**
+  /// **'Aleflix Noir'**
   String get themeMoonfin;
 
   /// Preview description for the Moonfin theme
   ///
   /// In en, this message translates to:
-  /// **'The original clean Moonfin default.'**
+  /// **'The original clean Aleflix default.'**
   String get themeMoonfinSubtitle;
 
   /// Display name for the Neon Pulse theme
@@ -1387,7 +1387,7 @@ abstract class AppLocalizations {
   /// Title of exit confirmation dialog
   ///
   /// In en, this message translates to:
-  /// **'Exit Moonfin?'**
+  /// **'Exit Aleflix?'**
   String get exitApp;
 
   /// Body text of exit confirmation dialog
@@ -3373,7 +3373,7 @@ abstract class AppLocalizations {
   /// Shown in the car when no account is signed in
   ///
   /// In en, this message translates to:
-  /// **'Sign in to Moonfin on your phone'**
+  /// **'Sign in to Aleflix on your phone'**
   String get carSignInPrompt;
 
   /// Shown in the car when the media server can't be reached
@@ -3847,7 +3847,7 @@ abstract class AppLocalizations {
   /// What Ctrl+Q does on desktop
   ///
   /// In en, this message translates to:
-  /// **'Quit Moonfin'**
+  /// **'Quit Aleflix'**
   String get shortcutQuit;
 
   /// Player shortcut action
@@ -4171,7 +4171,7 @@ abstract class AppLocalizations {
   /// Body of the dialog shown on Apple TV when the user tries to open a book or comic
   ///
   /// In en, this message translates to:
-  /// **'Open it in Moonfin on a phone, tablet or computer to read it. Audiobooks still play here.'**
+  /// **'Open it in Aleflix on a phone, tablet or computer to read it. Audiobooks still play here.'**
   String get bookReadingUnavailableMessage;
 
   /// Fallback message for unsupported document format
@@ -5587,7 +5587,7 @@ abstract class AppLocalizations {
   /// Description for loading animation customization settings
   ///
   /// In en, this message translates to:
-  /// **'Customize the loading animations used throughout Moonfin'**
+  /// **'Customize the loading animations used throughout Aleflix'**
   String get loadingAnimationDescription;
 
   /// Subtitle header for loading animation settings
@@ -5605,7 +5605,7 @@ abstract class AppLocalizations {
   /// Loading animation image option: Moonfin Logo
   ///
   /// In en, this message translates to:
-  /// **'Moonfin Logo'**
+  /// **'Aleflix Logo'**
   String get loadingAnimationImageMoonfinLogo;
 
   /// Loading animation image option: Spinner
@@ -5629,7 +5629,7 @@ abstract class AppLocalizations {
   /// Loading animation image option: Moonfin Phases in brand gradient
   ///
   /// In en, this message translates to:
-  /// **'Moonfin Phases'**
+  /// **'Aleflix Phases'**
   String get loadingAnimationImageMoonfinPhases;
 
   /// Loading animation image option: Neonfin Phases in neon colors
@@ -7669,7 +7669,7 @@ abstract class AppLocalizations {
   /// Description when no custom mpv.conf is set
   ///
   /// In en, this message translates to:
-  /// **'Not set. Moonfin will try a default mpv.conf in app/data folders.'**
+  /// **'Not set. Aleflix will try a default mpv.conf in app/data folders.'**
   String get notSetMpvConf;
 
   /// Dialog title for selecting mpv.conf
@@ -8197,7 +8197,7 @@ abstract class AppLocalizations {
   /// Note shown when the only download location Android allows is the default one
   ///
   /// In en, this message translates to:
-  /// **'Android only lets Moonfin write to the folders it owns, and this device has no removable storage. Turn on Save to Downloads folder above to keep downloads somewhere other apps can reach.'**
+  /// **'Android only lets Aleflix write to the folders it owns, and this device has no removable storage. Turn on Save to Downloads folder above to keep downloads somewhere other apps can reach.'**
   String get downloadLocationLimitedByAndroid;
 
   /// Setting for saving to downloads folder
@@ -8209,7 +8209,7 @@ abstract class AppLocalizations {
   /// Description for downloads folder visibility
   ///
   /// In en, this message translates to:
-  /// **'Downloads/Moonfin — visible to other apps'**
+  /// **'Downloads/Aleflix — visible to other apps'**
   String get downloadsVisibleToOtherApps;
 
   /// Section title for dangerous actions
@@ -8263,7 +8263,7 @@ abstract class AppLocalizations {
   /// Description for saving to downloads folder
   ///
   /// In en, this message translates to:
-  /// **'Downloaded media will be saved to Downloads/Moonfin on your device. These files will be visible to other apps such as your gallery or music player.\n\nExisting downloads will remain in their current location.'**
+  /// **'Downloaded media will be saved to Downloads/Aleflix on your device. These files will be visible to other apps such as your gallery or music player.\n\nExisting downloads will remain in their current location.'**
   String get saveToDownloadsFolderDescription;
 
   /// Notice shown below downloading text when downloading a transcoded stream
@@ -8707,7 +8707,7 @@ abstract class AppLocalizations {
   /// Explanation shown on the library visibility settings screen
   ///
   /// In en, this message translates to:
-  /// **'Toggle home page visibility per library. Restart Moonfin for changes to take effect.'**
+  /// **'Toggle home page visibility per library. Restart Aleflix for changes to take effect.'**
   String get libraryVisibilityDescription;
 
   /// Toggle for showing library in navigation
@@ -8833,7 +8833,7 @@ abstract class AppLocalizations {
   /// Media bar style option: Moonfin
   ///
   /// In en, this message translates to:
-  /// **'Moonfin'**
+  /// **'Aleflix'**
   String get mediaBarModeMoonfin;
 
   /// Media bar style option: MakD
@@ -9487,13 +9487,13 @@ abstract class AppLocalizations {
   /// Description under the Let TV Sleep After setting on Android TV, where the app closes
   ///
   /// In en, this message translates to:
-  /// **'Close Moonfin after this long without a button press so your TV\'s own screensaver and sleep timer can take over. Anything paused is stopped first, so it keeps its resume point.'**
+  /// **'Close Aleflix after this long without a button press so your TV\'s own screensaver and sleep timer can take over. Anything paused is stopped first, so it keeps its resume point.'**
   String get sleepAfterIdleDescriptionAndroid;
 
   /// Description under the Let TV Sleep After setting on Apple TV, where the app stays open
   ///
   /// In en, this message translates to:
-  /// **'After this long without a button press, hand the screen back to your Apple TV\'s own screensaver and sleep setting. Moonfin stays open, so you pick up right where you left off.'**
+  /// **'After this long without a button press, hand the screen back to your Apple TV\'s own screensaver and sleep setting. Aleflix stays open, so you pick up right where you left off.'**
   String get sleepAfterIdleDescriptionAppleTv;
 
   /// Setting for max age rating
@@ -9577,7 +9577,7 @@ abstract class AppLocalizations {
   /// Screensaver backdrop: Moonfin
   ///
   /// In en, this message translates to:
-  /// **'Moonfin'**
+  /// **'Aleflix'**
   String get screensaverBackdropMoonfin;
 
   /// Screensaver backdrop: Calm
@@ -9607,7 +9607,7 @@ abstract class AppLocalizations {
   /// Screensaver component: Moonfin Logo
   ///
   /// In en, this message translates to:
-  /// **'Moonfin Logo'**
+  /// **'Aleflix Logo'**
   String get screensaverComponentMoonfinLogo;
 
   /// Screensaver component: Runner
@@ -10189,7 +10189,7 @@ abstract class AppLocalizations {
   /// Displayed source code repository URL
   ///
   /// In en, this message translates to:
-  /// **'https://github.com/Moonfin-Client/Moonfin-Core'**
+  /// **'https://github.com/alejandrok5/aleflix'**
   String get sourceCodeUrl;
 
   /// Button to check for updates
@@ -10483,7 +10483,7 @@ abstract class AppLocalizations {
   /// Button to play available media in Moonfin
   ///
   /// In en, this message translates to:
-  /// **'Play in Moonfin'**
+  /// **'Play in Aleflix'**
   String get playInMoonfin;
 
   /// Label above the name of whoever requested media, where the name sits on its own line
@@ -10561,7 +10561,7 @@ abstract class AppLocalizations {
   /// Snackbar when Seerr item cannot be found in Jellyfin
   ///
   /// In en, this message translates to:
-  /// **'Item not found in your Moonfin library'**
+  /// **'Item not found in your Aleflix library'**
   String get itemNotFoundInLibrary;
 
   /// Snackbar when library search fails
@@ -14107,7 +14107,7 @@ abstract class AppLocalizations {
   /// No description provided for @adminServerRebootMessage.
   ///
   /// In en, this message translates to:
-  /// **'Server reboot in progress, please restart Moonfin'**
+  /// **'Server reboot in progress, please restart Aleflix'**
   String get adminServerRebootMessage;
 
   /// No description provided for @adminActiveSessions.
@@ -20761,7 +20761,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsLibraryVisibilitySubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Toggle home page visibility per library. Restart Moonfin for changes to take effect.'**
+  /// **'Toggle home page visibility per library. Restart Aleflix for changes to take effect.'**
   String get settingsLibraryVisibilitySubtitle;
 
   /// No description provided for @settingsMediaBarAndLocalPreviews.
@@ -20971,7 +20971,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsSupportMoonfin.
   ///
   /// In en, this message translates to:
-  /// **'Support Moonfin'**
+  /// **'Support Aleflix'**
   String get settingsSupportMoonfin;
 
   /// No description provided for @settingsSupportMoonfinSubtitle.
@@ -21007,7 +21007,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsPrivacyPolicySubtitle.
   ///
   /// In en, this message translates to:
-  /// **'How Moonfin handles your data'**
+  /// **'How Aleflix handles your data'**
   String get settingsPrivacyPolicySubtitle;
 
   /// No description provided for @settingsCheckForUpdates.
@@ -21019,7 +21019,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsCheckForUpdatesSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Check for the latest Moonfin release'**
+  /// **'Check for the latest Aleflix release'**
   String get settingsCheckForUpdatesSubtitle;
 
   /// Option label to show both progress bar and countdown timer on media segment countdown overlay
@@ -21799,7 +21799,7 @@ abstract class AppLocalizations {
   /// No description provided for @savedThemesDescription.
   ///
   /// In en, this message translates to:
-  /// **'These are themes downloaded from the Moonfin plugin for the current server. Deleting removes only this local copy.'**
+  /// **'These are themes downloaded from the Moonbase plugin for the current server. Deleting removes only this local copy.'**
   String get savedThemesDescription;
 
   /// No description provided for @savedThemesEmpty.
@@ -21835,7 +21835,7 @@ abstract class AppLocalizations {
   /// No description provided for @themeEditorSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Open the Moonfin Theme Editor in your browser'**
+  /// **'Open the Aleflix Theme Editor in your browser'**
   String get themeEditorSubtitle;
 
   /// No description provided for @homeScreen.
@@ -22081,13 +22081,13 @@ abstract class AppLocalizations {
   /// No description provided for @sinceYouWatchedSourceDescription.
   ///
   /// In en, this message translates to:
-  /// **'Choose recommendation source (Moonfin Recommends custom local algorithm, Jellyfin Recommends server engine, or TMDb\'s similarity metrics. Note: Online recommendations require Seerr integration).'**
+  /// **'Choose recommendation source (Aleflix Recommends custom local algorithm, Jellyfin Recommends server engine, or TMDb\'s similarity metrics. Note: Online recommendations require Seerr integration).'**
   String get sinceYouWatchedSourceDescription;
 
   /// No description provided for @sinceYouWatchedSourceLocal.
   ///
   /// In en, this message translates to:
-  /// **'Moonfin Recommends'**
+  /// **'Aleflix Recommends'**
   String get sinceYouWatchedSourceLocal;
 
   /// No description provided for @sinceYouWatchedSourceServer.
@@ -22615,7 +22615,7 @@ abstract class AppLocalizations {
   /// No description provided for @cadenceTipSlowdownHint.
   ///
   /// In en, this message translates to:
-  /// **'Or turn on Smooth 24 fps on a 60 Hz TV in Moonfin under Playback > Quality & Decoding.'**
+  /// **'Or turn on Smooth 24 fps on a 60 Hz TV in Aleflix under Playback > Quality & Decoding.'**
   String get cadenceTipSlowdownHint;
 
   /// No description provided for @useExternalPlayer.
@@ -22693,7 +22693,7 @@ abstract class AppLocalizations {
   /// No description provided for @webDiagnosticsTitle.
   ///
   /// In en, this message translates to:
-  /// **'Moonfin Web Diagnostics'**
+  /// **'Aleflix Web Diagnostics'**
   String get webDiagnosticsTitle;
 
   /// No description provided for @webDiagnosticsIntro.
@@ -22717,13 +22717,13 @@ abstract class AppLocalizations {
   /// No description provided for @webDiagnosticsMixedContentFailureBody.
   ///
   /// In en, this message translates to:
-  /// **'Moonfin detected an HTTPS page trying to call an HTTP server URL. Browsers block this request before it reaches your server.'**
+  /// **'Aleflix detected an HTTPS page trying to call an HTTP server URL. Browsers block this request before it reaches your server.'**
   String get webDiagnosticsMixedContentFailureBody;
 
   /// No description provided for @webDiagnosticsCorsFailureBody.
   ///
   /// In en, this message translates to:
-  /// **'Moonfin detected a browser-level request failure that is commonly caused by missing CORS or preflight headers on the media server.'**
+  /// **'Aleflix detected a browser-level request failure that is commonly caused by missing CORS or preflight headers on the media server.'**
   String get webDiagnosticsCorsFailureBody;
 
   /// Target URL shown in diagnostics summary
@@ -22807,7 +22807,7 @@ abstract class AppLocalizations {
   /// No description provided for @webDiagnosticsMixedContentFix.
   ///
   /// In en, this message translates to:
-  /// **'Fix: serve your media server or proxy endpoint via HTTPS, or load Moonfin over HTTP on trusted local networks only.'**
+  /// **'Fix: serve your media server or proxy endpoint via HTTPS, or load Aleflix over HTTP on trusted local networks only.'**
   String get webDiagnosticsMixedContentFix;
 
   /// No description provided for @webDiagnosticsNoMixedContentDetected.
@@ -25870,7 +25870,7 @@ abstract class AppLocalizations {
   /// Explanatory description under the rendering engine setting.
   ///
   /// In en, this message translates to:
-  /// **'Impeller is Flutter\'s modern GPU renderer for smoother animations and less stutter. On some TV boxes and older GPUs it can cause glitches or black video; switch it Off if you see those. Automatic picks the best default for your device. Restart Moonfin to apply.'**
+  /// **'Impeller is Flutter\'s modern GPU renderer for smoother animations and less stutter. On some TV boxes and older GPUs it can cause glitches or black video; switch it Off if you see those. Automatic picks the best default for your device. Restart Aleflix to apply.'**
   String get impellerRenderingSubtitle;
 
   /// No description provided for @impellerAuto.
@@ -25900,7 +25900,7 @@ abstract class AppLocalizations {
   /// Body of the dialog shown after changing the rendering engine.
   ///
   /// In en, this message translates to:
-  /// **'Moonfin needs to restart to change the rendering engine. Close the app now, then reopen it to apply.'**
+  /// **'Aleflix needs to restart to change the rendering engine. Close the app now, then reopen it to apply.'**
   String get impellerRestartMessage;
 
   /// Button that closes the app so the new rendering engine takes effect on next launch.
@@ -26890,13 +26890,13 @@ abstract class AppLocalizations {
   /// Line under the Moonbase row on the last setup wizard step
   ///
   /// In en, this message translates to:
-  /// **'A free server plugin that unlocks more of Moonfin'**
+  /// **'A free server plugin that unlocks more of Aleflix'**
   String get setupMoonbaseHint;
 
   /// First line of the Moonbase dialog, followed by a list of features
   ///
   /// In en, this message translates to:
-  /// **'Moonbase is free and runs on your server. With it, Moonfin gets:'**
+  /// **'Moonbase is free and runs on your server. With it, Aleflix gets:'**
   String get setupMoonbaseIntro;
 
   /// Moonbase dialog line for users who aren't a server admin, above a QR code or link to the install steps
@@ -27130,7 +27130,7 @@ abstract class AppLocalizations {
   /// Shown under transcoded options when choosing the quality of an auto-download subscription
   ///
   /// In en, this message translates to:
-  /// **'Transcoded qualities only download while Moonfin is open. Original quality also downloads in the background.'**
+  /// **'Transcoded qualities only download while Aleflix is open. Original quality also downloads in the background.'**
   String get autoDownloadTranscodedForegroundNote;
 
   /// Shown under a running transcoded download that a subscription queued
@@ -27142,7 +27142,7 @@ abstract class AppLocalizations {
   /// Short note next to a followed series in a transcoded quality
   ///
   /// In en, this message translates to:
-  /// **'Downloads only while Moonfin is open'**
+  /// **'Downloads only while Aleflix is open'**
   String get autoDownloadForegroundOnly;
 
   /// Title of the quality sheet when it is opened to create an auto-download subscription
@@ -27178,7 +27178,7 @@ abstract class AppLocalizations {
   /// Explains the smart downloads switch, including that watched episodes are deleted
   ///
   /// In en, this message translates to:
-  /// **'When you finish an episode on any device, Moonfin downloads the next ones. Episodes it downloads are deleted once watched.'**
+  /// **'When you finish an episode on any device, Aleflix downloads the next ones. Episodes it downloads are deleted once watched.'**
   String get smartDownloadsEnableDescription;
 
   /// Setting for how many unwatched episodes of a series stay downloaded after one is watched
@@ -27322,19 +27322,19 @@ abstract class AppLocalizations {
   /// Explains the background refresh setting
   ///
   /// In en, this message translates to:
-  /// **'Allow the system to check for new episodes periodically while Moonfin is closed'**
+  /// **'Allow the system to check for new episodes periodically while Aleflix is closed'**
   String get autoDownloadBackgroundRefreshSubtitle;
 
   /// Shown when iOS forbids background refresh for the app
   ///
   /// In en, this message translates to:
-  /// **'Background App Refresh is disabled for Moonfin. Enable it in iOS Settings.'**
+  /// **'Background App Refresh is disabled for Aleflix. Enable it in iOS Settings.'**
   String get autoDownloadBackgroundRefreshDenied;
 
   /// Shown when Android restricts the app from running in the background
   ///
   /// In en, this message translates to:
-  /// **'Background usage is restricted for Moonfin in Android Settings.'**
+  /// **'Background usage is restricted for Aleflix in Android Settings.'**
   String get autoDownloadBackgroundRestrictedAndroid;
 
   /// Button that runs a subscription check immediately
@@ -27632,7 +27632,7 @@ abstract class AppLocalizations {
   /// Apple TV settings subtitle for the Top Shelf option
   ///
   /// In en, this message translates to:
-  /// **'What the Apple TV home screen shows above the Moonfin icon when it is selected. This setting stays on this device.'**
+  /// **'What the Apple TV home screen shows above the Aleflix icon when it is selected. This setting stays on this device.'**
   String get topShelfDescription;
 
   /// Top Shelf option that shows a carousel of the newest items from the home screen's Latest rows
@@ -27644,7 +27644,7 @@ abstract class AppLocalizations {
   /// Top Shelf option that shows only the static Moonfin logo banner, nothing from the library
   ///
   /// In en, this message translates to:
-  /// **'Moonfin banner'**
+  /// **'Aleflix banner'**
   String get topShelfAppBanner;
 
   /// iPhone playback setting that holds the picture back from the camera housing in landscape
@@ -28992,7 +28992,7 @@ abstract class AppLocalizations {
   /// Body of the dialog offering to add a Silo server natively instead of through its Jellyfin-compatible service
   ///
   /// In en, this message translates to:
-  /// **'This address is the Jellyfin-compatible service of {serverName}. Moonfin can connect to Silo directly at {address}, with Silo\'s own features.'**
+  /// **'This address is the Jellyfin-compatible service of {serverName}. Aleflix can connect to Silo directly at {address}, with Silo\'s own features.'**
   String siloNativeOfferMessage(String serverName, String address);
 
   /// Button: add the Silo server through its native API
@@ -29010,13 +29010,13 @@ abstract class AppLocalizations {
   /// Shown when a Silo server no longer speaks the API this version of Moonfin uses (its API is newer)
   ///
   /// In en, this message translates to:
-  /// **'This Silo server needs a newer version of Moonfin. Update Moonfin to use it.'**
+  /// **'This Silo server needs a newer version of Aleflix. Update Aleflix to use it.'**
   String get siloAppUpdateRequired;
 
   /// Shown when a Silo server's API is older than the one this version of Moonfin uses
   ///
   /// In en, this message translates to:
-  /// **'This Silo server is too old for this version of Moonfin. Update Silo to use it.'**
+  /// **'This Silo server is too old for this version of Aleflix. Update Silo to use it.'**
   String get siloServerUpdateRequired;
 
   /// Shown when Silo refuses a request because of too many attempts (HTTP 429) without saying how long to wait
@@ -29064,7 +29064,7 @@ abstract class AppLocalizations {
   /// Player message: the Silo server no longer speaks the playback protocol this version of Moonfin uses
   ///
   /// In en, this message translates to:
-  /// **'This Silo server needs a newer version of Moonfin to play.'**
+  /// **'This Silo server needs a newer version of Aleflix to play.'**
   String get siloPlaybackUpdateRequired;
 
   /// Player message: an administrator ended this playback session on the Silo server
@@ -29196,7 +29196,7 @@ abstract class AppLocalizations {
   /// Explains what Unlink does on the RomM account screen
   ///
   /// In en, this message translates to:
-  /// **'Unlinking stops Moonfin from using your RomM key. The key stays in RomM until you remove it from your API tokens there.'**
+  /// **'Unlinking stops Aleflix from using your RomM key. The key stays in RomM until you remove it from your API tokens there.'**
   String get rommUnlinkNote;
 
   /// Button that unlinks the user's RomM account
@@ -29220,7 +29220,7 @@ abstract class AppLocalizations {
   /// Error when the server couldn't reach RomM while linking
   ///
   /// In en, this message translates to:
-  /// **'Moonfin couldn\'t reach RomM. Try again in a moment.'**
+  /// **'Aleflix couldn\'t reach RomM. Try again in a moment.'**
   String get rommUnreachable;
 
   /// Shown on the RomM account screen when the server has no RomM library
@@ -29754,7 +29754,7 @@ abstract class AppLocalizations {
   /// Calendar message when the server can't reach Sonarr and Radarr yet
   ///
   /// In en, this message translates to:
-  /// **'An admin needs to sign in to Seerr in Moonfin before the calendar can load.'**
+  /// **'An admin needs to sign in to Seerr in Aleflix before the calendar can load.'**
   String get calendarProblemNeedsSeerr;
 
   /// Calendar message when the server has no Sonarr or Radarr

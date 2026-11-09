@@ -43,7 +43,7 @@ class _AboutCategoryScreen extends StatelessWidget {
                 subtitle: Text(l10n.sourceCodeUrl),
                 onTap: () => showQrOrLaunch(
                   context,
-                  url: 'https://github.com/Moonfin-Client/Moonfin-Core',
+                  url: AleflixBrand.repoUrl,
                   title: l10n.sourceCode,
                 ),
               ),
@@ -53,7 +53,7 @@ class _AboutCategoryScreen extends StatelessWidget {
                 subtitle: Text(l10n.settingsReportAnIssueSubtitle),
                 onTap: () => showQrOrLaunch(
                   context,
-                  url: 'https://github.com/Moonfin-Client/Moonfin-Core/issues',
+                  url: AleflixBrand.issuesUrl,
                   title: l10n.settingsReportAnIssue,
                 ),
               ),
@@ -88,20 +88,17 @@ class _AboutCategoryScreen extends StatelessWidget {
                 },
               ),
               _TvSettingsListTile(
-                leading: const Icon(Icons.forum),
-                title: Text(l10n.settingsJoinDiscord),
-                subtitle: Text(l10n.settingsJoinDiscordSubtitle),
+                leading: const Icon(Icons.favorite_border),
+                title: const Text('Built on ${AleflixBrand.upstreamName}'),
+                subtitle: const Text(
+                  '${AleflixBrand.appName} is based on ${AleflixBrand.upstreamName}, '
+                  'the open-source Jellyfin client, under the GPL-2.0 license',
+                ),
                 onTap: () => showQrOrLaunch(
                   context,
-                  url: 'https://discord.gg/moonfin',
-                  title: l10n.settingsJoinTheDiscord,
+                  url: AleflixBrand.upstreamUrl,
+                  title: AleflixBrand.upstreamName,
                 ),
-              ),
-              _TvSettingsListTile(
-                leading: const Icon(Icons.favorite),
-                title: Text(l10n.settingsSupportMoonfin),
-                subtitle: Text(l10n.settingsSupportMoonfinSubtitle),
-                onTap: () => showSupportDialog(context),
               ),
             ],
           ),
@@ -114,8 +111,7 @@ class _AboutCategoryScreen extends StatelessWidget {
                 subtitle: Text(l10n.settingsOpenSourceLicenseNotices),
                 onTap: () => showQrOrLaunch(
                   context,
-                  url:
-                      'https://github.com/Moonfin-Client/Moonfin-Core/blob/main/LICENSE',
+                  url: AleflixBrand.licenseUrl,
                   title: l10n.settingsLicenses,
                 ),
               ),
@@ -125,7 +121,7 @@ class _AboutCategoryScreen extends StatelessWidget {
                 subtitle: Text(l10n.settingsPrivacyPolicySubtitle),
                 onTap: () => showQrOrLaunch(
                   context,
-                  url: 'https://moonfin.io/privacy',
+                  url: AleflixBrand.privacyPolicyUrl,
                   title: l10n.settingsPrivacyPolicy,
                 ),
               ),

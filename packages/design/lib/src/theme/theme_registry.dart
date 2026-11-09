@@ -2,9 +2,7 @@ import 'oled_derivation.dart';
 import 'oled_tuning.dart';
 import 'theme_spec.dart';
 import 'themes/moonfin_theme_spec.dart';
-import 'themes/neon_pulse_theme_spec.dart';
 import 'themes/glass_theme_spec.dart';
-import 'themes/eightbit_hero_theme_spec.dart';
 
 class ThemeRegistry {
   const ThemeRegistry._();
@@ -22,11 +20,12 @@ class ThemeRegistry {
     eightbitHeroId,
   };
 
+  // Aleflix: Neon Pulse and 8-bit Hero are not offered. Their ids stay in
+  // [builtInIds] so nothing else can claim them, and a saved selection of
+  // either resolves to the default (Aleflix Noir, under [moonfinId]).
   static const Map<String, ThemeSpec> _builtIns = {
     moonfinId: moonfinThemeSpec,
-    neonPulseId: neonPulseThemeSpec,
     glassId: glassThemeSpec,
-    eightbitHeroId: eightbitHeroThemeSpec,
   };
 
   static final Map<String, ThemeSpec> _custom = {};

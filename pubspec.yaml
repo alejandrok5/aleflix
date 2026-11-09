@@ -314,6 +314,25 @@ flutter:
           weight: 500
         - asset: assets/fonts/Roboto-Bold.ttf
           weight: 700
+    # Aleflix Noir: Inter for UI copy, Fraunces for titles.
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+    - family: Fraunces
+      fonts:
+        - asset: assets/fonts/Fraunces-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Fraunces-Regular.ttf
+        - asset: assets/fonts/Fraunces-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Fraunces-SemiBold.ttf
+          weight: 600
     - family: NeonPulseDisplay
       fonts:
         - asset: assets/fonts/Orbitron-Regular.ttf

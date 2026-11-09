@@ -1,6 +1,6 @@
 {
     "@@locale": "yue_HK",
-    "appTitle": "Moonfin",
+    "appTitle": "Aleflix",
     "@appTitle": {
         "description": "The application title"
     },
@@ -78,7 +78,7 @@
     "@selectServer": {
         "description": "Button to navigate back to server selection"
     },
-    "appVersionFooter": "Moonfin version {version}",
+    "appVersionFooter": "Aleflix version {version}",
     "@appVersionFooter": {
         "description": "App version shown in footer",
         "placeholders": {
@@ -152,7 +152,7 @@
     "@secureStorageUnavailable": {
         "description": "Dialog title when system keyring is inaccessible"
     },
-    "secureStorageUnavailableMessage": "Moonfin 無法存取您的系統金鑰環。登入可以繼續，但在密鑰環解鎖之前，安全令牌儲存可能不可用。",
+    "secureStorageUnavailableMessage": "Aleflix 無法存取您的系統金鑰環。登入可以繼續，但在密鑰環解鎖之前，安全令牌儲存可能不可用。",
     "@secureStorageUnavailableMessage": {
         "description": "Explanation when secure storage is not available"
     },
@@ -164,15 +164,15 @@
     "@settingsAppearanceTheme": {
         "description": "Title for the theme selection screen and theme settings entry"
     },
-    "settingsAppearanceThemeSubtitle": "在 Moonfin 和 Neon Pulse 之間切換，無需重新啟動應用程式",
+    "settingsAppearanceThemeSubtitle": "在 Aleflix 和 Neon Pulse 之間切換，無需重新啟動應用程式",
     "@settingsAppearanceThemeSubtitle": {
         "description": "Subtitle for the theme selection screen and theme settings entry"
     },
-    "themeMoonfin": "Moonfin",
+    "themeMoonfin": "Aleflix Noir",
     "@themeMoonfin": {
         "description": "Display name for the Moonfin theme"
     },
-    "themeMoonfinSubtitle": "目前的 Moonfin 外觀你們都喜歡",
+    "themeMoonfinSubtitle": "目前的 Aleflix 外觀你們都喜歡",
     "@themeMoonfinSubtitle": {
         "description": "Preview description for the Moonfin theme"
     },
@@ -245,7 +245,7 @@
             }
         }
     },
-    "exitApp": "退出Moonfin？",
+    "exitApp": "退出Aleflix？",
     "@exitApp": {
         "description": "Title of exit confirmation dialog"
     },
@@ -3072,7 +3072,7 @@
     "@customMpvConfPath": {
         "description": "Setting for custom mpv.conf path"
     },
-    "notSetMpvConf": "未設定。 Moonfin 將嘗試應用程式/資料資料夾中的預設 mpv.conf。",
+    "notSetMpvConf": "未設定。 Aleflix 將嘗試應用程式/資料資料夾中的預設 mpv.conf。",
     "@notSetMpvConf": {
         "description": "Description when no custom mpv.conf is set"
     },
@@ -3299,7 +3299,7 @@
     "@saveToDownloadsFolder": {
         "description": "Setting for saving to downloads folder"
     },
-    "downloadsVisibleToOtherApps": "Downloads/Moonfin — 對其他應用程式可見",
+    "downloadsVisibleToOtherApps": "Downloads/Aleflix — 對其他應用程式可見",
     "@downloadsVisibleToOtherApps": {
         "description": "Description for downloads folder visibility"
     },
@@ -3335,7 +3335,7 @@
     "@saveToDownloadsFolderQuestion": {
         "description": "Dialog title for saving to downloads folder"
     },
-    "saveToDownloadsFolderDescription": "下載的媒體將會儲存到您裝置上的 Downloads/Moonfin 中。這些檔案將對其他應用程式可見，例如您的圖庫或音樂播放器。\n\n現有下載將保留在目前位置。",
+    "saveToDownloadsFolderDescription": "下載的媒體將會儲存到您裝置上的 Downloads/Aleflix 中。這些檔案將對其他應用程式可見，例如您的圖庫或音樂播放器。\n\n現有下載將保留在目前位置。",
     "@saveToDownloadsFolderDescription": {
         "description": "Description for saving to downloads folder"
     },
@@ -3467,7 +3467,7 @@
     "@libraryVisibility": {
         "description": "Section title for library visibility"
     },
-    "libraryVisibilityDescription": "切換每個庫的主頁可見性。重新啟動 Moonfin 以使變更生效。",
+    "libraryVisibilityDescription": "切換每個庫的主頁可見性。重新啟動 Aleflix 以使變更生效。",
     "@libraryVisibilityDescription": {
         "description": "Explanation shown on the library visibility settings screen"
     },
@@ -3512,11 +3512,11 @@
     "@mediaBarMode": {
         "description": "Setting for choosing media bar style"
     },
-    "mediaBarModeDescription": "在 Moonfin、MakD 之間進行選擇，或關閉媒體列",
+    "mediaBarModeDescription": "在 Aleflix、MakD 之間進行選擇，或關閉媒體列",
     "@mediaBarModeDescription": {
         "description": "Description for media bar style setting"
     },
-    "mediaBarModeMoonfin": "Moonfin",
+    "mediaBarModeMoonfin": "Aleflix",
     "@mediaBarModeMoonfin": {
         "description": "Media bar style option: Moonfin"
     },
@@ -4020,7 +4020,7 @@
     "@sourceCode": {
         "description": "Link to source code"
     },
-    "sourceCodeUrl": "https://github.com/Moonfin-Client/Moonfin-Core",
+    "sourceCodeUrl": "https://github.com/alejandrok5/aleflix",
     "@sourceCodeUrl": {
         "description": "Displayed source code repository URL"
     },
@@ -4184,7 +4184,7 @@
     "@cancelRequest": {
         "description": "Button/dialog title to cancel a media request"
     },
-    "playInMoonfin": "玩 Moonfin",
+    "playInMoonfin": "玩 Aleflix",
     "@playInMoonfin": {
         "description": "Button to play available media in Moonfin"
     },
@@ -4238,7 +4238,7 @@
     "@keep": {
         "description": "Button to keep/dismiss a cancel dialog"
     },
-    "itemNotFoundInLibrary": "在您的 Moonfin 庫中找不到項目",
+    "itemNotFoundInLibrary": "在您的 Aleflix 庫中找不到項目",
     "@itemNotFoundInLibrary": {
         "description": "Snackbar when Seerr item cannot be found in Jellyfin"
     },
@@ -4540,7 +4540,7 @@
         }
     },
     "adminServerRebootInProgress": "伺服器正在重啟",
-    "adminServerRebootMessage": "伺服器正在重新啟動，請重新啟動 Moonfin",
+    "adminServerRebootMessage": "伺服器正在重新啟動，請重新啟動 Aleflix",
     "adminActiveSessions": "活躍會話",
     "adminSessionsLoadFailed": "無法載入會話",
     "adminNoActiveSessions": "沒有活動會話",
@@ -6416,7 +6416,7 @@
     "settingsShowGenresButtonInNavigation": "在導覽列中顯示流派按鈕",
     "settingsShowFavoritesButtonInNavigation": "在導覽列中顯示收藏夾按鈕",
     "settingsShowLibrariesButtonInNavigation": "在導覽列中顯示庫按鈕",
-    "settingsLibraryVisibilitySubtitle": "切換每個庫的主頁可見性。重新啟動 Moonfin 以使變更生效。",
+    "settingsLibraryVisibilitySubtitle": "切換每個庫的主頁可見性。重新啟動 Aleflix 以使變更生效。",
     "settingsMediaBarAndLocalPreviews": "媒體欄和本地預覽",
     "settingsVisualOverlays": "視覺疊加",
     "settingsSeasonalSurprise": "季節性驚喜",
@@ -6435,14 +6435,14 @@
     "settingsJoinDiscord": "加入 Discord",
     "settingsJoinDiscordSubtitle": "與社群聊天",
     "settingsJoinTheDiscord": "加入 Discord",
-    "settingsSupportMoonfin": "支援Moonfin",
+    "settingsSupportMoonfin": "支援Aleflix",
     "settingsLegal": "合法的",
     "settingsLicenses": "許可證",
     "settingsOpenSourceLicenseNotices": "開源授權聲明",
     "settingsPrivacyPolicy": "隱私權政策",
-    "settingsPrivacyPolicySubtitle": "Moonfin 如何處理您的數據",
+    "settingsPrivacyPolicySubtitle": "Aleflix 如何處理您的數據",
     "settingsCheckForUpdates": "檢查更新",
-    "settingsCheckForUpdatesSubtitle": "檢查最新的 Moonfin 版本",
+    "settingsCheckForUpdatesSubtitle": "檢查最新的 Aleflix 版本",
     "settingsPoweredByFlutter": "由顫動提供支持",
     "settingsLicenseNoticesCount": "{count, plural, one {# license notice} other {# license notices}}",
     "@settingsLicenseNoticesCount": {
@@ -6908,7 +6908,7 @@
         }
     },
     "savedThemesTitle": "Saved themes",
-    "savedThemesDescription": "These are themes downloaded from the Moonfin plugin for the current server. Deleting removes only this local copy.",
+    "savedThemesDescription": "These are themes downloaded from the Moonbase plugin for the current server. Deleting removes only this local copy.",
     "savedThemesEmpty": "No saved themes were found for this server.",
     "savedThemesCurrentThemeId": "{themeId} • Currently active",
     "@savedThemesCurrentThemeId": {
@@ -6922,7 +6922,7 @@
     "savedThemesDeleteTooltip": "Delete saved theme",
     "savedThemesManageSubtitle": "Manage downloaded plugin themes on this device",
     "themeEditor": "Theme Editor",
-    "themeEditorSubtitle": "Open the Moonfin Theme Editor in your browser",
+    "themeEditorSubtitle": "Open the Aleflix Theme Editor in your browser",
     "homeScreen": "Home Screen",
     "bottomBar": "Bottom Bar",
     "homeRowsStyleClassic": "Classic",
@@ -6971,12 +6971,12 @@
     "preferSdhSubtitles": "Prefer SDH subtitles",
     "preferSdhSubtitlesSubtitle": "Prioritize SDH/CC subtitle tracks when auto-selecting.",
     "webDiagnostics": "Web diagnostics",
-    "webDiagnosticsTitle": "Moonfin Web Diagnostics",
+    "webDiagnosticsTitle": "Aleflix Web Diagnostics",
     "webDiagnosticsIntro": "Use this page to diagnose browser connectivity issues (CORS, mixed content, and discovery settings).",
     "webDiagnosticsDetectedMixedContentFailure": "Detected Mixed-Content Failure",
     "webDiagnosticsDetectedCorsPreflightFailure": "Detected CORS/Preflight Failure",
-    "webDiagnosticsMixedContentFailureBody": "Moonfin detected an HTTPS page trying to call an HTTP server URL. Browsers block this request before it reaches your server.",
-    "webDiagnosticsCorsFailureBody": "Moonfin detected a browser-level request failure that is commonly caused by missing CORS or preflight headers on the media server.",
+    "webDiagnosticsMixedContentFailureBody": "Aleflix detected an HTTPS page trying to call an HTTP server URL. Browsers block this request before it reaches your server.",
+    "webDiagnosticsCorsFailureBody": "Aleflix detected a browser-level request failure that is commonly caused by missing CORS or preflight headers on the media server.",
     "webDiagnosticsTargetUrl": "Target URL: {url}",
     "@webDiagnosticsTargetUrl": {
         "description": "Target URL shown in diagnostics summary",
@@ -7006,7 +7006,7 @@
     "notConfigured": "not configured",
     "webDiagnosticsMixedContent": "Mixed Content",
     "webDiagnosticsMixedContentDetected": "This page is loaded over HTTPS, but one or more configured URLs are HTTP. Browsers block HTTPS pages from calling HTTP APIs.",
-    "webDiagnosticsMixedContentFix": "Fix: serve your media server or proxy endpoint via HTTPS, or load Moonfin over HTTP on trusted local networks only.",
+    "webDiagnosticsMixedContentFix": "Fix: serve your media server or proxy endpoint via HTTPS, or load Aleflix over HTTP on trusted local networks only.",
     "webDiagnosticsNoMixedContentDetected": "No obvious mixed-content configuration detected from current runtime settings.",
     "webDiagnosticsCorsChecklist": "CORS Checklist",
     "webDiagnosticsCorsChecklistItem1": "• Allow the browser origin in Access-Control-Allow-Origin.",

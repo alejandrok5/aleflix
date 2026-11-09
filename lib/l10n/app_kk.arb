@@ -1,6 +1,6 @@
 {
     "@@locale": "kk",
-    "appTitle": "Moonfin",
+    "appTitle": "Aleflix",
     "@appTitle": {
         "description": "The application title"
     },
@@ -82,7 +82,7 @@
     "@selectServer": {
         "description": "Button to navigate back to server selection"
     },
-    "appVersionFooter": "Moonfin нұсқасы {version}",
+    "appVersionFooter": "Aleflix нұсқасы {version}",
     "@appVersionFooter": {
         "description": "App version shown in footer",
         "placeholders": {
@@ -156,7 +156,7 @@
     "@secureStorageUnavailable": {
         "description": "Dialog title when system keyring is inaccessible"
     },
-    "secureStorageUnavailableMessage": "Moonfin жүйе кілттеріне қол жеткізе алмады. Жүйеге кіруді жалғастыруға болады, бірақ кілт сақинасының құлпы ашылғанша қауіпсіз таңбалауыш қоймасы қолжетімсіз болуы мүмкін.",
+    "secureStorageUnavailableMessage": "Aleflix жүйе кілттеріне қол жеткізе алмады. Жүйеге кіруді жалғастыруға болады, бірақ кілт сақинасының құлпы ашылғанша қауіпсіз таңбалауыш қоймасы қолжетімсіз болуы мүмкін.",
     "@secureStorageUnavailableMessage": {
         "description": "Explanation when secure storage is not available"
     },
@@ -168,15 +168,15 @@
     "@settingsAppearanceTheme": {
         "description": "Title for the theme selection screen and theme settings entry"
     },
-    "settingsAppearanceThemeSubtitle": "Қолданбаны қайта іске қоспай, Moonfin және Neon Pulse арасында ауысыңыз",
+    "settingsAppearanceThemeSubtitle": "Қолданбаны қайта іске қоспай, Aleflix және Neon Pulse арасында ауысыңыз",
     "@settingsAppearanceThemeSubtitle": {
         "description": "Subtitle for the theme selection screen and theme settings entry"
     },
-    "themeMoonfin": "Moonfin",
+    "themeMoonfin": "Aleflix Noir",
     "@themeMoonfin": {
         "description": "Display name for the Moonfin theme"
     },
-    "themeMoonfinSubtitle": "Ағымдағы Moonfin келбеті бәріңізге ұнады",
+    "themeMoonfinSubtitle": "Ағымдағы Aleflix келбеті бәріңізге ұнады",
     "@themeMoonfinSubtitle": {
         "description": "Preview description for the Moonfin theme"
     },
@@ -249,7 +249,7 @@
             }
         }
     },
-    "exitApp": "Moonfin шығу керек пе?",
+    "exitApp": "Aleflix шығу керек пе?",
     "@exitApp": {
         "description": "Title of exit confirmation dialog"
     },
@@ -3080,7 +3080,7 @@
     "@customMpvConfPath": {
         "description": "Setting for custom mpv.conf path"
     },
-    "notSetMpvConf": "Орнатылмаған. Moonfin қолданба/деректер қалталарында әдепкі mpv.conf файлын қолданып көреді.",
+    "notSetMpvConf": "Орнатылмаған. Aleflix қолданба/деректер қалталарында әдепкі mpv.conf файлын қолданып көреді.",
     "@notSetMpvConf": {
         "description": "Description when no custom mpv.conf is set"
     },
@@ -3307,7 +3307,7 @@
     "@saveToDownloadsFolder": {
         "description": "Setting for saving to downloads folder"
     },
-    "downloadsVisibleToOtherApps": "Жүктеулер/Moonfin — басқа қолданбаларға көрінеді",
+    "downloadsVisibleToOtherApps": "Жүктеулер/Aleflix — басқа қолданбаларға көрінеді",
     "@downloadsVisibleToOtherApps": {
         "description": "Description for downloads folder visibility"
     },
@@ -3343,7 +3343,7 @@
     "@saveToDownloadsFolderQuestion": {
         "description": "Dialog title for saving to downloads folder"
     },
-    "saveToDownloadsFolderDescription": "Жүктеп алынған медиа құрылғыңыздағы Жүктеулер/Moonfin ішіне сақталады. Бұл файлдар галерея немесе музыка ойнатқышы сияқты басқа қолданбаларға көрінеді.\n\nБар жүктеп алынған файлдар ағымдағы орнында қалады.",
+    "saveToDownloadsFolderDescription": "Жүктеп алынған медиа құрылғыңыздағы Жүктеулер/Aleflix ішіне сақталады. Бұл файлдар галерея немесе музыка ойнатқышы сияқты басқа қолданбаларға көрінеді.\n\nБар жүктеп алынған файлдар ағымдағы орнында қалады.",
     "@saveToDownloadsFolderDescription": {
         "description": "Description for saving to downloads folder"
     },
@@ -3475,7 +3475,7 @@
     "@libraryVisibility": {
         "description": "Section title for library visibility"
     },
-    "libraryVisibilityDescription": "Әрбір кітапхананың басты бетінің көріну мүмкіндігін ауыстырып-қосқыш. Өзгерістердің күшіне енуі үшін Moonfin қолданбасын қайта іске қосыңыз.",
+    "libraryVisibilityDescription": "Әрбір кітапхананың басты бетінің көріну мүмкіндігін ауыстырып-қосқыш. Өзгерістердің күшіне енуі үшін Aleflix қолданбасын қайта іске қосыңыз.",
     "@libraryVisibilityDescription": {
         "description": "Explanation shown on the library visibility settings screen"
     },
@@ -3524,7 +3524,7 @@
     "@mediaBarModeDescription": {
         "description": "Description for media bar style setting"
     },
-    "mediaBarModeMoonfin": "Moonfin",
+    "mediaBarModeMoonfin": "Aleflix",
     "@mediaBarModeMoonfin": {
         "description": "Media bar style option: Moonfin"
     },
@@ -4084,7 +4084,7 @@
     "@sourceCode": {
         "description": "Link to source code"
     },
-    "sourceCodeUrl": "https://github.com/Moonfin-Client/Moonfin-Core",
+    "sourceCodeUrl": "https://github.com/alejandrok5/aleflix",
     "@sourceCodeUrl": {
         "description": "Displayed source code repository URL"
     },
@@ -4252,7 +4252,7 @@
     "@cancelRequest": {
         "description": "Button/dialog title to cancel a media request"
     },
-    "playInMoonfin": "Moonfin ойынында ойнаңыз",
+    "playInMoonfin": "Aleflix ойынында ойнаңыз",
     "@playInMoonfin": {
         "description": "Button to play available media in Moonfin"
     },
@@ -4306,7 +4306,7 @@
     "@keep": {
         "description": "Button to keep/dismiss a cancel dialog"
     },
-    "itemNotFoundInLibrary": "Элемент Moonfin кітапханасынан табылмады",
+    "itemNotFoundInLibrary": "Элемент Aleflix кітапханасынан табылмады",
     "@itemNotFoundInLibrary": {
         "description": "Snackbar when Seerr item cannot be found in Jellyfin"
     },
@@ -4610,7 +4610,7 @@
         }
     },
     "adminServerRebootInProgress": "Серверді қайта жүктеу орындалуда",
-    "adminServerRebootMessage": "Сервер қайта жүктелуде, Moonfin қайта іске қосыңыз",
+    "adminServerRebootMessage": "Сервер қайта жүктелуде, Aleflix қайта іске қосыңыз",
     "adminActiveSessions": "Белсенді сессиялар",
     "adminSessionsLoadFailed": "Сеанстарды жүктеу сәтсіз аяқталды",
     "adminNoActiveSessions": "Белсенді сеанстар жоқ",
@@ -6498,7 +6498,7 @@
     "settingsShowGenresButtonInNavigation": "Шарлау жолағында жанрлар түймесін көрсетіңіз",
     "settingsShowFavoritesButtonInNavigation": "Навигация жолағында таңдаулылар түймесін көрсетіңіз",
     "settingsShowLibrariesButtonInNavigation": "Шарлау жолағында кітапханалар түймесін көрсетіңіз",
-    "settingsLibraryVisibilitySubtitle": "Әрбір кітапхананың басты бетінің көріну мүмкіндігін ауыстырып-қосқыш. Өзгерістердің күшіне енуі үшін Moonfin қолданбасын қайта іске қосыңыз.",
+    "settingsLibraryVisibilitySubtitle": "Әрбір кітапхананың басты бетінің көріну мүмкіндігін ауыстырып-қосқыш. Өзгерістердің күшіне енуі үшін Aleflix қолданбасын қайта іске қосыңыз.",
     "settingsMediaBarAndLocalPreviews": "Медиа жолағы және жергілікті алдын ала қараулар",
     "settingsVisualOverlays": "Көрнекі қабаттасулар",
     "settingsSeasonalSurprise": "Маусымдық тосынсый",
@@ -6517,14 +6517,14 @@
     "settingsJoinDiscord": "Discord-қа қосылыңыз",
     "settingsJoinDiscordSubtitle": "Қауымдастықпен сөйлесу",
     "settingsJoinTheDiscord": "Discord қосылыңыз",
-    "settingsSupportMoonfin": "Қолдау Moonfin",
+    "settingsSupportMoonfin": "Қолдау Aleflix",
     "settingsLegal": "ЗАҢДЫ",
     "settingsLicenses": "Лицензиялар",
     "settingsOpenSourceLicenseNotices": "Ашық бастапқы лицензия туралы ескертулер",
     "settingsPrivacyPolicy": "Құпиялылық саясаты",
-    "settingsPrivacyPolicySubtitle": "Moonfin деректеріңізді қалай өңдейді",
+    "settingsPrivacyPolicySubtitle": "Aleflix деректеріңізді қалай өңдейді",
     "settingsCheckForUpdates": "Жаңартуларды тексеріңіз",
-    "settingsCheckForUpdatesSubtitle": "Соңғы Moonfin шығарылымын тексеріңіз",
+    "settingsCheckForUpdatesSubtitle": "Соңғы Aleflix шығарылымын тексеріңіз",
     "settingsPoweredByFlutter": "Flutter арқылы қуатталған",
     "settingsLicenseNoticesCount": "{count, plural, one {# лицензиялық ескертпе} other {# лицензиялық ескертпе}}",
     "@settingsLicenseNoticesCount": {
@@ -6994,7 +6994,7 @@
         }
     },
     "savedThemesTitle": "Сақталған тақырыптар",
-    "savedThemesDescription": "Бұл — ағымдағы сервер үшін Moonfin плагинінен жүктелген тақырыптар. Жою тек осы жергілікті көшірмені өшіреді.",
+    "savedThemesDescription": "Бұл — ағымдағы сервер үшін Moonbase плагинінен жүктелген тақырыптар. Жою тек осы жергілікті көшірмені өшіреді.",
     "savedThemesEmpty": "Бұл сервер үшін сақталған тақырыптар табылмады.",
     "savedThemesCurrentThemeId": "{themeId} • Қазір белсенді",
     "@savedThemesCurrentThemeId": {
@@ -7008,7 +7008,7 @@
     "savedThemesDeleteTooltip": "Сақталған тақырыпты жою",
     "savedThemesManageSubtitle": "Осы құрылғыда жүктелген плагин тақырыптарын басқару",
     "themeEditor": "Тақырып өңдегіші",
-    "themeEditorSubtitle": "Браузерде Moonfin тақырып өңдегішін ашу",
+    "themeEditorSubtitle": "Браузерде Aleflix тақырып өңдегішін ашу",
     "homeScreen": "Негізгі экран",
     "bottomBar": "Төменгі жолақ",
     "homeRowsStyleClassic": "Классикалық",
@@ -7057,12 +7057,12 @@
     "preferSdhSubtitles": "SDH субтитрлерін таңдау",
     "preferSdhSubtitlesSubtitle": "Автоматты таңдау кезінде SDH/CC субтитр тректеріне басымдық беру.",
     "webDiagnostics": "Веб-диагностика",
-    "webDiagnosticsTitle": "Moonfin веб-диагностикасы",
+    "webDiagnosticsTitle": "Aleflix веб-диагностикасы",
     "webDiagnosticsIntro": "Браузердің қосылым мәселелерін (CORS, аралас мазмұн және табу параметрлері) диагностикалау үшін осы бетті пайдаланыңыз.",
     "webDiagnosticsDetectedMixedContentFailure": "Аралас мазмұн қатесі анықталды",
     "webDiagnosticsDetectedCorsPreflightFailure": "CORS/Preflight қатесі анықталды",
-    "webDiagnosticsMixedContentFailureBody": "Moonfin HTTPS бетінің HTTP сервер URL-іне қоңырау шалу әрекетін анықтады. Браузерлер бұл сұранысты серверіңізге жетпей тұрып бұғаттайды.",
-    "webDiagnosticsCorsFailureBody": "Moonfin браузер деңгейіндегі сұраныс қатесін анықтады, ол әдетте медиасервердегі CORS немесе preflight тақырыптарының болмауынан туындайды.",
+    "webDiagnosticsMixedContentFailureBody": "Aleflix HTTPS бетінің HTTP сервер URL-іне қоңырау шалу әрекетін анықтады. Браузерлер бұл сұранысты серверіңізге жетпей тұрып бұғаттайды.",
+    "webDiagnosticsCorsFailureBody": "Aleflix браузер деңгейіндегі сұраныс қатесін анықтады, ол әдетте медиасервердегі CORS немесе preflight тақырыптарының болмауынан туындайды.",
     "webDiagnosticsTargetUrl": "Мақсатты URL: {url}",
     "@webDiagnosticsTargetUrl": {
         "description": "Target URL shown in diagnostics summary",
@@ -7092,7 +7092,7 @@
     "notConfigured": "конфигурацияланбаған",
     "webDiagnosticsMixedContent": "Аралас мазмұн",
     "webDiagnosticsMixedContentDetected": "Бұл бет HTTPS арқылы жүктелген, бірақ бір немесе бірнеше конфигурацияланған URL — HTTP. Браузерлер HTTPS беттеріне HTTP API-ге қоңырау шалуды бұғаттайды.",
-    "webDiagnosticsMixedContentFix": "Түзету: медиасерверіңізді немесе прокси нүктеңізді HTTPS арқылы ұсыныңыз, немесе Moonfin-ді HTTP арқылы тек сенімді жергілікті желілерде жүктеңіз.",
+    "webDiagnosticsMixedContentFix": "Түзету: медиасерверіңізді немесе прокси нүктеңізді HTTPS арқылы ұсыныңыз, немесе Aleflix-ді HTTP арқылы тек сенімді жергілікті желілерде жүктеңіз.",
     "webDiagnosticsNoMixedContentDetected": "Ағымдағы орындалу параметрлерінен айқын аралас мазмұн конфигурациясы анықталмады.",
     "webDiagnosticsCorsChecklist": "CORS тексеру тізімі",
     "webDiagnosticsCorsChecklistItem1": "• Браузердің бастапқы көзіне Access-Control-Allow-Origin ішінде рұқсат етіңіз.",
@@ -7288,7 +7288,7 @@
     "@detailScreenStyle": {
         "description": "Label for the media detail screen layout style setting"
     },
-    "detailScreenStyleSubtitle": "«Классикалық» — Moonfin бағдарламасының бастапқы, ортаға тураланған қалыбы. «Заманауи» — бейімделгіш кинематографиялық қалып.",
+    "detailScreenStyleSubtitle": "«Классикалық» — Aleflix бағдарламасының бастапқы, ортаға тураланған қалыбы. «Заманауи» — бейімделгіш кинематографиялық қалып.",
     "@detailScreenStyleSubtitle": {
         "description": "Explanation under the detail screen style setting"
     },
@@ -7320,11 +7320,11 @@
     "@recommendationSystem": {
         "description": "Label for the Recommendation System setting"
     },
-    "recommendationSystemSubtitle": "Moonfin ұсынады жергілікті кітапхана алгоритмін немесе TMDb ұсынатын желілік ұқсастық метрикаларын пайдаланыңыз. Ескертпе: желілік ұсыныстар Seerr интеграциясын талап етеді.",
+    "recommendationSystemSubtitle": "Aleflix ұсынады жергілікті кітапхана алгоритмін немесе TMDb ұсынатын желілік ұқсастық метрикаларын пайдаланыңыз. Ескертпе: желілік ұсыныстар Seerr интеграциясын талап етеді.",
     "@recommendationSystemSubtitle": {
         "description": "Explanation under the recommendation system setting"
     },
-    "recommendationSystemMoonfin": "Moonfin ұсынады",
+    "recommendationSystemMoonfin": "Aleflix ұсынады",
     "@recommendationSystemMoonfin": {
         "description": "Recommendation system option: Moonfin Recommends"
     },
@@ -7336,7 +7336,7 @@
     "@recommendationsApplyParentalRatingCap": {
         "description": "Label for the toggle that controls whether similar suggestions are capped by target media parental rating"
     },
-    "recommendationsApplyParentalRatingCapSubtitle": "Moonfin ұсынады тізіміндегі ұсыныстарды таңдалған медиафайлдың жас шектеуі бойынша шектеу",
+    "recommendationsApplyParentalRatingCapSubtitle": "Aleflix ұсынады тізіміндегі ұсыныстарды таңдалған медиафайлдың жас шектеуі бойынша шектеу",
     "@recommendationsApplyParentalRatingCapSubtitle": {
         "description": "Explanation under the parental rating cap setting toggle"
     },
@@ -7384,7 +7384,7 @@
     "@customThemeTitle": {
         "description": "Title for the custom theme settings section"
     },
-    "customThemeSubtitle": "Жеке тақырыптар Moonfin бойынша визуалды элементтерді өзгертеді. Өз стиліңізге сай нұсқаны таңдаңыз.",
+    "customThemeSubtitle": "Жеке тақырыптар Aleflix бойынша визуалды элементтерді өзгертеді. Өз стиліңізге сай нұсқаны таңдаңыз.",
     "@customThemeSubtitle": {
         "description": "Description under custom themes section"
     },
@@ -7557,7 +7557,7 @@
     "@shuffleAllMusic": {
         "description": "Car browse action that shuffles the whole music library"
     },
-    "carSignInPrompt": "Телефоныңызда Moonfin-ге кіріңіз",
+    "carSignInPrompt": "Телефоныңызда Aleflix-ге кіріңіз",
     "@carSignInPrompt": {
         "description": "Shown in the car when no account is signed in"
     },
@@ -8897,7 +8897,7 @@
     "@impellerRendering": {
         "description": "Title of the setting that selects the Flutter rendering engine (Impeller vs. legacy)."
     },
-    "impellerRenderingSubtitle": "Impeller — плавнырақ анимациялар мен азырақ кідірістер үшін Flutter-дің заманауи GPU рендерері. Кейбір ТД-приставкаларда және ескі GPU-ларда ол ақаулар немесе қара бейне тудыруы мүмкін; мұны көрсеңіз, өшіріңіз. «Автоматты» құрылғыңызға ең қолайлы әдепкіні таңдайды. Қолдану үшін Moonfin-ді қайта іске қосыңыз.",
+    "impellerRenderingSubtitle": "Impeller — плавнырақ анимациялар мен азырақ кідірістер үшін Flutter-дің заманауи GPU рендерері. Кейбір ТД-приставкаларда және ескі GPU-ларда ол ақаулар немесе қара бейне тудыруы мүмкін; мұны көрсеңіз, өшіріңіз. «Автоматты» құрылғыңызға ең қолайлы әдепкіні таңдайды. Қолдану үшін Aleflix-ді қайта іске қосыңыз.",
     "@impellerRenderingSubtitle": {
         "description": "Explanatory description under the rendering engine setting."
     },
@@ -8908,7 +8908,7 @@
     "@impellerRestartTitle": {
         "description": "Title of the dialog shown after changing the rendering engine."
     },
-    "impellerRestartMessage": "Рендеринг қозғалтқышын өзгерту үшін Moonfin-ді қайта іске қосу қажет. Қолдану үшін қолданбаны қазір жауып, содан кейін қайта ашыңыз.",
+    "impellerRestartMessage": "Рендеринг қозғалтқышын өзгерту үшін Aleflix-ді қайта іске қосу қажет. Қолдану үшін қолданбаны қазір жауып, содан кейін қайта ашыңыз.",
     "@impellerRestartMessage": {
         "description": "Body of the dialog shown after changing the rendering engine."
     },

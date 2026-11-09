@@ -1,6 +1,6 @@
 {
     "@@locale": "be",
-    "appTitle": "Moonfin",
+    "appTitle": "Aleflix",
     "@appTitle": {
         "description": "The application title"
     },
@@ -82,7 +82,7 @@
     "@selectServer": {
         "description": "Button to navigate back to server selection"
     },
-    "appVersionFooter": "Moonfin версія {version}",
+    "appVersionFooter": "Aleflix версія {version}",
     "@appVersionFooter": {
         "description": "App version shown in footer",
         "placeholders": {
@@ -156,7 +156,7 @@
     "@secureStorageUnavailable": {
         "description": "Dialog title when system keyring is inaccessible"
     },
-    "secureStorageUnavailableMessage": "Moonfin не можа атрымаць доступ да вашага сістэмнага бірулькі. Уваход можна працягваць, але бяспечнае сховішча токенаў можа быць недаступным, пакуль бірулька не будзе разблакіравана.",
+    "secureStorageUnavailableMessage": "Aleflix не можа атрымаць доступ да вашага сістэмнага бірулькі. Уваход можна працягваць, але бяспечнае сховішча токенаў можа быць недаступным, пакуль бірулька не будзе разблакіравана.",
     "@secureStorageUnavailableMessage": {
         "description": "Explanation when secure storage is not available"
     },
@@ -168,15 +168,15 @@
     "@settingsAppearanceTheme": {
         "description": "Title for the theme selection screen and theme settings entry"
     },
-    "settingsAppearanceThemeSubtitle": "Пераключайцеся паміж Moonfin і Neon Pulse без перазапуску праграмы",
+    "settingsAppearanceThemeSubtitle": "Пераключайцеся паміж Aleflix і Neon Pulse без перазапуску праграмы",
     "@settingsAppearanceThemeSubtitle": {
         "description": "Subtitle for the theme selection screen and theme settings entry"
     },
-    "themeMoonfin": "Moonfin",
+    "themeMoonfin": "Aleflix Noir",
     "@themeMoonfin": {
         "description": "Display name for the Moonfin theme"
     },
-    "themeMoonfinSubtitle": "Цяперашні Moonfin выгляд, які вам усім спадабаўся",
+    "themeMoonfinSubtitle": "Цяперашні Aleflix выгляд, які вам усім спадабаўся",
     "@themeMoonfinSubtitle": {
         "description": "Preview description for the Moonfin theme"
     },
@@ -249,7 +249,7 @@
             }
         }
     },
-    "exitApp": "Выйсці з Moonfin?",
+    "exitApp": "Выйсці з Aleflix?",
     "@exitApp": {
         "description": "Title of exit confirmation dialog"
     },
@@ -3080,7 +3080,7 @@
     "@customMpvConfPath": {
         "description": "Setting for custom mpv.conf path"
     },
-    "notSetMpvConf": "Не ўстаноўлена. Moonfin паспрабуе стандартны mpv.conf у папках прыкладанняў/дадзеных.",
+    "notSetMpvConf": "Не ўстаноўлена. Aleflix паспрабуе стандартны mpv.conf у папках прыкладанняў/дадзеных.",
     "@notSetMpvConf": {
         "description": "Description when no custom mpv.conf is set"
     },
@@ -3307,7 +3307,7 @@
     "@saveToDownloadsFolder": {
         "description": "Setting for saving to downloads folder"
     },
-    "downloadsVisibleToOtherApps": "Спампоўкі/Moonfin — бачныя іншым праграмам",
+    "downloadsVisibleToOtherApps": "Спампоўкі/Aleflix — бачныя іншым праграмам",
     "@downloadsVisibleToOtherApps": {
         "description": "Description for downloads folder visibility"
     },
@@ -3343,7 +3343,7 @@
     "@saveToDownloadsFolderQuestion": {
         "description": "Dialog title for saving to downloads folder"
     },
-    "saveToDownloadsFolderDescription": "Спампаваныя мультымедыя будуць захаваны ў Downloads/Moonfin на вашай прыладзе. Гэтыя файлы будуць бачныя для іншых праграм, такіх як галерэя або музычны прайгравальнік.\n\nІснуючыя спампоўкі застануцца ў іх бягучым месцы.",
+    "saveToDownloadsFolderDescription": "Спампаваныя мультымедыя будуць захаваны ў Downloads/Aleflix на вашай прыладзе. Гэтыя файлы будуць бачныя для іншых праграм, такіх як галерэя або музычны прайгравальнік.\n\nІснуючыя спампоўкі застануцца ў іх бягучым месцы.",
     "@saveToDownloadsFolderDescription": {
         "description": "Description for saving to downloads folder"
     },
@@ -3475,7 +3475,7 @@
     "@libraryVisibility": {
         "description": "Section title for library visibility"
     },
-    "libraryVisibilityDescription": "Пераключыць бачнасць хатняй старонкі для кожнай бібліятэкі. Перазапусціце Moonfin, каб змены ўступілі ў сілу.",
+    "libraryVisibilityDescription": "Пераключыць бачнасць хатняй старонкі для кожнай бібліятэкі. Перазапусціце Aleflix, каб змены ўступілі ў сілу.",
     "@libraryVisibilityDescription": {
         "description": "Explanation shown on the library visibility settings screen"
     },
@@ -3524,7 +3524,7 @@
     "@mediaBarModeDescription": {
         "description": "Description for media bar style setting"
     },
-    "mediaBarModeMoonfin": "Moonfin",
+    "mediaBarModeMoonfin": "Aleflix",
     "@mediaBarModeMoonfin": {
         "description": "Media bar style option: Moonfin"
     },
@@ -4084,7 +4084,7 @@
     "@sourceCode": {
         "description": "Link to source code"
     },
-    "sourceCodeUrl": "https://github.com/Moonfin-Client/Moonfin-Core",
+    "sourceCodeUrl": "https://github.com/alejandrok5/aleflix",
     "@sourceCodeUrl": {
         "description": "Displayed source code repository URL"
     },
@@ -4252,7 +4252,7 @@
     "@cancelRequest": {
         "description": "Button/dialog title to cancel a media request"
     },
-    "playInMoonfin": "Гуляць у Moonfin",
+    "playInMoonfin": "Гуляць у Aleflix",
     "@playInMoonfin": {
         "description": "Button to play available media in Moonfin"
     },
@@ -4306,7 +4306,7 @@
     "@keep": {
         "description": "Button to keep/dismiss a cancel dialog"
     },
-    "itemNotFoundInLibrary": "Элемент не знойдзены ў вашай бібліятэцы Moonfin",
+    "itemNotFoundInLibrary": "Элемент не знойдзены ў вашай бібліятэцы Aleflix",
     "@itemNotFoundInLibrary": {
         "description": "Snackbar when Seerr item cannot be found in Jellyfin"
     },
@@ -4610,7 +4610,7 @@
         }
     },
     "adminServerRebootInProgress": "Ідзе перазагрузка сервера",
-    "adminServerRebootMessage": "Ідзе перазагрузка сервера, перазапусціце Moonfin",
+    "adminServerRebootMessage": "Ідзе перазагрузка сервера, перазапусціце Aleflix",
     "adminActiveSessions": "Актыўныя сеансы",
     "adminSessionsLoadFailed": "Не ўдалося загрузіць сеансы",
     "adminNoActiveSessions": "Няма актыўных сеансаў",
@@ -6498,7 +6498,7 @@
     "settingsShowGenresButtonInNavigation": "Паказаць кнопку жанраў на панэлі навігацыі",
     "settingsShowFavoritesButtonInNavigation": "Паказаць кнопку абранага на панэлі навігацыі",
     "settingsShowLibrariesButtonInNavigation": "Паказаць кнопку бібліятэк на панэлі навігацыі",
-    "settingsLibraryVisibilitySubtitle": "Пераключыць бачнасць хатняй старонкі для кожнай бібліятэкі. Перазапусціце Moonfin, каб змены ўступілі ў сілу.",
+    "settingsLibraryVisibilitySubtitle": "Пераключыць бачнасць хатняй старонкі для кожнай бібліятэкі. Перазапусціце Aleflix, каб змены ўступілі ў сілу.",
     "settingsMediaBarAndLocalPreviews": "Медыяпанэль і лакальны папярэдні прагляд",
     "settingsVisualOverlays": "Візуальныя накладкі",
     "settingsSeasonalSurprise": "Сезонны сюрпрыз",
@@ -6517,14 +6517,14 @@
     "settingsJoinDiscord": "Далучайцеся да Discord",
     "settingsJoinDiscordSubtitle": "Чат з супольнасцю",
     "settingsJoinTheDiscord": "Далучайцеся да Discord",
-    "settingsSupportMoonfin": "Падтрымка Moonfin",
+    "settingsSupportMoonfin": "Падтрымка Aleflix",
     "settingsLegal": "ЗАКОННЫ",
     "settingsLicenses": "Ліцэнзіі",
     "settingsOpenSourceLicenseNotices": "Паведамленні аб ліцэнзіі з адкрытым зыходным кодам",
     "settingsPrivacyPolicy": "Палітыка прыватнасці",
-    "settingsPrivacyPolicySubtitle": "Як Moonfin апрацоўвае вашы дадзеныя",
+    "settingsPrivacyPolicySubtitle": "Як Aleflix апрацоўвае вашы дадзеныя",
     "settingsCheckForUpdates": "Праверце наяўнасць абнаўленняў",
-    "settingsCheckForUpdatesSubtitle": "Праверце апошнюю версію Moonfin",
+    "settingsCheckForUpdatesSubtitle": "Праверце апошнюю версію Aleflix",
     "settingsPoweredByFlutter": "Працуе на Flutter",
     "settingsLicenseNoticesCount": "{count, plural, one {# ліцэнзійная заўвага} few {# ліцэнзійныя заўвагі} many {# ліцэнзійных заўваг} other {# ліцэнзійнай заўвагі}}",
     "@settingsLicenseNoticesCount": {
@@ -6994,7 +6994,7 @@
         }
     },
     "savedThemesTitle": "Захаваныя тэмы",
-    "savedThemesDescription": "Гэта тэмы, спампаваныя з плагіна Moonfin для бягучага сервера. Выдаленне выдаляе толькі гэтую лакальную копію.",
+    "savedThemesDescription": "Гэта тэмы, спампаваныя з плагіна Moonbase для бягучага сервера. Выдаленне выдаляе толькі гэтую лакальную копію.",
     "savedThemesEmpty": "Для гэтага сервера не знойдзена захаваных тэм.",
     "savedThemesCurrentThemeId": "{themeId} • У цяперашні час актыўны",
     "@savedThemesCurrentThemeId": {
@@ -7008,7 +7008,7 @@
     "savedThemesDeleteTooltip": "Выдаліць захаваную тэму",
     "savedThemesManageSubtitle": "Кіруйце спампаванымі тэмамі плагінаў на гэтай прыладзе",
     "themeEditor": "Рэдактар ​​тэм",
-    "themeEditorSubtitle": "Адкрыйце рэдактар ​​тэм Moonfin у сваім браўзеры",
+    "themeEditorSubtitle": "Адкрыйце рэдактар ​​тэм Aleflix у сваім браўзеры",
     "homeScreen": "Галоўны экран",
     "bottomBar": "Ніжняя панэль",
     "homeRowsStyleClassic": "Класіка",
@@ -7057,12 +7057,12 @@
     "preferSdhSubtitles": "Аддайце перавагу субтытрам SDH",
     "preferSdhSubtitlesSubtitle": "Прыярытэзуйце дарожкі субтытраў SDH/CC пры аўтаматычным выбары.",
     "webDiagnostics": "Вэб дыягностыка",
-    "webDiagnosticsTitle": "Moonfin Вэб-дыягностыка",
+    "webDiagnosticsTitle": "Aleflix Вэб-дыягностыка",
     "webDiagnosticsIntro": "Выкарыстоўвайце гэтую старонку для дыягностыкі праблем з падключэннем браўзера (CORS, змешаны кантэнт і налады выяўлення).",
     "webDiagnosticsDetectedMixedContentFailure": "Выяўлены збой са змешаным зместам",
     "webDiagnosticsDetectedCorsPreflightFailure": "Выяўлены збой CORS/Preflight",
-    "webDiagnosticsMixedContentFailureBody": "Moonfin выявіў старонку HTTPS, якая спрабуе выклікаць URL-адрас сервера HTTP. Браўзеры блакіруюць гэты запыт, перш чым ён дасягне вашага сервера.",
-    "webDiagnosticsCorsFailureBody": "Moonfin выявіў памылку запыту на ўзроўні браўзера, якая звычайна ўзнікае з-за адсутнасці CORS або перадпалётных загалоўкаў на медыясерверы.",
+    "webDiagnosticsMixedContentFailureBody": "Aleflix выявіў старонку HTTPS, якая спрабуе выклікаць URL-адрас сервера HTTP. Браўзеры блакіруюць гэты запыт, перш чым ён дасягне вашага сервера.",
+    "webDiagnosticsCorsFailureBody": "Aleflix выявіў памылку запыту на ўзроўні браўзера, якая звычайна ўзнікае з-за адсутнасці CORS або перадпалётных загалоўкаў на медыясерверы.",
     "webDiagnosticsTargetUrl": "Мэтавы URL: {url}",
     "@webDiagnosticsTargetUrl": {
         "description": "Target URL shown in diagnostics summary",
@@ -7092,7 +7092,7 @@
     "notConfigured": "не наладжана",
     "webDiagnosticsMixedContent": "Змешаны кантэнт",
     "webDiagnosticsMixedContentDetected": "Гэта старонка загружаецца праз HTTPS, але адзін або некалькі настроеных URL-адрасоў з'яўляюцца HTTP. Браўзеры блакуюць HTTPS-старонкі ад выкліку HTTP API.",
-    "webDiagnosticsMixedContentFix": "Выпраўленне: абслугоўванне вашага медыясервера або канчатковай кропкі проксі праз HTTPS або загрузка Moonfin праз HTTP толькі ў надзейных лакальных сетках.",
+    "webDiagnosticsMixedContentFix": "Выпраўленне: абслугоўванне вашага медыясервера або канчатковай кропкі проксі праз HTTPS або загрузка Aleflix праз HTTP толькі ў надзейных лакальных сетках.",
     "webDiagnosticsNoMixedContentDetected": "У бягучых наладах выканання не выяўлена відавочнай канфігурацыі змешанага змесціва.",
     "webDiagnosticsCorsChecklist": "Кантрольны спіс CORS",
     "webDiagnosticsCorsChecklistItem1": "• Дазволіць паходжанне браўзера ў Access-Control-Allow-Origin.",
@@ -7288,7 +7288,7 @@
     "@detailScreenStyle": {
         "description": "Label for the media detail screen layout style setting"
     },
-    "detailScreenStyleSubtitle": "«Класічны» — арыгінальная цэнтраваная кампаноўка Moonfin. «Сучасны» — адаптыўная кінематаграфічная кампаноўка.",
+    "detailScreenStyleSubtitle": "«Класічны» — арыгінальная цэнтраваная кампаноўка Aleflix. «Сучасны» — адаптыўная кінематаграфічная кампаноўка.",
     "@detailScreenStyleSubtitle": {
         "description": "Explanation under the detail screen style setting"
     },
@@ -7320,11 +7320,11 @@
     "@recommendationSystem": {
         "description": "Label for the Recommendation System setting"
     },
-    "recommendationSystemSubtitle": "Выкарыстоўвайце алгарытм лакальнай бібліятэкі «Moonfin рэкамендуе» або сеціўныя метрыкі падабенства TMDb. Заўвага: сеціўныя рэкамендацыі патрабуюць інтэграцыі з Seerr.",
+    "recommendationSystemSubtitle": "Выкарыстоўвайце алгарытм лакальнай бібліятэкі «Aleflix рэкамендуе» або сеціўныя метрыкі падабенства TMDb. Заўвага: сеціўныя рэкамендацыі патрабуюць інтэграцыі з Seerr.",
     "@recommendationSystemSubtitle": {
         "description": "Explanation under the recommendation system setting"
     },
-    "recommendationSystemMoonfin": "Moonfin рэкамендуе",
+    "recommendationSystemMoonfin": "Aleflix рэкамендуе",
     "@recommendationSystemMoonfin": {
         "description": "Recommendation system option: Moonfin Recommends"
     },
@@ -7336,7 +7336,7 @@
     "@recommendationsApplyParentalRatingCap": {
         "description": "Label for the toggle that controls whether similar suggestions are capped by target media parental rating"
     },
-    "recommendationsApplyParentalRatingCapSubtitle": "Абмяжоўваць прапановы «Moonfin рэкамендуе» паводле ўзроставага рэйтынгу выбранага медыя",
+    "recommendationsApplyParentalRatingCapSubtitle": "Абмяжоўваць прапановы «Aleflix рэкамендуе» паводле ўзроставага рэйтынгу выбранага медыя",
     "@recommendationsApplyParentalRatingCapSubtitle": {
         "description": "Explanation under the parental rating cap setting toggle"
     },
@@ -7384,7 +7384,7 @@
     "@customThemeTitle": {
         "description": "Title for the custom theme settings section"
     },
-    "customThemeSubtitle": "Уласныя тэмы змяняюць візуальныя элементы ва ўсім Moonfin. Выберыце адзін з варыянтаў пад свой густ.",
+    "customThemeSubtitle": "Уласныя тэмы змяняюць візуальныя элементы ва ўсім Aleflix. Выберыце адзін з варыянтаў пад свой густ.",
     "@customThemeSubtitle": {
         "description": "Description under custom themes section"
     },
@@ -7557,7 +7557,7 @@
     "@shuffleAllMusic": {
         "description": "Car browse action that shuffles the whole music library"
     },
-    "carSignInPrompt": "Увайдзіце ў Moonfin на тэлефоне",
+    "carSignInPrompt": "Увайдзіце ў Aleflix на тэлефоне",
     "@carSignInPrompt": {
         "description": "Shown in the car when no account is signed in"
     },
@@ -8897,7 +8897,7 @@
     "@impellerRendering": {
         "description": "Title of the setting that selects the Flutter rendering engine (Impeller vs. legacy)."
     },
-    "impellerRenderingSubtitle": "Impeller — сучасны GPU-рэндэрар Flutter для плаўнейшых анімацый і меншых падтармажванняў. На некаторых ТБ-прыстаўках і старых GPU ён можа выклікаць артэфакты або чорнае відэа; выключыце яго, калі бачыце такое. «Аўтаматычна» выбірае найлепшы варыянт для вашай прылады. Перазапусціце Moonfin, каб ужыць.",
+    "impellerRenderingSubtitle": "Impeller — сучасны GPU-рэндэрар Flutter для плаўнейшых анімацый і меншых падтармажванняў. На некаторых ТБ-прыстаўках і старых GPU ён можа выклікаць артэфакты або чорнае відэа; выключыце яго, калі бачыце такое. «Аўтаматычна» выбірае найлепшы варыянт для вашай прылады. Перазапусціце Aleflix, каб ужыць.",
     "@impellerRenderingSubtitle": {
         "description": "Explanatory description under the rendering engine setting."
     },
@@ -8908,7 +8908,7 @@
     "@impellerRestartTitle": {
         "description": "Title of the dialog shown after changing the rendering engine."
     },
-    "impellerRestartMessage": "Каб змяніць рухавік рэндэрынгу, Moonfin трэба перазапусціць. Закрыйце праграму, а потым адкрыйце яе зноў, каб ужыць змены.",
+    "impellerRestartMessage": "Каб змяніць рухавік рэндэрынгу, Aleflix трэба перазапусціць. Закрыйце праграму, а потым адкрыйце яе зноў, каб ужыць змены.",
     "@impellerRestartMessage": {
         "description": "Body of the dialog shown after changing the rendering engine."
     },

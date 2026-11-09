@@ -25,13 +25,18 @@ void main() {
         prefs.get(UserPreferences.screensaverBackdrop),
         ScreensaverBackdrop.library,
       );
+      // Aleflix defaults: a medium clock, static, bottom-right.
       expect(
         prefs.get(UserPreferences.screensaverComponent),
-        ScreensaverComponent.moonfinLogo,
+        ScreensaverComponent.clock,
       );
       expect(
         prefs.get(UserPreferences.screensaverMovement),
-        ScreensaverMovement.moderate,
+        ScreensaverMovement.staticCorner,
+      );
+      expect(
+        prefs.get(UserPreferences.screensaverPosition),
+        ScreensaverPosition.bottomRight,
       );
       expect(
         prefs.get(UserPreferences.screensaverSize),
@@ -388,7 +393,8 @@ void main() {
       await tester.pump(const Duration(milliseconds: 50));
 
       expect(find.text('Component Position'), findsOneWidget);
-      expect(find.text('Middle'), findsOneWidget);
+      // Aleflix: bottom-right is the default position.
+      expect(find.text('Bottom-Right'), findsOneWidget);
     });
 
     testWidgets('hides Component Position when movement is bouncing', (tester) async {

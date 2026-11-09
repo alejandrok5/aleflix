@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import '../../aleflix/aleflix_palette.dart';
 import '../../preference/preference_constants.dart';
 
 class AnimatedGradientBackdrop extends StatefulWidget {
@@ -56,7 +57,7 @@ class _AnimatedGradientBackdropState extends State<AnimatedGradientBackdrop>
 Color _getAccentColor(ScreensaverBackdrop backdrop, [double pulse = 0.0]) {
   switch (backdrop) {
     case ScreensaverBackdrop.moonfin:
-      return const Color(0xFF00C6FF);
+      return AleflixPalette.champagne; // Aleflix: moonlight over noir
     case ScreensaverBackdrop.calm:
       return const Color(0xFF68D388);
     case ScreensaverBackdrop.neonPulse:
@@ -76,16 +77,17 @@ Color _getAccentColor(ScreensaverBackdrop backdrop, [double pulse = 0.0]) {
 List<Color> _getColors(ScreensaverBackdrop backdrop, [double pulse = 0.0]) {
   switch (backdrop) {
     case ScreensaverBackdrop.moonfin:
-      // Moonfin logo brand palette: Royal purple to Electric Cyan
+      // Aleflix Noir: charcoal through bronze to old gold and back
+      // (was Moonfin's royal purple to electric cyan).
       return const [
-        Color(0xFF1A0526), // Midnight plum
-        Color(0xFF6B2087), // Royal violet
-        Color(0xFFAA5CC3), // Vivid magenta
-        Color(0xFF9C62C5), // Moonfin violet
-        Color(0xFF7672CB), // Lavender blue
-        Color(0xFF3A8CD4), // Sky cerulean
-        Color(0xFF00C6FF), // Electric cyan
-        Color(0xFF091426), // Deep oceanic midnight
+        Color(0xFF0E0D0C), // Noir
+        Color(0xFF1F1A14), // Smoke
+        Color(0xFF3B3024), // Umber
+        Color(0xFF6E5E44), // Bronze
+        Color(0xFFA88A4E), // Old gold
+        Color(0xFF5A4B36), // Deep bronze
+        Color(0xFF2A231A), // Walnut
+        Color(0xFF0E0D0C), // Noir
       ];
     case ScreensaverBackdrop.calm:
       // Vibrant, luminous nature scene: lush emeralds, bamboo lime, spring foliage

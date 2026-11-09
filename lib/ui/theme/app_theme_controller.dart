@@ -52,10 +52,10 @@ class AppThemeController extends ChangeNotifier {
 
   static AppTheme _defaultFocusColorForTheme(VisualThemeId themeId) {
     return switch (themeId) {
-      VisualThemeId.moonfin => AppTheme.moonfinCyan,
-      VisualThemeId.neonPulse => AppTheme.neonPulseMagenta,
+      VisualThemeId.moonfin => AppTheme.champagne,
+      VisualThemeId.neonPulse => AppTheme.champagne,
       VisualThemeId.glass => AppTheme.white,
-      VisualThemeId.eightbitHero => AppTheme.eightBitGold,
+      VisualThemeId.eightbitHero => AppTheme.champagne,
     };
   }
 

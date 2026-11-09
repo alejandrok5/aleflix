@@ -318,10 +318,9 @@ class SeerrRepository {
     try {
       final result = await client.moonfinQuickConnectLogin(username: username);
       if (result.success) {
-        await _store.setString(
-          _moonfinDisplayNameKey,
-          result.displayName ?? '',
-        );
+        // Aleflix: the key holds the service's label ("Seerr", "Requests"),
+        // which the plugin config refresh sets. Writing the signed-in user's
+        // name here relabeled every Seerr screen with that name.
         await _store.setString(
           _moonfinUserIdKey,
           result.seerrUserId?.toString() ?? '',
@@ -368,10 +367,9 @@ class SeerrRepository {
       authType: authType,
     );
 
-    await _store.setString(
-      _moonfinDisplayNameKey,
-      response.displayName ?? '',
-    );
+    // Aleflix: the key holds the service's label ("Seerr", "Requests"),
+    // which the plugin config refresh sets. Writing the signed-in user's
+    // name here relabeled every Seerr screen with that name.
     await _store.setString(
       _moonfinUserIdKey,
       response.seerrUserId?.toString() ?? '',

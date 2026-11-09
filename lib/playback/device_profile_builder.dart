@@ -1148,7 +1148,7 @@ class DeviceProfileBuilder {
           ? 'Moonfin for Web'
           : 'Moonfin on Github';
     }
-    if (PlatformDetection.isAndroid) return 'Moonfin for Android';
+    if (PlatformDetection.isAndroid) return 'Aleflix for Android';
     if (PlatformDetection.isIOS) return 'Moonfin iOS';
     if (PlatformDetection.isMacOS) return 'Moonfin macOS';
     if (PlatformDetection.isWindows) return 'Moonfin Windows';

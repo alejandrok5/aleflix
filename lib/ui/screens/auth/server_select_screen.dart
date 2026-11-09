@@ -31,6 +31,7 @@ import '../../widgets/allow_self_signed_dialog.dart';
 import '../../widgets/login_scaffold.dart';
 import '../../widgets/overlay_sheet.dart';
 import '../../widgets/server_type_icon.dart';
+import '../../../aleflix/aleflix_brand.dart';
 import 'add_server_dialog.dart';
 
 final _kAccent = AppColorScheme.accent;
@@ -66,7 +67,7 @@ class _ServerSelectScreenState extends State<ServerSelectScreen> {
 
   final List<DiscoveredServer> _discoveredServers = [];
   bool _isDiscovering = false;
-  bool get _isMoonfin => ThemeRegistry.active.id == ThemeRegistry.moonfinId;
+  bool get _isMoonfin => AleflixBrand.usesUpstreamMoonfinStyling;
 
   bool get _isWebPluginMode =>
       PlatformDetection.isWeb && webRuntimeConfig.pluginMode;
@@ -266,7 +267,7 @@ class _ServerSelectScreenState extends State<ServerSelectScreen> {
       final resolvedUserName = (currentUser.name ?? '').trim();
       final user = PrivateUser(
         id: resolvedUserId,
-        name: resolvedUserName.isNotEmpty ? resolvedUserName : 'Moonfin User',
+        name: resolvedUserName.isNotEmpty ? resolvedUserName : 'Aleflix User',
         serverId: server.id,
         accessToken: credentials.accessToken,
         lastUsed: DateTime.now(),
@@ -826,7 +827,7 @@ class _FocusableTileState extends State<_FocusableTile> {
   Timer? _selectHoldTimer;
   bool _longPressFiredFromKey = false;
   bool _selectKeyPressed = false;
-  bool get _isMoonfin => ThemeRegistry.active.id == ThemeRegistry.moonfinId;
+  bool get _isMoonfin => AleflixBrand.usesUpstreamMoonfinStyling;
 
   void _clearSelectKeyState() {
     _selectHoldTimer?.cancel();

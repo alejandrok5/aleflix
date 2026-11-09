@@ -34,8 +34,12 @@ plugins {
     // it there is safe because push messaging bails immediately on TV anyway -
     // push_messaging_service.dart:38 returns unless PlatformDetection.isMobile,
     // and the initializeApp call is try/caught regardless.
-    id("com.google.gms.google-services")
-        .apply(System.getenv("MOONFIN_TEST_ID_SUFFIX").isNullOrEmpty())
+    // Aleflix: Moonfin's google-services.json belongs to Moonfin's Firebase
+    // project, so it is not shipped and the plugin is not applied. Push
+    // initialization fails quietly without it (push_messaging_service.dart).
+    // To enable push, add your own google-services.json and restore:
+    // id("com.google.gms.google-services")
+    //     .apply(System.getenv("MOONFIN_TEST_ID_SUFFIX").isNullOrEmpty())
     // END: FlutterFire Configuration
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
@@ -79,8 +83,8 @@ android {
 
     flavorDimensions += "device"
     productFlavors {
-        val baseAppId = "org.moonfin.androidtv"
-        val baseAppName = "Moonfin"
+        val baseAppId = "com.aleflix.app"
+        val baseAppName = "Aleflix"
         // Optional application-id suffix for on-device testing, set through the
         // environment so an unset build is byte-identical to before:
         //   MOONFIN_TEST_ID_SUFFIX=.hwtest flutter build apk --flavor androidTv --debug

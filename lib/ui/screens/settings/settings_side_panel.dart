@@ -122,6 +122,7 @@ import '../detail/detail_buttons.dart';
 import '../detail/playlist_sort_filter_bar.dart';
 import '../playback/osd_buttons.dart';
 import '../watch_party/watch_together_route.dart';
+import '../../../aleflix/aleflix_brand.dart';
 
 part 'panel/settings_panel_infra.dart';
 part 'panel/settings_search_field.dart';

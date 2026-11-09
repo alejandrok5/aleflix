@@ -1,6 +1,6 @@
 {
     "@@locale": "de",
-    "appTitle": "Moonfin",
+    "appTitle": "Aleflix",
     "@appTitle": {
         "description": "The application title"
     },
@@ -82,7 +82,7 @@
     "@selectServer": {
         "description": "Button to navigate back to server selection"
     },
-    "appVersionFooter": "Moonfin Version {version}",
+    "appVersionFooter": "Aleflix Version {version}",
     "@appVersionFooter": {
         "description": "App version shown in footer",
         "placeholders": {
@@ -156,7 +156,7 @@
     "@secureStorageUnavailable": {
         "description": "Dialog title when system keyring is inaccessible"
     },
-    "secureStorageUnavailableMessage": "Moonfin konnte nicht auf den Schlüsselbund Ihres Systems zugreifen. Sie können sich trotzdem anmelden, aber die sichere Speicherung des Anmeldetokens ist möglicherweise erst verfügbar, wenn der Schlüsselbund entsperrt wurde.",
+    "secureStorageUnavailableMessage": "Aleflix konnte nicht auf den Schlüsselbund Ihres Systems zugreifen. Sie können sich trotzdem anmelden, aber die sichere Speicherung des Anmeldetokens ist möglicherweise erst verfügbar, wenn der Schlüsselbund entsperrt wurde.",
     "@secureStorageUnavailableMessage": {
         "description": "Explanation when secure storage is not available"
     },
@@ -172,11 +172,11 @@
     "@settingsAppearanceThemeSubtitle": {
         "description": "Subtitle for the theme selection screen and theme settings entry"
     },
-    "themeMoonfin": "Moonfin",
+    "themeMoonfin": "Aleflix Noir",
     "@themeMoonfin": {
         "description": "Display name for the Moonfin theme"
     },
-    "themeMoonfinSubtitle": "Das ursprüngliche und schlichte Moonfin-Design.",
+    "themeMoonfinSubtitle": "Das ursprüngliche und schlichte Aleflix-Design.",
     "@themeMoonfinSubtitle": {
         "description": "Preview description for the Moonfin theme"
     },
@@ -249,7 +249,7 @@
             }
         }
     },
-    "exitApp": "Moonfin beenden?",
+    "exitApp": "Aleflix beenden?",
     "@exitApp": {
         "description": "Title of exit confirmation dialog"
     },
@@ -3046,7 +3046,7 @@
     "@customMpvConfPath": {
         "description": "Setting for custom mpv.conf path"
     },
-    "notSetMpvConf": "Nicht gesetzt. Moonfin versucht eine Standard-mpv.conf in App-/Datenordnern.",
+    "notSetMpvConf": "Nicht gesetzt. Aleflix versucht eine Standard-mpv.conf in App-/Datenordnern.",
     "@notSetMpvConf": {
         "description": "Description when no custom mpv.conf is set"
     },
@@ -3253,7 +3253,7 @@
     "@saveToDownloadsFolder": {
         "description": "Setting for saving to downloads folder"
     },
-    "downloadsVisibleToOtherApps": "Downloads/Moonfin — für andere Apps sichtbar",
+    "downloadsVisibleToOtherApps": "Downloads/Aleflix — für andere Apps sichtbar",
     "@downloadsVisibleToOtherApps": {
         "description": "Description for downloads folder visibility"
     },
@@ -3289,7 +3289,7 @@
     "@saveToDownloadsFolderQuestion": {
         "description": "Dialog title for saving to downloads folder"
     },
-    "saveToDownloadsFolderDescription": "Heruntergeladene Medien werden im Downloads/Moonfin-Ordner auf deinem Gerät gespeichert. Diese Dateien sind für andere Apps wie deine Galerie oder deinen Musikplayer sichtbar.\n\nBestehende Downloads verbleiben an ihrem aktuellen Speicherort.",
+    "saveToDownloadsFolderDescription": "Heruntergeladene Medien werden im Downloads/Aleflix-Ordner auf deinem Gerät gespeichert. Diese Dateien sind für andere Apps wie deine Galerie oder deinen Musikplayer sichtbar.\n\nBestehende Downloads verbleiben an ihrem aktuellen Speicherort.",
     "@saveToDownloadsFolderDescription": {
         "description": "Description for saving to downloads folder"
     },
@@ -3466,7 +3466,7 @@
     "@mediaBarModeDescription": {
         "description": "Description for media bar style setting"
     },
-    "mediaBarModeMoonfin": "Moonfin",
+    "mediaBarModeMoonfin": "Aleflix",
     "@mediaBarModeMoonfin": {
         "description": "Media bar style option: Moonfin"
     },
@@ -4165,7 +4165,7 @@
     "@cancelRequest": {
         "description": "Button/dialog title to cancel a media request"
     },
-    "playInMoonfin": "In Moonfin abspielen",
+    "playInMoonfin": "In Aleflix abspielen",
     "@playInMoonfin": {
         "description": "Button to play available media in Moonfin"
     },
@@ -4219,7 +4219,7 @@
     "@keep": {
         "description": "Button to keep/dismiss a cancel dialog"
     },
-    "itemNotFoundInLibrary": "Element nicht in deiner Moonfin-Bibliothek gefunden",
+    "itemNotFoundInLibrary": "Element nicht in deiner Aleflix-Bibliothek gefunden",
     "@itemNotFoundInLibrary": {
         "description": "Snackbar when Seerr item cannot be found in Jellyfin"
     },
@@ -4475,7 +4475,7 @@
         }
     },
     "adminServerRebootInProgress": "Server-Neustart wird durchgeführt",
-    "adminServerRebootMessage": "Server-Neustart wird durchgeführt, bitte starte Moonfin neu",
+    "adminServerRebootMessage": "Server-Neustart wird durchgeführt, bitte starte Aleflix neu",
     "adminActiveSessions": "Aktive Sitzungen",
     "adminSessionsLoadFailed": "Sitzungen konnten nicht geladen werden",
     "adminNoActiveSessions": "Keine aktiven Sitzungen",
@@ -6266,11 +6266,11 @@
     "@subtitlePreviewText": {
         "description": "Sample text shown in the subtitle live preview"
     },
-    "libraryVisibilityDescription": "Schalten Sie die Sichtbarkeit der Startseite pro Bibliothek um. Starten Sie Moonfin neu, damit die Änderungen wirksam werden.",
+    "libraryVisibilityDescription": "Schalten Sie die Sichtbarkeit der Startseite pro Bibliothek um. Starten Sie Aleflix neu, damit die Änderungen wirksam werden.",
     "@libraryVisibilityDescription": {
         "description": "Explanation shown on the library visibility settings screen"
     },
-    "sourceCodeUrl": "https://github.com/Moonfin-Client/Moonfin-Core",
+    "sourceCodeUrl": "https://github.com/alejandrok5/aleflix",
     "@sourceCodeUrl": {
         "description": "Displayed source code repository URL"
     },
@@ -6511,7 +6511,7 @@
     "settingsShowGenresButtonInNavigation": "Zeigen Sie die Schaltfläche „Genres“ in der Navigationsleiste an.",
     "settingsShowFavoritesButtonInNavigation": "Zeigen Sie die Favoritenschaltfläche in der Navigationsleiste an.",
     "settingsShowLibrariesButtonInNavigation": "Zeigen Sie die Schaltfläche „Bibliotheken“ in der Navigationsleiste an.",
-    "settingsLibraryVisibilitySubtitle": "Schalten Sie die Sichtbarkeit der Startseite pro Bibliothek um. Starten Sie Moonfin neu, damit die Änderungen wirksam werden.",
+    "settingsLibraryVisibilitySubtitle": "Schalten Sie die Sichtbarkeit der Startseite pro Bibliothek um. Starten Sie Aleflix neu, damit die Änderungen wirksam werden.",
     "settingsMediaBarAndLocalPreviews": "Medienleiste und lokale Vorschauen",
     "settingsVisualOverlays": "Visuelle Überlagerungen",
     "settingsSeasonalSurprise": "Saisonale Überraschung",
@@ -6530,14 +6530,14 @@
     "settingsJoinDiscord": "Treten Sie Discord bei",
     "settingsJoinDiscordSubtitle": "Chatten Sie mit der Community",
     "settingsJoinTheDiscord": "Treten Sie dem Discord bei",
-    "settingsSupportMoonfin": "Unterstützen Sie Moonfin",
+    "settingsSupportMoonfin": "Unterstützen Sie Aleflix",
     "settingsLegal": "RECHTLICH",
     "settingsLicenses": "Lizenzen",
     "settingsOpenSourceLicenseNotices": "Hinweise zur Open-Source-Lizenz",
     "settingsPrivacyPolicy": "Datenschutzrichtlinie",
-    "settingsPrivacyPolicySubtitle": "Wie Moonfin mit Ihren Daten umgeht",
+    "settingsPrivacyPolicySubtitle": "Wie Aleflix mit Ihren Daten umgeht",
     "settingsCheckForUpdates": "Suchen Sie nach Updates",
-    "settingsCheckForUpdatesSubtitle": "Suchen Sie nach der neuesten Moonfin-Version",
+    "settingsCheckForUpdatesSubtitle": "Suchen Sie nach der neuesten Aleflix-Version",
     "settingsPoweredByFlutter": "Unterstützt von Flutter",
     "settingsLicenseNoticesCount": "{count, plural, one {# Lizenzhinweis} other {# Lizenzhinweise}}",
     "@settingsLicenseNoticesCount": {
@@ -6994,7 +6994,7 @@
         }
     },
     "savedThemesTitle": "Gespeicherte Themen",
-    "savedThemesDescription": "Dabei handelt es sich um Themes, die vom Moonfin-Plugin für den aktuellen Server heruntergeladen wurden. Beim Löschen wird nur diese lokale Kopie entfernt.",
+    "savedThemesDescription": "Dabei handelt es sich um Themes, die vom Moonbase-Plugin für den aktuellen Server heruntergeladen wurden. Beim Löschen wird nur diese lokale Kopie entfernt.",
     "savedThemesEmpty": "Für diesen Server wurden keine gespeicherten Themes gefunden.",
     "savedThemesCurrentThemeId": "{themeId} • Derzeit aktiv",
     "@savedThemesCurrentThemeId": {
@@ -7008,7 +7008,7 @@
     "savedThemesDeleteTooltip": "Gespeichertes Thema löschen",
     "savedThemesManageSubtitle": "Verwalten Sie heruntergeladene Plugin-Themes auf diesem Gerät.",
     "themeEditor": "Theme-Editor",
-    "themeEditorSubtitle": "Öffnen Sie den Moonfin Theme-Editor in Ihrem Browser",
+    "themeEditorSubtitle": "Öffnen Sie den Aleflix Theme-Editor in Ihrem Browser",
     "homeScreen": "Startbildschirm",
     "bottomBar": "Untere Leiste",
     "homeRowsStyleClassic": "Klassiker",
@@ -7057,12 +7057,12 @@
     "preferSdhSubtitles": "Bevorzugen Sie SDH-Untertitel",
     "preferSdhSubtitlesSubtitle": "Priorisieren Sie SDH/CC-Untertitelspuren bei der automatischen Auswahl.",
     "webDiagnostics": "Webdiagnose",
-    "webDiagnosticsTitle": "Moonfin Webdiagnose",
+    "webDiagnosticsTitle": "Aleflix Webdiagnose",
     "webDiagnosticsIntro": "Verwenden Sie diese Seite, um Browser-Konnektivitätsprobleme (CORS, gemischte Inhalte und Erkennungseinstellungen) zu diagnostizieren.",
     "webDiagnosticsDetectedMixedContentFailure": "Fehler bei gemischten Inhalten erkannt",
     "webDiagnosticsDetectedCorsPreflightFailure": "CORS/Preflight-Fehler erkannt",
-    "webDiagnosticsMixedContentFailureBody": "Moonfin hat eine HTTPS-Seite erkannt, die versucht, eine HTTP-Server-URL aufzurufen. Browser blockieren diese Anfrage, bevor sie Ihren Server erreicht.",
-    "webDiagnosticsCorsFailureBody": "Moonfin hat einen Anforderungsfehler auf Browserebene erkannt, der häufig durch fehlende CORS- oder Preflight-Header auf dem Medienserver verursacht wird.",
+    "webDiagnosticsMixedContentFailureBody": "Aleflix hat eine HTTPS-Seite erkannt, die versucht, eine HTTP-Server-URL aufzurufen. Browser blockieren diese Anfrage, bevor sie Ihren Server erreicht.",
+    "webDiagnosticsCorsFailureBody": "Aleflix hat einen Anforderungsfehler auf Browserebene erkannt, der häufig durch fehlende CORS- oder Preflight-Header auf dem Medienserver verursacht wird.",
     "webDiagnosticsTargetUrl": "Ziel-URL: {url}",
     "@webDiagnosticsTargetUrl": {
         "description": "Target URL shown in diagnostics summary",
@@ -7092,7 +7092,7 @@
     "notConfigured": "nicht konfiguriert",
     "webDiagnosticsMixedContent": "Gemischter Inhalt",
     "webDiagnosticsMixedContentDetected": "Diese Seite wird über HTTPS geladen, aber eine oder mehrere konfigurierte URLs sind HTTP. Browser blockieren den Aufruf von HTTP-APIs durch HTTPS-Seiten.",
-    "webDiagnosticsMixedContentFix": "Fix: Stellen Sie Ihren Medienserver oder Proxy-Endpunkt über HTTPS bereit oder laden Sie Moonfin über HTTP nur in vertrauenswürdigen lokalen Netzwerken.",
+    "webDiagnosticsMixedContentFix": "Fix: Stellen Sie Ihren Medienserver oder Proxy-Endpunkt über HTTPS bereit oder laden Sie Aleflix über HTTP nur in vertrauenswürdigen lokalen Netzwerken.",
     "webDiagnosticsNoMixedContentDetected": "In den aktuellen Laufzeiteinstellungen wurde keine offensichtliche Mixed-Content-Konfiguration erkannt.",
     "webDiagnosticsCorsChecklist": "CORS-Checkliste",
     "webDiagnosticsCorsChecklistItem1": "• Erlauben Sie den Browser-Ursprung in Access-Control-Allow-Origin.",
@@ -7357,7 +7357,7 @@
     "@detailScreenStyle": {
         "description": "Label for the media detail screen layout style setting"
     },
-    "detailScreenStyleSubtitle": "„Klassisch“ ist das ursprüngliche zentrierte Moonfin-Layout.\n„Modern“ ist ein responsives, filmisches Layout.",
+    "detailScreenStyleSubtitle": "„Klassisch“ ist das ursprüngliche zentrierte Aleflix-Layout.\n„Modern“ ist ein responsives, filmisches Layout.",
     "@detailScreenStyleSubtitle": {
         "description": "Explanation under the detail screen style setting"
     },
@@ -7377,15 +7377,15 @@
     "@recommendationSystem": {
         "description": "Label for the Recommendation System setting"
     },
-    "recommendationSystemSubtitle": "Verwenden Sie den lokalen Algorithmus „Moonfin Empfehlungen“ für Ihre Bibliothek oder die Online-Ähnlichkeitswerte von TMDb. Hinweis: Für Online-Empfehlungen ist eine Seerr-Integration erforderlich.",
+    "recommendationSystemSubtitle": "Verwenden Sie den lokalen Algorithmus „Aleflix Empfehlungen“ für Ihre Bibliothek oder die Online-Ähnlichkeitswerte von TMDb. Hinweis: Für Online-Empfehlungen ist eine Seerr-Integration erforderlich.",
     "@recommendationSystemSubtitle": {
         "description": "Explanation under the recommendation system setting"
     },
-    "recommendationSystemMoonfin": "Moonfin Empfehlungen",
+    "recommendationSystemMoonfin": "Aleflix Empfehlungen",
     "@recommendationSystemMoonfin": {
         "description": "Recommendation system option: Moonfin Recommends"
     },
-    "recommendationsApplyParentalRatingCapSubtitle": "Empfehlungen von Moonfin anhand der Altersfreigabe der empfohlenen Inhalte begrenzen",
+    "recommendationsApplyParentalRatingCapSubtitle": "Empfehlungen von Aleflix anhand der Altersfreigabe der empfohlenen Inhalte begrenzen",
     "@recommendationsApplyParentalRatingCapSubtitle": {
         "description": "Explanation under the parental rating cap setting toggle"
     },
@@ -7409,7 +7409,7 @@
     "@glassQualityReduced": {
         "description": "Glass quality option: lightweight zero-blur glass"
     },
-    "customThemeSubtitle": "Benutzerdefinierte Designs verändern das Erscheinungsbild von Moonfin. Wählen Sie die Option, die am besten zu Ihrem Stil passt.",
+    "customThemeSubtitle": "Benutzerdefinierte Designs verändern das Erscheinungsbild von Aleflix. Wählen Sie die Option, die am besten zu Ihrem Stil passt.",
     "@customThemeSubtitle": {
         "description": "Description under custom themes section"
     },
@@ -7557,7 +7557,7 @@
     "@shuffleAllMusic": {
         "description": "Car browse action that shuffles the whole music library"
     },
-    "carSignInPrompt": "Melden Sie sich auf Ihrem Telefon bei Moonfin an",
+    "carSignInPrompt": "Melden Sie sich auf Ihrem Telefon bei Aleflix an",
     "@carSignInPrompt": {
         "description": "Shown in the car when no account is signed in"
     },
@@ -8897,7 +8897,7 @@
     "@impellerRendering": {
         "description": "Title of the setting that selects the Flutter rendering engine (Impeller vs. legacy)."
     },
-    "impellerRenderingSubtitle": "Impeller ist Flutters moderner GPU-Renderer für flüssigere Animationen und weniger Ruckeln. Auf manchen TV-Boxen und älteren GPUs kann er Grafikfehler oder ein schwarzes Bild verursachen; schalten Sie ihn dann aus. „Automatisch“ wählt die beste Standardeinstellung für Ihr Gerät. Starten Sie Moonfin neu, um die Änderung anzuwenden.",
+    "impellerRenderingSubtitle": "Impeller ist Flutters moderner GPU-Renderer für flüssigere Animationen und weniger Ruckeln. Auf manchen TV-Boxen und älteren GPUs kann er Grafikfehler oder ein schwarzes Bild verursachen; schalten Sie ihn dann aus. „Automatisch“ wählt die beste Standardeinstellung für Ihr Gerät. Starten Sie Aleflix neu, um die Änderung anzuwenden.",
     "@impellerRenderingSubtitle": {
         "description": "Explanatory description under the rendering engine setting."
     },
@@ -8908,7 +8908,7 @@
     "@impellerRestartTitle": {
         "description": "Title of the dialog shown after changing the rendering engine."
     },
-    "impellerRestartMessage": "Moonfin muss neu gestartet werden, um die Rendering-Engine zu ändern. Schließen Sie die App jetzt und öffnen Sie sie erneut, um die Änderung anzuwenden.",
+    "impellerRestartMessage": "Aleflix muss neu gestartet werden, um die Rendering-Engine zu ändern. Schließen Sie die App jetzt und öffnen Sie sie erneut, um die Änderung anzuwenden.",
     "@impellerRestartMessage": {
         "description": "Body of the dialog shown after changing the rendering engine."
     },
@@ -9276,7 +9276,7 @@
     },
     "emulatorCoreUnavailable": "Auf diesem Gerät nicht verfügbar",
     "sortOrder": "Sortierreihenfolge",
-    "interfaceLayoutSubtitle": "Überschreibt das automatisch erkannte Layout, wenn Ihr Gerät falsch erkannt wurde. Starten Sie Moonfin neu, damit die Änderungen wirksam werden.",
+    "interfaceLayoutSubtitle": "Überschreibt das automatisch erkannte Layout, wenn Ihr Gerät falsch erkannt wurde. Starten Sie Aleflix neu, damit die Änderungen wirksam werden.",
     "@interfaceLayoutSubtitle": {
         "description": "Subtitle for the interface layout setting"
     },
@@ -9496,7 +9496,7 @@
     "@tvOfflineDownloadsSubtitle": {
         "description": "Subtitle for the TV-only offline downloads toggle"
     },
-    "downloadLocationLimitedByAndroid": "Android erlaubt Moonfin auf diesem Gerät nur den Zugriff auf eigene Ordner. Da kein Wechselspeicher vorhanden ist, aktivieren Sie oben „Im Downloads-Ordner speichern“, damit auch andere Apps auf die Downloads zugreifen können.",
+    "downloadLocationLimitedByAndroid": "Android erlaubt Aleflix auf diesem Gerät nur den Zugriff auf eigene Ordner. Da kein Wechselspeicher vorhanden ist, aktivieren Sie oben „Im Downloads-Ordner speichern“, damit auch andere Apps auf die Downloads zugreifen können.",
     "@downloadLocationLimitedByAndroid": {
         "description": "Note shown when the only download location Android allows is the default one"
     },
@@ -10374,7 +10374,7 @@
     "@shortcutToggleFullscreen": {
         "description": "F11 and Alt+Enter anywhere, F in the player"
     },
-    "shortcutQuit": "Moonfin Beenden",
+    "shortcutQuit": "Aleflix Beenden",
     "@shortcutQuit": {
         "description": "What Ctrl+Q does on desktop"
     },
@@ -10458,7 +10458,7 @@
     "@loadingAnimationImageMoonPhases": {
         "description": "Loading animation image option: Moon Phases"
     },
-    "loadingAnimationImageMoonfinPhases": "Moonfin Phasenweise",
+    "loadingAnimationImageMoonfinPhases": "Aleflix Phasenweise",
     "@loadingAnimationImageMoonfinPhases": {
         "description": "Loading animation image option: Moonfin Phases in brand gradient"
     },

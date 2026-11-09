@@ -369,7 +369,7 @@ class _TvMenuState extends State<_TvMenu> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const AhKicker('Moonfin'),
+                        const AhKicker('Aleflix'),
                         Text(
                           l10n.afterHoursTitle,
                           style: ahDisplay(46, color: K.gold),

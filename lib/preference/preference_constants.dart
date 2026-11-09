@@ -345,7 +345,9 @@ enum AppTheme {
   indigo(0xFF4B0082),
   moonfinCyan(0xFF00A4DC),
   neonPulseMagenta(0xFFFF2E92),
-  eightBitGold(0xFFFFCD75);
+  eightBitGold(0xFFFFCD75),
+  // Aleflix Noir's focus ring.
+  champagne(0xFFE6D3A8);
 
   const AppTheme(this.colorValue);
   final int colorValue;

@@ -17,7 +17,19 @@ class AppTheme {
       fontFamily: spec.fontFamily,
     ).textTheme;
     if (spec.textGlow.isEmpty) {
-      return base;
+      final display = spec.displayFontFamily;
+      if (display == null) return base;
+      TextStyle? editorial(TextStyle? style) =>
+          style?.copyWith(fontFamily: display, letterSpacing: 0);
+      return base.copyWith(
+        displayLarge: editorial(base.displayLarge),
+        displayMedium: editorial(base.displayMedium),
+        displaySmall: editorial(base.displaySmall),
+        headlineLarge: editorial(base.headlineLarge),
+        headlineMedium: editorial(base.headlineMedium),
+        headlineSmall: editorial(base.headlineSmall),
+        titleLarge: editorial(base.titleLarge),
+      );
     }
 
     final themedShadows = spec.textGlow;

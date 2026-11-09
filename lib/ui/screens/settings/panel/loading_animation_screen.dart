@@ -28,6 +28,10 @@ class _LoadingAnimationScreenState extends State<_LoadingAnimationScreen> {
                 preference: UserPreferences.loadingAnimationImage,
                 title: l10n.loadingAnimationImage,
                 icon: Icons.movie_filter_outlined,
+                // Aleflix: the neon moon belonged to the dropped Neon Pulse theme.
+                values: LoadingAnimationImage.values
+                    .where((v) => v != LoadingAnimationImage.neonfinPhases)
+                    .toList(),
                 onChanged: () => setState(() {}),
                 labelOf: (value) => switch (value) {
                   LoadingAnimationImage.none => l10n.none,

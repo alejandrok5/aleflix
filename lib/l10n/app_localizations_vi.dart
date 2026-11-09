@@ -10,7 +10,7 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get appTitle => 'Moonfin';
+  String get appTitle => 'Aleflix';
 
   @override
   String get animeMarkerFiller => 'Filler';
@@ -177,7 +177,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String appVersionFooter(String version) {
-    return 'Moonfin phiên bản $version';
+    return 'Aleflix phiên bản $version';
   }
 
   @override
@@ -229,7 +229,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get secureStorageUnavailableMessage =>
-      'Moonfin không thể truy cập vào khóa hệ thống của bạn. Việc đăng nhập có thể tiếp tục nhưng việc lưu trữ mã thông báo an toàn có thể không khả dụng cho đến khi khóa được mở khóa.';
+      'Aleflix không thể truy cập vào khóa hệ thống của bạn. Việc đăng nhập có thể tiếp tục nhưng việc lưu trữ mã thông báo an toàn có thể không khả dụng cho đến khi khóa được mở khóa.';
 
   @override
   String get ok => 'ĐƯỢC RỒI';
@@ -242,7 +242,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get detailScreenStyleSubtitle =>
-      'Cổ điển là bố cục Moonfin gốc căn giữa. Hiện đại là bố cục điện ảnh tự điều chỉnh.';
+      'Cổ điển là bố cục Aleflix gốc căn giữa. Hiện đại là bố cục điện ảnh tự điều chỉnh.';
 
   @override
   String get detailScreenStyleMoonfin => 'Cổ điển';
@@ -505,10 +505,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get recommendationSystemSubtitle =>
-      'Dùng thuật toán Moonfin Gợi ý dựa trên thư viện cục bộ hoặc Chỉ số tương đồng trực tuyến của TMDb. Lưu ý: Gợi ý trực tuyến cần tích hợp Seerr.';
+      'Dùng thuật toán Aleflix Gợi ý dựa trên thư viện cục bộ hoặc Chỉ số tương đồng trực tuyến của TMDb. Lưu ý: Gợi ý trực tuyến cần tích hợp Seerr.';
 
   @override
-  String get recommendationSystemMoonfin => 'Moonfin Gợi ý';
+  String get recommendationSystemMoonfin => 'Aleflix Gợi ý';
 
   @override
   String get recommendationSystemJellyfin => 'Jellyfin Recommends';
@@ -522,7 +522,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get recommendationsApplyParentalRatingCapSubtitle =>
-      'Giới hạn gợi ý của Moonfin Gợi ý theo xếp hạng độ tuổi của nội dung đích';
+      'Giới hạn gợi ý của Aleflix Gợi ý theo xếp hạng độ tuổi của nội dung đích';
 
   @override
   String get interfaceStyle => 'Kiểu giao diện';
@@ -545,7 +545,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get interfaceLayoutSubtitle =>
-      'Override the detected layout when this device is read wrong. Restart Moonfin for changes to take effect.';
+      'Override the detected layout when this device is read wrong. Restart Aleflix for changes to take effect.';
 
   @override
   String get interfaceLayoutAutomatic => 'Automatic';
@@ -623,21 +623,21 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get settingsAppearanceThemeSubtitle =>
-      'Chuyển đổi giữa Moonfin và Neon Pulse mà không cần khởi động lại ứng dụng';
+      'Chuyển đổi giữa Aleflix và Neon Pulse mà không cần khởi động lại ứng dụng';
 
   @override
   String get customThemeTitle => 'Chủ đề tùy chỉnh';
 
   @override
   String get customThemeSubtitle =>
-      'Chủ đề tùy chỉnh thay đổi các thành phần giao diện trên toàn Moonfin. Hãy chọn một tùy chọn hợp với phong cách của bạn.';
+      'Chủ đề tùy chỉnh thay đổi các thành phần giao diện trên toàn Aleflix. Hãy chọn một tùy chọn hợp với phong cách của bạn.';
 
   @override
   String get keyboardStyle => 'Keyboard Style';
 
   @override
   String get keyboardStyleDescription =>
-      'Native uses your TV\'s own keyboard. Classic is the original Moonfin keyboard. Glass is a frosted panel with larger keys. Docked fills the bottom of the screen and shows what you type above the keys.';
+      'Native uses your TV\'s own keyboard. Classic is the original Aleflix keyboard. Glass is a frosted panel with larger keys. Docked fills the bottom of the screen and shows what you type above the keys.';
 
   @override
   String get keyboardStyleNative => 'Native';
@@ -671,11 +671,11 @@ class AppLocalizationsVi extends AppLocalizations {
       'Let a connected game controller move focus and select items';
 
   @override
-  String get themeMoonfin => 'Moonfin';
+  String get themeMoonfin => 'Aleflix Noir';
 
   @override
   String get themeMoonfinSubtitle =>
-      'Diện mạo Moonfin hiện tại được tất cả các bạn yêu thích';
+      'Diện mạo Aleflix hiện tại được tất cả các bạn yêu thích';
 
   @override
   String get themeNeonPulse => 'Xung neon';
@@ -773,7 +773,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get exitApp => 'Thoát khỏi Moonfin?';
+  String get exitApp => 'Thoát khỏi Aleflix?';
 
   @override
   String get exitAppConfirmation => 'Bạn có chắc chắn muốn thoát không?';
@@ -1935,7 +1935,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get shuffleAllMusic => 'Phát ngẫu nhiên toàn bộ nhạc';
 
   @override
-  String get carSignInPrompt => 'Đăng nhập Moonfin trên điện thoại của bạn';
+  String get carSignInPrompt => 'Đăng nhập Aleflix trên điện thoại của bạn';
 
   @override
   String get carServerUnreachable => 'Không kết nối được máy chủ của bạn';
@@ -2217,7 +2217,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get shortcutToggleFullscreen => 'Fullscreen on or off';
 
   @override
-  String get shortcutQuit => 'Quit Moonfin';
+  String get shortcutQuit => 'Quit Aleflix';
 
   @override
   String get shortcutPlayPause => 'Play or pause';
@@ -2388,7 +2388,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get bookReadingUnavailableMessage =>
-      'Open it in Moonfin on a phone, tablet or computer to read it. Audiobooks still play here.';
+      'Open it in Aleflix on a phone, tablet or computer to read it. Audiobooks still play here.';
 
   @override
   String formatCannotRenderInApp(String extension) {
@@ -3225,7 +3225,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get loadingAnimationDescription =>
-      'Customize the loading animations used throughout Moonfin';
+      'Customize the loading animations used throughout Aleflix';
 
   @override
   String get loadingAnimationConfiguration => 'Loading Animation Configuration';
@@ -3234,7 +3234,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get loadingAnimationImage => 'Image';
 
   @override
-  String get loadingAnimationImageMoonfinLogo => 'Moonfin Logo';
+  String get loadingAnimationImageMoonfinLogo => 'Aleflix Logo';
 
   @override
   String get loadingAnimationImageSpinner => 'Spinner';
@@ -3246,7 +3246,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get loadingAnimationImageMoonPhases => 'Moon Phases';
 
   @override
-  String get loadingAnimationImageMoonfinPhases => 'Moonfin Phases';
+  String get loadingAnimationImageMoonfinPhases => 'Aleflix Phases';
 
   @override
   String get loadingAnimationImageNeonfinPhases => 'Neonfin Phases';
@@ -4348,7 +4348,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get notSetMpvConf =>
-      'Chưa được thiết lập. Moonfin sẽ thử mpv.conf mặc định trong thư mục ứng dụng/dữ liệu.';
+      'Chưa được thiết lập. Aleflix sẽ thử mpv.conf mặc định trong thư mục ứng dụng/dữ liệu.';
 
   @override
   String get selectMpvConf => 'Chọn mpv.conf';
@@ -4645,14 +4645,14 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get downloadLocationLimitedByAndroid =>
-      'Android only lets Moonfin write to the folders it owns, and this device has no removable storage. Turn on Save to Downloads folder above to keep downloads somewhere other apps can reach.';
+      'Android only lets Aleflix write to the folders it owns, and this device has no removable storage. Turn on Save to Downloads folder above to keep downloads somewhere other apps can reach.';
 
   @override
   String get saveToDownloadsFolder => 'Lưu vào thư mục Tải xuống';
 
   @override
   String get downloadsVisibleToOtherApps =>
-      'Tải xuống/Moonfin - hiển thị với các ứng dụng khác';
+      'Tải xuống/Aleflix - hiển thị với các ứng dụng khác';
 
   @override
   String get dangerZone => 'Vùng nguy hiểm';
@@ -4682,7 +4682,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get saveToDownloadsFolderDescription =>
-      'Phương tiện đã tải xuống sẽ được lưu vào Tải xuống/Moonfin trên thiết bị của bạn. Các tệp này sẽ hiển thị với các ứng dụng khác như thư viện hoặc trình phát nhạc của bạn.\n\nCác bản tải xuống hiện tại sẽ vẫn ở vị trí hiện tại của chúng.';
+      'Phương tiện đã tải xuống sẽ được lưu vào Tải xuống/Aleflix trên thiết bị của bạn. Các tệp này sẽ hiển thị với các ứng dụng khác như thư viện hoặc trình phát nhạc của bạn.\n\nCác bản tải xuống hiện tại sẽ vẫn ở vị trí hiện tại của chúng.';
 
   @override
   String get transcodingTimeRemainingUnavailable =>
@@ -4935,7 +4935,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get libraryVisibilityDescription =>
-      'Chuyển đổi khả năng hiển thị trang chủ cho mỗi thư viện. Khởi động lại Moonfin để các thay đổi có hiệu lực.';
+      'Chuyển đổi khả năng hiển thị trang chủ cho mỗi thư viện. Khởi động lại Aleflix để các thay đổi có hiệu lực.';
 
   @override
   String get showInNavigation => 'Hiển thị trong điều hướng';
@@ -4995,7 +4995,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mediaBarModeDescription =>
-      'Chọn giữa Moonfin, MakD hoặc tắt thanh phương tiện';
+      'Chọn giữa Aleflix, MakD hoặc tắt thanh phương tiện';
 
   @override
   String get peekHomeRows => 'Peek Home Rows';
@@ -5005,7 +5005,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Show the top half of the first row along the bottom of the media bar';
 
   @override
-  String get mediaBarModeMoonfin => 'Moonfin';
+  String get mediaBarModeMoonfin => 'Aleflix';
 
   @override
   String get mediaBarModeMakd => 'MakD';
@@ -5363,11 +5363,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get sleepAfterIdleDescriptionAndroid =>
-      'Close Moonfin after this long without a button press so your TV\'s own screensaver and sleep timer can take over. Anything paused is stopped first, so it keeps its resume point.';
+      'Close Aleflix after this long without a button press so your TV\'s own screensaver and sleep timer can take over. Anything paused is stopped first, so it keeps its resume point.';
 
   @override
   String get sleepAfterIdleDescriptionAppleTv =>
-      'After this long without a button press, hand the screen back to your Apple TV\'s own screensaver and sleep setting. Moonfin stays open, so you pick up right where you left off.';
+      'After this long without a button press, hand the screen back to your Apple TV\'s own screensaver and sleep setting. Aleflix stays open, so you pick up right where you left off.';
 
   @override
   String get maxAgeRating => 'Xếp hạng độ tuổi tối đa';
@@ -5412,7 +5412,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get screensaverBackdropBlack => 'Black';
 
   @override
-  String get screensaverBackdropMoonfin => 'Moonfin';
+  String get screensaverBackdropMoonfin => 'Aleflix';
 
   @override
   String get screensaverBackdropCalm => 'Calm';
@@ -5427,7 +5427,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get screensaverAdditionalComponent => 'Additional Component';
 
   @override
-  String get screensaverComponentMoonfinLogo => 'Moonfin Logo';
+  String get screensaverComponentMoonfinLogo => 'Aleflix Logo';
 
   @override
   String get screensaverComponentRunner => 'Runner';
@@ -5753,7 +5753,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sourceCode => 'Mã nguồn';
 
   @override
-  String get sourceCodeUrl => 'https://github.com/Moonfin-Client/Moonfin-Core';
+  String get sourceCodeUrl => 'https://github.com/alejandrok5/aleflix';
 
   @override
   String get checkForUpdatesNow => 'Kiểm tra cập nhật ngay bây giờ';
@@ -5925,7 +5925,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get cancelRequest4k => 'Cancel 4K Request';
 
   @override
-  String get playInMoonfin => 'Chơi ở Moonfin';
+  String get playInMoonfin => 'Chơi ở Aleflix';
 
   @override
   String get requestedByLabel => 'Requested by';
@@ -5971,7 +5971,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get itemNotFoundInLibrary =>
-      'Không tìm thấy mục trong thư viện Moonfin của bạn';
+      'Không tìm thấy mục trong thư viện Aleflix của bạn';
 
   @override
   String get errorSearchingLibrary => 'Lỗi tìm kiếm thư viện';
@@ -7978,7 +7978,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get adminServerRebootMessage =>
-      'Máy chủ đang khởi động lại, vui lòng khởi động lại Moonfin';
+      'Máy chủ đang khởi động lại, vui lòng khởi động lại Aleflix';
 
   @override
   String get adminActiveSessions => 'Phiên hoạt động';
@@ -11778,7 +11778,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get settingsLibraryVisibilitySubtitle =>
-      'Chuyển đổi khả năng hiển thị trang chủ cho mỗi thư viện. Khởi động lại Moonfin để các thay đổi có hiệu lực.';
+      'Chuyển đổi khả năng hiển thị trang chủ cho mỗi thư viện. Khởi động lại Aleflix để các thay đổi có hiệu lực.';
 
   @override
   String get settingsMediaBarAndLocalPreviews =>
@@ -11900,7 +11900,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsJoinTheDiscord => 'Tham gia Discord';
 
   @override
-  String get settingsSupportMoonfin => 'Hỗ trợ Moonfin';
+  String get settingsSupportMoonfin => 'Hỗ trợ Aleflix';
 
   @override
   String get settingsSupportMoonfinSubtitle =>
@@ -11920,14 +11920,14 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get settingsPrivacyPolicySubtitle =>
-      'Cách Moonfin xử lý dữ liệu của bạn';
+      'Cách Aleflix xử lý dữ liệu của bạn';
 
   @override
   String get settingsCheckForUpdates => 'Kiểm tra cập nhật';
 
   @override
   String get settingsCheckForUpdatesSubtitle =>
-      'Kiểm tra bản phát hành Moonfin mới nhất';
+      'Kiểm tra bản phát hành Aleflix mới nhất';
 
   @override
   String get settingsBoth => 'Cả hai';
@@ -12387,7 +12387,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get savedThemesDescription =>
-      'Đây là các chủ đề được tải xuống từ plugin Moonfin cho máy chủ hiện tại. Việc xóa chỉ xóa bản sao cục bộ này.';
+      'Đây là các chủ đề được tải xuống từ plugin Moonbase cho máy chủ hiện tại. Việc xóa chỉ xóa bản sao cục bộ này.';
 
   @override
   String get savedThemesEmpty =>
@@ -12410,7 +12410,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get themeEditorSubtitle =>
-      'Mở Trình chỉnh sửa chủ đề Moonfin trong trình duyệt của bạn';
+      'Mở Trình chỉnh sửa chủ đề Aleflix trong trình duyệt của bạn';
 
   @override
   String get homeScreen => 'Màn hình chính';
@@ -12552,10 +12552,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get sinceYouWatchedSourceDescription =>
-      'Choose recommendation source (Moonfin Recommends custom local algorithm, Jellyfin Recommends server engine, or TMDb\'s similarity metrics. Note: Online recommendations require Seerr integration).';
+      'Choose recommendation source (Aleflix Recommends custom local algorithm, Jellyfin Recommends server engine, or TMDb\'s similarity metrics. Note: Online recommendations require Seerr integration).';
 
   @override
-  String get sinceYouWatchedSourceLocal => 'Moonfin Recommends';
+  String get sinceYouWatchedSourceLocal => 'Aleflix Recommends';
 
   @override
   String get sinceYouWatchedSourceServer => 'Jellyfin Recommends';
@@ -12849,7 +12849,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get cadenceTipSlowdownHint =>
-      'Or turn on Smooth 24 fps on a 60 Hz TV in Moonfin under Playback > Quality & Decoding.';
+      'Or turn on Smooth 24 fps on a 60 Hz TV in Aleflix under Playback > Quality & Decoding.';
 
   @override
   String get useExternalPlayer => 'Sử dụng trình phát bên ngoài';
@@ -12893,7 +12893,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get webDiagnostics => 'Chẩn đoán web';
 
   @override
-  String get webDiagnosticsTitle => 'Moonfin Chẩn đoán web';
+  String get webDiagnosticsTitle => 'Aleflix Chẩn đoán web';
 
   @override
   String get webDiagnosticsIntro =>
@@ -12909,11 +12909,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get webDiagnosticsMixedContentFailureBody =>
-      'Moonfin đã phát hiện thấy một trang HTTPS đang cố gọi URL máy chủ HTTP. Trình duyệt chặn yêu cầu này trước khi nó đến máy chủ của bạn.';
+      'Aleflix đã phát hiện thấy một trang HTTPS đang cố gọi URL máy chủ HTTP. Trình duyệt chặn yêu cầu này trước khi nó đến máy chủ của bạn.';
 
   @override
   String get webDiagnosticsCorsFailureBody =>
-      'Moonfin đã phát hiện ra lỗi yêu cầu ở cấp trình duyệt thường xảy ra do thiếu tiêu đề CORS hoặc preflight trên máy chủ phương tiện.';
+      'Aleflix đã phát hiện ra lỗi yêu cầu ở cấp trình duyệt thường xảy ra do thiếu tiêu đề CORS hoặc preflight trên máy chủ phương tiện.';
 
   @override
   String webDiagnosticsTargetUrl(String url) {
@@ -12962,7 +12962,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get webDiagnosticsMixedContentFix =>
-      'Khắc phục: phân phối máy chủ phương tiện hoặc điểm cuối proxy của bạn qua HTTPS hoặc chỉ tải Moonfin qua HTTP trên các mạng cục bộ đáng tin cậy.';
+      'Khắc phục: phân phối máy chủ phương tiện hoặc điểm cuối proxy của bạn qua HTTPS hoặc chỉ tải Aleflix qua HTTP trên các mạng cục bộ đáng tin cậy.';
 
   @override
   String get webDiagnosticsNoMixedContentDetected =>
@@ -14808,7 +14808,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get impellerRenderingSubtitle =>
-      'Impeller là bộ kết xuất GPU hiện đại của Flutter, cho hoạt ảnh mượt hơn và ít giật hơn. Trên một số hộp TV và GPU đời cũ, nó có thể gây lỗi hiển thị hoặc video đen; hãy Tắt nếu bạn gặp tình trạng đó. Tự động sẽ chọn mặc định phù hợp nhất cho thiết bị của bạn. Khởi động lại Moonfin để áp dụng.';
+      'Impeller là bộ kết xuất GPU hiện đại của Flutter, cho hoạt ảnh mượt hơn và ít giật hơn. Trên một số hộp TV và GPU đời cũ, nó có thể gây lỗi hiển thị hoặc video đen; hãy Tắt nếu bạn gặp tình trạng đó. Tự động sẽ chọn mặc định phù hợp nhất cho thiết bị của bạn. Khởi động lại Aleflix để áp dụng.';
 
   @override
   String get impellerAuto => 'Tự động';
@@ -14824,7 +14824,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get impellerRestartMessage =>
-      'Moonfin cần khởi động lại để đổi công cụ kết xuất. Hãy đóng ứng dụng ngay bây giờ, sau đó mở lại để áp dụng.';
+      'Aleflix cần khởi động lại để đổi công cụ kết xuất. Hãy đóng ứng dụng ngay bây giờ, sau đó mở lại để áp dụng.';
 
   @override
   String get impellerCloseNow => 'Đóng ứng dụng ngay';
@@ -15357,11 +15357,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get setupMoonbaseHint =>
-      'A free server plugin that unlocks more of Moonfin';
+      'A free server plugin that unlocks more of Aleflix';
 
   @override
   String get setupMoonbaseIntro =>
-      'Moonbase is free and runs on your server. With it, Moonfin gets:';
+      'Moonbase is free and runs on your server. With it, Aleflix gets:';
 
   @override
   String get setupMoonbaseAskAdmin =>
@@ -15507,7 +15507,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get autoDownloadTranscodedForegroundNote =>
-      'Transcoded qualities only download while Moonfin is open. Original quality also downloads in the background.';
+      'Transcoded qualities only download while Aleflix is open. Original quality also downloads in the background.';
 
   @override
   String get autoDownloadTranscodedRunningNote =>
@@ -15515,7 +15515,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get autoDownloadForegroundOnly =>
-      'Downloads only while Moonfin is open';
+      'Downloads only while Aleflix is open';
 
   @override
   String get autoDownloadQualityTitle => 'Auto-download quality';
@@ -15538,7 +15538,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get smartDownloadsEnableDescription =>
-      'When you finish an episode on any device, Moonfin downloads the next ones. Episodes it downloads are deleted once watched.';
+      'When you finish an episode on any device, Aleflix downloads the next ones. Episodes it downloads are deleted once watched.';
 
   @override
   String get smartDownloadsKeepReady => 'Episodes to Keep Downloaded';
@@ -15626,15 +15626,15 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get autoDownloadBackgroundRefreshSubtitle =>
-      'Allow the system to check for new episodes periodically while Moonfin is closed';
+      'Allow the system to check for new episodes periodically while Aleflix is closed';
 
   @override
   String get autoDownloadBackgroundRefreshDenied =>
-      'Background App Refresh is disabled for Moonfin. Enable it in iOS Settings.';
+      'Background App Refresh is disabled for Aleflix. Enable it in iOS Settings.';
 
   @override
   String get autoDownloadBackgroundRestrictedAndroid =>
-      'Background usage is restricted for Moonfin in Android Settings.';
+      'Background usage is restricted for Aleflix in Android Settings.';
 
   @override
   String get autoDownloadCheckNow => 'Check Now';
@@ -15852,13 +15852,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get topShelfDescription =>
-      'What the Apple TV home screen shows above the Moonfin icon when it is selected. This setting stays on this device.';
+      'What the Apple TV home screen shows above the Aleflix icon when it is selected. This setting stays on this device.';
 
   @override
   String get topShelfLatestMedia => 'Latest media';
 
   @override
-  String get topShelfAppBanner => 'Moonfin banner';
+  String get topShelfAppBanner => 'Aleflix banner';
 
   @override
   String get keepVideoClearOfDynamicIsland =>
@@ -16688,7 +16688,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String siloNativeOfferMessage(String serverName, String address) {
-    return 'This address is the Jellyfin-compatible service of $serverName. Moonfin can connect to Silo directly at $address, with Silo\'s own features.';
+    return 'This address is the Jellyfin-compatible service of $serverName. Aleflix can connect to Silo directly at $address, with Silo\'s own features.';
   }
 
   @override
@@ -16699,11 +16699,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get siloAppUpdateRequired =>
-      'This Silo server needs a newer version of Moonfin. Update Moonfin to use it.';
+      'This Silo server needs a newer version of Aleflix. Update Aleflix to use it.';
 
   @override
   String get siloServerUpdateRequired =>
-      'This Silo server is too old for this version of Moonfin. Update Silo to use it.';
+      'This Silo server is too old for this version of Aleflix. Update Silo to use it.';
 
   @override
   String get siloTooManyAttempts => 'Too many attempts. Try again later.';
@@ -16750,7 +16750,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get siloPlaybackUpdateRequired =>
-      'This Silo server needs a newer version of Moonfin to play.';
+      'This Silo server needs a newer version of Aleflix to play.';
 
   @override
   String get siloPlaybackEndedOnServer =>
@@ -16839,7 +16839,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get rommUnlinkNote =>
-      'Unlinking stops Moonfin from using your RomM key. The key stays in RomM until you remove it from your API tokens there.';
+      'Unlinking stops Aleflix from using your RomM key. The key stays in RomM until you remove it from your API tokens there.';
 
   @override
   String get rommUnlink => 'Unlink';
@@ -16853,7 +16853,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get rommUnreachable =>
-      'Moonfin couldn\'t reach RomM. Try again in a moment.';
+      'Aleflix couldn\'t reach RomM. Try again in a moment.';
 
   @override
   String get rommNotAvailable => 'This server has no RomM library.';
@@ -17187,7 +17187,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get calendarProblemNeedsSeerr =>
-      'An admin needs to sign in to Seerr in Moonfin before the calendar can load.';
+      'An admin needs to sign in to Seerr in Aleflix before the calendar can load.';
 
   @override
   String get calendarProblemNotConfigured =>

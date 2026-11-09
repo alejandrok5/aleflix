@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
+import 'package:moonfin/preference/preference_constants.dart' show AppTheme;
 import 'package:moonfin/preference/user_preferences.dart';
 import 'package:moonfin_design/moonfin_design.dart';
 
@@ -9,6 +10,7 @@ import '../../../../../util/platform_detection.dart';
 import '../../../../../util/idiom/glass_capability.dart';
 import '../../../../widgets/focus/glass_focus_halo.dart';
 import '../../../../widgets/focus/step_scroll.dart';
+import '../../../../../aleflix/aleflix_brand.dart';
 
 /// Focusable, d-pad friendly tab bar: tabs select on press, left/right move
 /// focus between tabs, and left from the first tab calls [onExitLeft].
@@ -177,13 +179,18 @@ class _DetailsTabItemState extends State<_DetailsTabItem> {
     if (activeTheme.id == ThemeRegistry.neonPulseId) {
       return AppColorScheme.onButtonFocused;
     }
-    if (activeTheme.id == ThemeRegistry.moonfinId) {
+    if (AleflixBrand.usesUpstreamMoonfinStyling &&
+        activeTheme.id == ThemeRegistry.moonfinId) {
       return Colors.white;
     }
+    // Aleflix: Noir reaches this lookup where upstream's theme returned white
+    // above, so it must not assume preferences are registered.
+    final getIt = GetIt.instance;
+    if (!getIt.isRegistered<UserPreferences>()) {
+      return Color(AppTheme.champagne.colorValue);
+    }
     return Color(
-      GetIt.instance<UserPreferences>()
-          .get(UserPreferences.focusColor)
-          .colorValue,
+      getIt<UserPreferences>().get(UserPreferences.focusColor).colorValue,
     );
   }
 
