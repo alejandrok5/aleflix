@@ -1851,6 +1851,30 @@ class AppLocalizationsTr extends AppLocalizations {
   String get writers => 'SENARİSTLER';
 
   @override
+  String get episodeDirector => 'Episode Director';
+
+  @override
+  String episodeDirectorWithRole(String role) {
+    return '$role (Episode Director)';
+  }
+
+  @override
+  String get episodeWriter => 'Episode Writer';
+
+  @override
+  String episodeWriterWithRole(String role) {
+    return '$role (Episode Writer)';
+  }
+
+  @override
+  String get guestStar => 'Guest Star';
+
+  @override
+  String guestStarWithRole(String role) {
+    return '$role (Guest Star)';
+  }
+
+  @override
   String get studio => 'STÜDYO';
 
   @override
@@ -16802,6 +16826,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get siloPinUnlock => 'Kilidi aç';
 
   @override
+  String get siloPinRemember => 'Remember PIN on this device';
+
+  @override
   String get siloPinWrong => 'Bu PIN doğru değil.';
 
   @override
@@ -16815,9 +16842,6 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get siloPinFailed => 'PIN doğrulanamadı. Tekrar deneyin.';
-
-  @override
-  String get siloSignOutAccount => 'Silo hesabından çıkış yap';
 
   @override
   String trailerCount(int count) {

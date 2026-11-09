@@ -1860,6 +1860,30 @@ class AppLocalizationsAr extends AppLocalizations {
   String get writers => 'الكتّاب';
 
   @override
+  String get episodeDirector => 'Episode Director';
+
+  @override
+  String episodeDirectorWithRole(String role) {
+    return '$role (Episode Director)';
+  }
+
+  @override
+  String get episodeWriter => 'Episode Writer';
+
+  @override
+  String episodeWriterWithRole(String role) {
+    return '$role (Episode Writer)';
+  }
+
+  @override
+  String get guestStar => 'Guest Star';
+
+  @override
+  String guestStarWithRole(String role) {
+    return '$role (Guest Star)';
+  }
+
+  @override
   String get studio => 'استوديو';
 
   @override
@@ -16743,6 +16767,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get siloPinUnlock => 'Unlock';
 
   @override
+  String get siloPinRemember => 'Remember PIN on this device';
+
+  @override
   String get siloPinWrong => 'That PIN isn\'t right.';
 
   @override
@@ -16755,9 +16782,6 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get siloPinFailed => 'The PIN couldn\'t be checked. Try again.';
-
-  @override
-  String get siloSignOutAccount => 'Sign out of the Silo account';
 
   @override
   String trailerCount(int count) {

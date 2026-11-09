@@ -1861,6 +1861,30 @@ class AppLocalizationsFr extends AppLocalizations {
   String get writers => 'SCÉNARISTES';
 
   @override
+  String get episodeDirector => 'Episode Director';
+
+  @override
+  String episodeDirectorWithRole(String role) {
+    return '$role (Episode Director)';
+  }
+
+  @override
+  String get episodeWriter => 'Episode Writer';
+
+  @override
+  String episodeWriterWithRole(String role) {
+    return '$role (Episode Writer)';
+  }
+
+  @override
+  String get guestStar => 'Guest Star';
+
+  @override
+  String guestStarWithRole(String role) {
+    return '$role (Guest Star)';
+  }
+
+  @override
   String get studio => 'STUDIO';
 
   @override
@@ -16999,6 +17023,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get siloPinUnlock => 'Déverrouiller';
 
   @override
+  String get siloPinRemember => 'Remember PIN on this device';
+
+  @override
   String get siloPinWrong => 'Ce code PIN n\'est pas le bon.';
 
   @override
@@ -17012,9 +17039,6 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get siloPinFailed =>
       'Le code PIN n\'a pas pu être vérifié. Réessayez.';
-
-  @override
-  String get siloSignOutAccount => 'Se déconnecter du compte Silo';
 
   @override
   String trailerCount(int count) {

@@ -3274,6 +3274,42 @@ abstract class AppLocalizations {
   /// **'WRITERS'**
   String get writers;
 
+  /// Role label for an episode director
+  ///
+  /// In en, this message translates to:
+  /// **'Episode Director'**
+  String get episodeDirector;
+
+  /// Role label formatting an episode director with an existing role description
+  ///
+  /// In en, this message translates to:
+  /// **'{role} (Episode Director)'**
+  String episodeDirectorWithRole(String role);
+
+  /// Role label for an episode writer
+  ///
+  /// In en, this message translates to:
+  /// **'Episode Writer'**
+  String get episodeWriter;
+
+  /// Role label formatting an episode writer with an existing role description
+  ///
+  /// In en, this message translates to:
+  /// **'{role} (Episode Writer)'**
+  String episodeWriterWithRole(String role);
+
+  /// Role label for a guest star
+  ///
+  /// In en, this message translates to:
+  /// **'Guest Star'**
+  String get guestStar;
+
+  /// Role label formatting a character role as a guest star
+  ///
+  /// In en, this message translates to:
+  /// **'{role} (Guest Star)'**
+  String guestStarWithRole(String role);
+
   /// Metadata label for studio
   ///
   /// In en, this message translates to:
@@ -29091,6 +29127,12 @@ abstract class AppLocalizations {
   /// **'Unlock'**
   String get siloPinUnlock;
 
+  /// Checkbox in the Silo profile PIN dialog. Ticked, the PIN isn't asked for again on this device; unticked, it is asked for each time the app starts or this profile is switched to
+  ///
+  /// In en, this message translates to:
+  /// **'Remember PIN on this device'**
+  String get siloPinRemember;
+
   /// Shown in the Silo profile PIN dialog when the PIN doesn't match
   ///
   /// In en, this message translates to:
@@ -29114,12 +29156,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The PIN couldn\'t be checked. Try again.'**
   String get siloPinFailed;
-
-  /// Account menu button shown for a Silo household profile when other profiles of the same Silo account are stored on this device: signs all of them out and ends the login (Sign out alone removes only the current profile)
-  ///
-  /// In en, this message translates to:
-  /// **'Sign out of the Silo account'**
-  String get siloSignOutAccount;
 
   /// How many trailers the trailer picker lists, shown in its header
   ///

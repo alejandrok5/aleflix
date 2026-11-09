@@ -10252,7 +10252,7 @@
     "@loadingAnimation": {
         "description": "Setting title for custom loading animation"
     },
-    "loadingAnimationImageMoonfinLogo": "Logo de Moonfin",
+    "loadingAnimationImageMoonfinLogo": "Logo de Aleflix",
     "@loadingAnimationImageMoonfinLogo": {
         "description": "Loading animation image option: Moonfin Logo"
     },
@@ -10268,7 +10268,7 @@
     "@loadingAnimationImageMoonPhases": {
         "description": "Loading animation image option: Moon Phases"
     },
-    "loadingAnimationImageMoonfinPhases": "Fases de Moonfin",
+    "loadingAnimationImageMoonfinPhases": "Fases de Aleflix",
     "@loadingAnimationImageMoonfinPhases": {
         "description": "Loading animation image option: Moonfin Phases in brand gradient"
     },
